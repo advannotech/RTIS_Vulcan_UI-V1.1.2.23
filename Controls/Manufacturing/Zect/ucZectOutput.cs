@@ -77,6 +77,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
 
                 dataLines = Client.getZectJobs(StartDate + "|" + EndDate);
                 dataPulled = true;
+                ppnlWait.Visible = false;
             }
             catch (Exception ex)
             {

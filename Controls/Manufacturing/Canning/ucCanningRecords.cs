@@ -79,6 +79,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing.Canning
 
                 dataLines = Client.getCanningRecords(StartDate + "|" + EndDate);
                 dataPulled = true;
+                ppnlWait.Visible = false;
             }
             catch (Exception ex)
             {
