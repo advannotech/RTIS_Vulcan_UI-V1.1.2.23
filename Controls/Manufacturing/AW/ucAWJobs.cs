@@ -37,8 +37,8 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
         private void ucAWJobs_Load(object sender, EventArgs e)
         {
             setUpDatatable();
-            dtpStartDate.Value = DateTime.Now.AddDays(-30);
-            dtpEndDate.Value = DateTime.Now;
+            dtpStartDate.Value = DateTime.Now;
+            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
             refreshItems();
         }
         public void setUpDatatable()
@@ -203,6 +203,16 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
 
             frmAWJobInfo jobInfo = new frmAWJobInfo(idParam, jobCodeParam, dtGenInfo);
             jobInfo.ShowDialog();
+        }
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
+        }
+
+        public DateTime getEndDate(DateTime minDate)
+        {
+            return minDate.AddDays(1);
         }
     }
 }

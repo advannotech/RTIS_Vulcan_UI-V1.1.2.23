@@ -50,8 +50,8 @@
             this.cbNeg.Location = new System.Drawing.Point(16, 49);
             this.cbNeg.Margin = new System.Windows.Forms.Padding(4);
             this.cbNeg.Name = "cbNeg";
-            this.cbNeg.Properties.Caption = "Negative Variences";
-            this.cbNeg.Size = new System.Drawing.Size(165, 20);
+            this.cbNeg.Properties.Caption = "Negative Variances";
+            this.cbNeg.Size = new System.Drawing.Size(165, 24);
             this.cbNeg.TabIndex = 0;
             this.cbNeg.CheckedChanged += new System.EventHandler(this.cbNeg_CheckedChanged);
             // 
@@ -60,8 +60,8 @@
             this.cbPos.Location = new System.Drawing.Point(189, 49);
             this.cbPos.Margin = new System.Windows.Forms.Padding(4);
             this.cbPos.Name = "cbPos";
-            this.cbPos.Properties.Caption = "Positive Variences";
-            this.cbPos.Size = new System.Drawing.Size(173, 20);
+            this.cbPos.Properties.Caption = "Positive Variances";
+            this.cbPos.Size = new System.Drawing.Size(173, 24);
             this.cbPos.TabIndex = 1;
             this.cbPos.CheckedChanged += new System.EventHandler(this.cbPos_CheckedChanged);
             // 
@@ -71,7 +71,7 @@
             this.cbUnc.Margin = new System.Windows.Forms.Padding(4);
             this.cbUnc.Name = "cbUnc";
             this.cbUnc.Properties.Caption = "Uncounted Items";
-            this.cbUnc.Size = new System.Drawing.Size(165, 20);
+            this.cbUnc.Size = new System.Drawing.Size(165, 24);
             this.cbUnc.TabIndex = 2;
             this.cbUnc.CheckedChanged += new System.EventHandler(this.cbUnc_CheckedChanged);
             // 
@@ -81,7 +81,7 @@
             this.cbMatch.Margin = new System.Windows.Forms.Padding(4);
             this.cbMatch.Name = "cbMatch";
             this.cbMatch.Properties.Caption = "Matching Items";
-            this.cbMatch.Size = new System.Drawing.Size(173, 20);
+            this.cbMatch.Size = new System.Drawing.Size(173, 24);
             this.cbMatch.TabIndex = 3;
             this.cbMatch.CheckedChanged += new System.EventHandler(this.cbMatch_CheckedChanged);
             // 
@@ -97,7 +97,7 @@
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
+            this.btnOk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.ImageOptions.Image")));
             this.btnOk.Location = new System.Drawing.Point(179, 197);
             this.btnOk.LookAndFeel.SkinMaskColor = System.Drawing.Color.Transparent;
             this.btnOk.LookAndFeel.SkinName = "DevExpress Dark Style";
@@ -114,8 +114,8 @@
             this.cbNonMatch.Location = new System.Drawing.Point(16, 153);
             this.cbNonMatch.Margin = new System.Windows.Forms.Padding(4);
             this.cbNonMatch.Name = "cbNonMatch";
-            this.cbNonMatch.Properties.Caption = "Scanner Variences";
-            this.cbNonMatch.Size = new System.Drawing.Size(165, 20);
+            this.cbNonMatch.Properties.Caption = "Scanner Variances";
+            this.cbNonMatch.Size = new System.Drawing.Size(165, 24);
             this.cbNonMatch.TabIndex = 6;
             this.cbNonMatch.CheckedChanged += new System.EventHandler(this.cbNonMatch_CheckedChanged);
             // 
@@ -125,7 +125,7 @@
             this.cbNonST.Margin = new System.Windows.Forms.Padding(4);
             this.cbNonST.Name = "cbNonST";
             this.cbNonST.Properties.Caption = "Non Stock Take";
-            this.cbNonST.Size = new System.Drawing.Size(173, 20);
+            this.cbNonST.Size = new System.Drawing.Size(173, 24);
             this.cbNonST.TabIndex = 7;
             this.cbNonST.CheckedChanged += new System.EventHandler(this.cbNonST_CheckedChanged);
             // 

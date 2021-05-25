@@ -54,6 +54,12 @@ namespace RTIS_Vulcan_UI.Controls
         }
         private void ucTransferManagement_Load(object sender, EventArgs e)
         {
+            dtpStartDate.Value = DateTime.Now;
+            dtpFailedStartDate.Value = DateTime.Now;
+            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
+            dtpFailedEndDate.MinDate = getEndDate(dtpFailedStartDate.Value);
+            dateTransferredStatus();
+            dateFailedStatus();
             setUpDatatables();
             loadStatuses();
             getProcesses();
@@ -260,6 +266,13 @@ namespace RTIS_Vulcan_UI.Controls
         {
             try
             {
+                string startDateTransferred = tglDateTransferred.IsOn == true ? "|t" + dtpStartDate.Value.ToString() : null;
+                string endDateTransferred = tglDateTransferred.IsOn == true ? "|" + dtpEndDate.Value.ToString() : null;
+                string startDateFailed = tglDateFailed.IsOn == true ? "|f" + dtpFailedStartDate.Value.ToString() : null;
+                string endDateFailed = tglDateFailed.IsOn == true ? "|" + dtpFailedEndDate.Value.ToString() : null;
+                int comboStatusIndex = cmbStatus.SelectedIndex;
+                string comboStatus = cmbStatus.Properties.Items[comboStatusIndex].ToString();
+
                 foreach (DataRow dr in dtProcs.Rows)
                 {
                     if (dr["DisplayName"].ToString() == cmbProcess.Text)
@@ -268,19 +281,19 @@ namespace RTIS_Vulcan_UI.Controls
                     }
                 }
 
-                if (cmbStatus.Text == "Posted")
+                if (comboStatus == "Posted")
                 {
-                    dataLines = Client.getWhseTransferLinesPosted(procName + "|" + txtRows.Text);
+                    dataLines = Client.getWhseTransferLinesPosted(string.Format("{0}|{1}{2}{3}{4}{5}", procName, txtRows.Text, startDateTransferred, endDateTransferred, startDateFailed, endDateFailed));
                     dataPulled = true;
                 }
-                else if (cmbStatus.Text == "All")
+                else if (comboStatus == "All")
                 {
-                    dataLines = Client.getWhseTransferLinesAll(procName + "|" + txtRows.Text);
+                    dataLines = Client.getWhseTransferLinesAll(string.Format("{0}|{1}{2}{3}{4}{5}", comboStatus, txtRows.Text, startDateTransferred, endDateTransferred, startDateFailed, endDateFailed));
                     dataPulled = true;
                 }
                 else
                 {
-                    dataLines = Client.getWhseTransferLines(cmbStatus.Text + "|" + procName + "|" + txtRows.Text);
+                    dataLines = Client.getWhseTransferLines(string.Format("{0}|{1}|{2}{3}{4}{5}{6}", comboStatus, procName , txtRows.Text, startDateTransferred, endDateTransferred, startDateFailed, endDateFailed));
                     dataPulled = true;
                 }               
             }
@@ -751,6 +764,64 @@ namespace RTIS_Vulcan_UI.Controls
                 tmrProcess.Stop();
                 ExHandler.showErrorEx(ex);
             }
+        }
+
+        private void dtpEndDate_ValueChanged(object sender, EventArgs e)
+        {
+            //dtpEndDate.MinDate = dtpStartDate.Value.AddDays(1);
+        }
+
+        public DateTime getEndDate(DateTime minDate)
+        {
+            return minDate.AddDays(1);
+        }
+
+        private void dtpStartDate_ValueChanged_1(object sender, EventArgs e)
+        {
+            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
+        }
+
+        private void dtpFailedStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtpFailedEndDate.MinDate = getEndDate(dtpFailedStartDate.Value);
+        }
+
+        private void tglDateTransferred_Toggled(object sender, EventArgs e)
+        {
+            dateTransferredStatus();
+        }
+
+        public void dateTransferredStatus()
+        {
+            if (tglDateTransferred.IsOn == true)
+            {
+                dtpStartDate.Enabled = true;
+                dtpEndDate.Enabled = true;
+            }
+            else
+            {
+                dtpStartDate.Enabled = false;
+                dtpEndDate.Enabled = false;
+            }
+        }
+
+        public void dateFailedStatus()
+        {
+            if (tglDateFailed.IsOn == true)
+            {
+                dtpFailedStartDate.Enabled = true;
+                dtpFailedEndDate.Enabled = true;
+            }
+            else
+            {
+                dtpFailedStartDate.Enabled = false;
+                dtpFailedEndDate.Enabled = false;
+            }
+        }
+
+        private void tglDateFailed_Toggled(object sender, EventArgs e)
+        {
+            dateFailedStatus();
         }
     }
 }

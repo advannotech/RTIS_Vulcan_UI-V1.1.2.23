@@ -37,8 +37,8 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
         private void ucZectOutput_Load(object sender, EventArgs e)
         {
             setUpDatatable();
-            dtpStartDate.Value = DateTime.Now.AddDays(-30);
-            dtpEndDate.Value = DateTime.Now;
+            dtpStartDate.Value = DateTime.Now;
+            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
             refreshItems();
         }
         public void setUpDatatable()
@@ -208,6 +208,16 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
         private void btnSearch_Click(object sender, EventArgs e)
         {
             refreshItems();
+        }
+
+        public DateTime getEndDate(DateTime minDate)
+        {
+            return minDate.AddDays(1);
+        }
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
         }
     }
 }

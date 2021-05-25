@@ -38,8 +38,8 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing.PGM
 
         private void ucPGMJobs_Load(object sender, EventArgs e)
         {
-            dtpStartDate.Value = DateTime.Now.AddDays(-30);
-            dtpEndDate.Value = DateTime.Now;
+            dtpStartDate.Value = DateTime.Now;
+            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
             setupPGMDataTable();
             refreshPGMItems();
         }
@@ -204,6 +204,16 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing.PGM
         private void btnSearch_Click(object sender, EventArgs e)
         {
             refreshPGMItems();
+        }
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
+        }
+
+        public DateTime getEndDate(DateTime minDate)
+        {
+            return minDate.AddDays(1);
         }
     }
 }
