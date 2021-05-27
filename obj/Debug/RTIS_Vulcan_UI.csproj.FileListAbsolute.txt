@@ -3390,4 +3390,3 @@ C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.csproj.CopyComplete
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.exe
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.pdb
-C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.csprojAssemblyReference.cache
