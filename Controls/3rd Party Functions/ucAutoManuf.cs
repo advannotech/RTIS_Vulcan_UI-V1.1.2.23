@@ -77,6 +77,7 @@ namespace RTIS_Vulcan_UI.Controls
                 string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd") + " 23:59:59";
                 dataLines = Client.GetAutoManufRecordsByDate(StartDate + "|" + EndDate);
                 dataPulled = true;
+                ppnlWait.Visible = false;
                 if (IsHandleCreated)
                 {
                     this.Invoke((MethodInvoker)delegate

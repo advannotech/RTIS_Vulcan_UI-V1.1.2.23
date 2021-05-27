@@ -110,6 +110,7 @@ namespace RTIS_Vulcan_UI.Controls.Administration
         {
             dataLines = Client.GetDispatchUnqs();
             dataPulled = true;
+            ppnlWait.Visible = false;
             if (IsHandleCreated)
             {
                 this.Invoke((MethodInvoker)delegate

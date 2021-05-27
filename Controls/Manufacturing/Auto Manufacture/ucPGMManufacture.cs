@@ -314,7 +314,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing.PGM
                         {
                             case "1":
                                 msg = new frmMsg("Success", "The powder has been manufactured",
-                                    GlobalVars.msgState.Info);
+                                    GlobalVars.msgState.Success);
                                 msg.ShowDialog();
                                 gvPowders.DeleteRow(index);
                                 break;
@@ -398,7 +398,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing.PGM
                         {
                             case "1":
                                 msg = new frmMsg("Success", "The powder has been manufactured",
-                                    GlobalVars.msgState.Info);
+                                    GlobalVars.msgState.Success);
                                 msg.ShowDialog();
                                 gvPowders.DeleteRow(index);
                                 break;

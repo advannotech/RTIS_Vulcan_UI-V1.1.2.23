@@ -150,6 +150,7 @@ namespace RTIS_Vulcan_UI.Controls
             {
                 dataLines = Client.GetWhtProcLokkups(procName);
                 dataPulled = true;
+                ppnlWait.Visible = false;
             }
             catch (Exception ex)
             {
