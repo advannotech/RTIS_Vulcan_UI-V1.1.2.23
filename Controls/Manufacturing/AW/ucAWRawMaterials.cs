@@ -86,6 +86,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
             {
                 dataLines = Client.getAWCatalysts();
                 dataPulled = true;
+                ppnlWait.Visible = false;
             }
             catch (Exception ex)
             {

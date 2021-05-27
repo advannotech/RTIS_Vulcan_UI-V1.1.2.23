@@ -85,6 +85,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
             {
                 dataLines = Client.getCanningCatalysts();
                 dataPulled = true;
+                ppnlWait.Visible = false;
             }
             catch (Exception ex)
             {

@@ -4756,7 +4756,6 @@ namespace RTIS_Vulcan_UI.Classes
                 byte[] receivebytes = new byte[3];
                 ASCIIEncoding ascenc = new ASCIIEncoding();
 
-
                 //Send start request
                 DataClient.SendTimeout = 60000;
                 DataClient.ReceiveTimeout = 60000;

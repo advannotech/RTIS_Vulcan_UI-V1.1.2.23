@@ -83,6 +83,7 @@ namespace RTIS_Vulcan_UI.Controls
             {
                 dataLines = Client.getZectCatalysts();
                 dataPulled = true;
+                ppnlWait.Visible = false;
             }
             catch (Exception ex)
             {
