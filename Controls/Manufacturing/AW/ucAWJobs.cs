@@ -205,5 +205,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
             frmAWJobInfo jobInfo = new frmAWJobInfo(idParam, jobCodeParam, dtGenInfo);
             jobInfo.ShowDialog();
         }
+
+     
     }
 }
