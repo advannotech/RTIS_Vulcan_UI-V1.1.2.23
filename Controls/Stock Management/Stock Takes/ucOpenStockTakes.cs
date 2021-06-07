@@ -355,23 +355,19 @@ namespace RTIS_Vulcan_UI.Controls.Stock_Management.Stock_Takes
                     builder.Append(writeLine);
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        bool onST = Convert.ToBoolean(gvItems.GetRowCellValue(i, "gcOnST").ToString());
-                        if (onST)
+                        string line = string.Empty;
+                        var builder1 = new StringBuilder();
+                        builder1.Append(line);
+                        foreach (string column in _format.Split('|'))
                         {
-                            string line = string.Empty;
-                            var builder1 = new StringBuilder();
-                            builder1.Append(line);
-                            foreach (string column in _format.Split('|'))
+                            if (column != string.Empty)
                             {
-                                if (column != string.Empty)
-                                {
-                                    builder1.Append(gvItems.GetRowCellValue(i, column) + _delimiter.Replace("'", ""));
-                                }
+                                builder1.Append(gvItems.GetRowCellValue(i, column) + _delimiter.Replace("'", ""));
                             }
-                            line = builder1.ToString();
-                            line = line.Substring(0, line.Length - 1);
-                            builder.Append(line + "|");
                         }
+                        line = builder1.ToString();
+                        line = line.Substring(0, line.Length - 1);
+                        builder.Append(line + "|");
                     }
                     writeLine = builder.ToString();
                     File.Create(@"C:\RTIS\Stock Takes\Stock Take Records\" + cmbStockTakes.Text.Split('-')[0].Substring(0, cmbStockTakes.Text.Split('-')[0].Length - 1) + " - " + _name + ".csv").Close();
