@@ -209,5 +209,15 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing.Canning
         {
             dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
         }
+
+        private void pnlBack_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ppnlWait_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTransferManagement));
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnProcess = new DevExpress.XtraEditors.SimpleButton();
@@ -76,11 +75,9 @@
             this.ppnlWait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.tmrProcess = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTransfers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTransfers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbOptions)).BeginInit();
-            this.gbOptions.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtRows.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -129,8 +126,7 @@
             this.btnProcess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnProcess.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnProcess.Appearance.Options.UseBackColor = true;
-            this.btnProcess.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProcess.ImageOptions.Image")));
-            this.btnProcess.Location = new System.Drawing.Point(542, 677);
+            this.btnProcess.Location = new System.Drawing.Point(1654, 1309);
             this.btnProcess.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnProcess.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnProcess.Margin = new System.Windows.Forms.Padding(4);
@@ -149,7 +145,7 @@
             this.dgTransfers.Location = new System.Drawing.Point(6, 163);
             this.dgTransfers.MainView = this.gvTransfers;
             this.dgTransfers.Name = "dgTransfers";
-            this.dgTransfers.Size = new System.Drawing.Size(1300, 507);
+            this.dgTransfers.Size = new System.Drawing.Size(2412, 1139);
             this.dgTransfers.TabIndex = 2;
             this.dgTransfers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTransfers});
@@ -338,7 +334,7 @@
             this.gbOptions.Location = new System.Drawing.Point(6, 6);
             this.gbOptions.Margin = new System.Windows.Forms.Padding(4);
             this.gbOptions.Name = "gbOptions";
-            this.gbOptions.Size = new System.Drawing.Size(1300, 150);
+            this.gbOptions.Size = new System.Drawing.Size(2412, 150);
             this.gbOptions.TabIndex = 1;
             this.gbOptions.Text = "Search Options";
             // 
@@ -378,9 +374,12 @@
             // 
             this.tglDateTransferred.Location = new System.Drawing.Point(233, 14);
             this.tglDateTransferred.Name = "tglDateTransferred";
+            // 
+            // 
+            // 
             this.tglDateTransferred.Properties.OffText = "Off";
             this.tglDateTransferred.Properties.OnText = "On";
-            this.tglDateTransferred.Size = new System.Drawing.Size(95, 24);
+            this.tglDateTransferred.Size = new System.Drawing.Size(95, 26);
             this.tglDateTransferred.TabIndex = 104;
             this.tglDateTransferred.Toggled += new System.EventHandler(this.tglDateTransferred_Toggled);
             // 
@@ -445,9 +444,12 @@
             // 
             this.tglDateFailed.Location = new System.Drawing.Point(210, 14);
             this.tglDateFailed.Name = "tglDateFailed";
+            // 
+            // 
+            // 
             this.tglDateFailed.Properties.OffText = "Off";
             this.tglDateFailed.Properties.OnText = "On";
-            this.tglDateFailed.Size = new System.Drawing.Size(95, 24);
+            this.tglDateFailed.Size = new System.Drawing.Size(95, 26);
             this.tglDateFailed.TabIndex = 104;
             this.tglDateFailed.Toggled += new System.EventHandler(this.tglDateFailed_Toggled);
             // 
@@ -509,6 +511,9 @@
             this.cmbStatus.Location = new System.Drawing.Point(3, 76);
             this.cmbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbStatus.Name = "cmbStatus";
+            // 
+            // 
+            // 
             this.cmbStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbStatus.Size = new System.Drawing.Size(292, 22);
@@ -530,6 +535,9 @@
             this.cmbProcess.Location = new System.Drawing.Point(3, 76);
             this.cmbProcess.Margin = new System.Windows.Forms.Padding(4);
             this.cmbProcess.Name = "cmbProcess";
+            // 
+            // 
+            // 
             this.cmbProcess.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbProcess.Size = new System.Drawing.Size(292, 22);
@@ -540,8 +548,7 @@
             this.btnUnlock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUnlock.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnUnlock.Appearance.Options.UseBackColor = true;
-            this.btnUnlock.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUnlock.ImageOptions.Image")));
-            this.btnUnlock.Location = new System.Drawing.Point(928, 677);
+            this.btnUnlock.Location = new System.Drawing.Point(2040, 1309);
             this.btnUnlock.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnUnlock.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnUnlock.Margin = new System.Windows.Forms.Padding(4);
@@ -556,8 +563,7 @@
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnSearch.Appearance.Options.UseBackColor = true;
-            this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(1121, 677);
+            this.btnSearch.Location = new System.Drawing.Point(2233, 1309);
             this.btnSearch.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnSearch.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
@@ -572,8 +578,7 @@
             this.btnPending.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPending.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnPending.Appearance.Options.UseBackColor = true;
-            this.btnPending.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPending.ImageOptions.Image")));
-            this.btnPending.Location = new System.Drawing.Point(735, 677);
+            this.btnPending.Location = new System.Drawing.Point(1847, 1309);
             this.btnPending.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnPending.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnPending.Margin = new System.Windows.Forms.Padding(4);
@@ -594,6 +599,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.ppnlWait.Appearance.Options.UseBackColor = true;
+            this.ppnlWait.BarAnimationElementThickness = 2;
             this.ppnlWait.Location = new System.Drawing.Point(4, 2);
             this.ppnlWait.Margin = new System.Windows.Forms.Padding(4);
             this.ppnlWait.Name = "ppnlWait";
@@ -617,11 +623,9 @@
             this.Size = new System.Drawing.Size(1319, 791);
             this.Load += new System.EventHandler(this.ucTransferManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgTransfers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTransfers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbOptions)).EndInit();
-            this.gbOptions.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtRows.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -97,7 +97,6 @@
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.ImageOptions.Image")));
             this.btnOk.Location = new System.Drawing.Point(179, 197);
             this.btnOk.LookAndFeel.SkinMaskColor = System.Drawing.Color.Transparent;
             this.btnOk.LookAndFeel.SkinName = "DevExpress Dark Style";
