@@ -71,6 +71,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
             tmrItems.Start();
             Thread thread = new Thread(getAWJobs);
             thread.Start();
+            ppnlWait.Visible = false;
         }
         public void getAWJobs()
         {

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTIS_Vulcan_UI", "RTIS_Vulcan_UI.csproj", "{D6D0EB05-EFE9-40D6-9EBE-D08091C63BC7}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Advannotech_UI", "..\Advannotech_UI\Advannotech_UI.vdproj", "{78D77A8A-2507-4E71-9044-3DAAB7E0DB89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,13 @@ Global
 		{D6D0EB05-EFE9-40D6-9EBE-D08091C63BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6D0EB05-EFE9-40D6-9EBE-D08091C63BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6D0EB05-EFE9-40D6-9EBE-D08091C63BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78D77A8A-2507-4E71-9044-3DAAB7E0DB89}.Debug|Any CPU.ActiveCfg = Debug
+		{78D77A8A-2507-4E71-9044-3DAAB7E0DB89}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC3E463C-BDB0-47C7-9EA2-2C21C05C8456}
 	EndGlobalSection
 EndGlobal
