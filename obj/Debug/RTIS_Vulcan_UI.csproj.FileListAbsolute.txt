@@ -3088,6 +3088,8 @@ D:\Reltech Solutions\GIT\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulc
 D:\Reltech Solutions\GIT\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Reports.rptPalletLines.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\SQLite.Interop.dll
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\RTIS_Vulcan_UI.exe.config
+C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\RTIS_Vulcan_UI.exe.manifest
+C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\RTIS_Vulcan_UI.application
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\RTIS_Vulcan_UI.exe
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\RTIS_Vulcan_UI.pdb
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\DevExpress.BonusSkins.v20.2.dll
@@ -3387,11 +3389,8 @@ C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.csproj.GenerateResource.cache
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.exe.licenses
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.csproj.CoreCompileInputs.cache
+C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.exe.manifest
+C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.application
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.csproj.CopyComplete
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.exe
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.pdb
-C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.csprojAssemblyReference.cache
-C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\RTIS_Vulcan_UI.exe.manifest
-C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\RTIS_Vulcan_UI.application
-C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.exe.manifest
-C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.application
