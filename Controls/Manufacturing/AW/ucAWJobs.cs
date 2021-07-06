@@ -80,6 +80,11 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
                 string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd") + " 23:59:59"; //.Split(' ')[0]
 
                 dataLines = Client.getAWJobs(StartDate + "|" + EndDate);
+                if (!dataLines.Equals(string.Empty))
+                {
+                    ppnlWait.Visible = false;
+                }
+
                 dataPulled = true;
             }
             catch (Exception ex)

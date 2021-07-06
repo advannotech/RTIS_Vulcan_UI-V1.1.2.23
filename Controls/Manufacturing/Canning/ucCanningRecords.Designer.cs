@@ -46,14 +46,14 @@
             this.gcPallet = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcUser = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.ppnlWait = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.tmrItems = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.lblDateFrom = new System.Windows.Forms.Label();
             this.lblDateTo = new System.Windows.Forms.Label();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.ppnlWait = new DevExpress.XtraWaitForm.ProgressPanel();
+            this.tmrItems = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pnlBack)).BeginInit();
             this.pnlBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).BeginInit();
@@ -220,40 +220,6 @@
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Search Options";
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Appearance.BackColor = System.Drawing.Color.Black;
-            this.btnSearch.Appearance.Options.UseBackColor = true;
-            this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
-            this.btnSearch.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSearch.Location = new System.Drawing.Point(374, 68);
-            this.btnSearch.LookAndFeel.SkinName = "DevExpress Dark Style";
-            this.btnSearch.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(56, 52);
-            this.btnSearch.TabIndex = 38;
-            this.btnSearch.ToolTip = "Search";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // ppnlWait
-            // 
-            this.ppnlWait.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.ppnlWait.Appearance.Options.UseBackColor = true;
-            this.ppnlWait.Location = new System.Drawing.Point(0, 0);
-            this.ppnlWait.Margin = new System.Windows.Forms.Padding(4);
-            this.ppnlWait.Name = "ppnlWait";
-            this.ppnlWait.Size = new System.Drawing.Size(1311, 795);
-            this.ppnlWait.TabIndex = 39;
-            this.ppnlWait.Text = "progressPanel1";
-            // 
-            // tmrItems
-            // 
-            this.tmrItems.Tick += new System.EventHandler(this.tmrItems_Tick);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dtpStartDate);
@@ -265,7 +231,7 @@
             this.groupBox1.Size = new System.Drawing.Size(351, 100);
             this.groupBox1.TabIndex = 104;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Date Transferred";
+            this.groupBox1.Text = "Date Added";
             // 
             // dtpStartDate
             // 
@@ -309,6 +275,40 @@
             this.dtpEndDate.Size = new System.Drawing.Size(132, 23);
             this.dtpEndDate.TabIndex = 45;
             this.dtpEndDate.Value = new System.DateTime(2017, 10, 23, 13, 27, 52, 0);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Appearance.BackColor = System.Drawing.Color.Black;
+            this.btnSearch.Appearance.Options.UseBackColor = true;
+            this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
+            this.btnSearch.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSearch.Location = new System.Drawing.Point(374, 68);
+            this.btnSearch.LookAndFeel.SkinName = "DevExpress Dark Style";
+            this.btnSearch.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(56, 52);
+            this.btnSearch.TabIndex = 38;
+            this.btnSearch.ToolTip = "Search";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // ppnlWait
+            // 
+            this.ppnlWait.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.ppnlWait.Appearance.Options.UseBackColor = true;
+            this.ppnlWait.Location = new System.Drawing.Point(0, 0);
+            this.ppnlWait.Margin = new System.Windows.Forms.Padding(4);
+            this.ppnlWait.Name = "ppnlWait";
+            this.ppnlWait.Size = new System.Drawing.Size(1311, 795);
+            this.ppnlWait.TabIndex = 39;
+            this.ppnlWait.Text = "progressPanel1";
+            // 
+            // tmrItems
+            // 
+            this.tmrItems.Tick += new System.EventHandler(this.tmrItems_Tick);
             // 
             // ucCanningRecords
             // 
