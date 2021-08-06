@@ -122,7 +122,7 @@
             // btnReprint
             // 
             this.btnReprint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReprint.Image = ((System.Drawing.Image)(resources.GetObject("btnReprint.Image")));
+            this.btnReprint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnReprint.ImageOptions.Image")));
             this.btnReprint.Location = new System.Drawing.Point(959, 676);
             this.btnReprint.LookAndFeel.SkinMaskColor = System.Drawing.Color.Transparent;
             this.btnReprint.LookAndFeel.SkinName = "DevExpress Dark Style";
@@ -137,7 +137,7 @@
             // btnPrintDocument
             // 
             this.btnPrintDocument.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPrintDocument.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintDocument.Image")));
+            this.btnPrintDocument.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintDocument.ImageOptions.Image")));
             this.btnPrintDocument.Location = new System.Drawing.Point(8, 676);
             this.btnPrintDocument.LookAndFeel.SkinMaskColor = System.Drawing.Color.Transparent;
             this.btnPrintDocument.LookAndFeel.SkinName = "DevExpress Dark Style";
@@ -153,7 +153,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
             this.btnCancel.Location = new System.Drawing.Point(783, 676);
             this.btnCancel.LookAndFeel.SkinMaskColor = System.Drawing.Color.Transparent;
             this.btnCancel.LookAndFeel.SkinName = "DevExpress Dark Style";
@@ -198,7 +198,7 @@
             this.cbAllLines.Margin = new System.Windows.Forms.Padding(4);
             this.cbAllLines.Name = "cbAllLines";
             this.cbAllLines.Properties.Caption = "Show all lines";
-            this.cbAllLines.Size = new System.Drawing.Size(141, 20);
+            this.cbAllLines.Size = new System.Drawing.Size(141, 24);
             this.cbAllLines.TabIndex = 89;
             this.cbAllLines.CheckedChanged += new System.EventHandler(this.cbAllLines_CheckedChanged);
             // 
@@ -216,7 +216,7 @@
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnSearch.Appearance.Options.UseBackColor = true;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
             this.btnSearch.Location = new System.Drawing.Point(1229, 30);
             this.btnSearch.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnSearch.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -260,7 +260,7 @@
             // btnComplete
             // 
             this.btnComplete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnComplete.Image = ((System.Drawing.Image)(resources.GetObject("btnComplete.Image")));
+            this.btnComplete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnComplete.ImageOptions.Image")));
             this.btnComplete.Location = new System.Drawing.Point(1135, 676);
             this.btnComplete.LookAndFeel.SkinMaskColor = System.Drawing.Color.Transparent;
             this.btnComplete.LookAndFeel.SkinName = "DevExpress Dark Style";
@@ -500,7 +500,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.ppnlWait.Appearance.Options.UseBackColor = true;
-            this.ppnlWait.BarAnimationElementThickness = 2;
             this.ppnlWait.Location = new System.Drawing.Point(8, 6);
             this.ppnlWait.Margin = new System.Windows.Forms.Padding(4);
             this.ppnlWait.Name = "ppnlWait";
@@ -519,7 +518,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ppnlPrint.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ppnlPrint.Appearance.Options.UseBackColor = true;
-            this.ppnlPrint.BarAnimationElementThickness = 2;
             this.ppnlPrint.Description = "Preparing to print ...";
             this.ppnlPrint.Location = new System.Drawing.Point(4, 56);
             this.ppnlPrint.Margin = new System.Windows.Forms.Padding(4);
