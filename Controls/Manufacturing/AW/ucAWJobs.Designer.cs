@@ -348,6 +348,7 @@
             this.ppnlWait.Size = new System.Drawing.Size(1311, 787);
             this.ppnlWait.TabIndex = 38;
             this.ppnlWait.Text = "progressPanel1";
+            this.ppnlWait.Visible = false;
             // 
             // tmrItems
             // 

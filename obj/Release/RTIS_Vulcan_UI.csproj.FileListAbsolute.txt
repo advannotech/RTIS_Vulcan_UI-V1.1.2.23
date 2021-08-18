@@ -3054,7 +3054,6 @@ C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Relea
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Release\es\DevExpress.Diagram.v20.2.Core.resources.dll
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Release\ja\DevExpress.Diagram.v20.2.Core.resources.dll
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Release\ru\DevExpress.Diagram.v20.2.Core.resources.dll
-C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Release\RTIS_Vulcan_UI.csprojAssemblyReference.cache
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Release\RTIS_Vulcan_UI.ucRecTransferManagement.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Release\RTIS_Vulcan_UI.Controls.Administration.Transfer_Management.ucWhseLocManagement.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Release\RTIS_Vulcan_UI.Controls.Administration.ucDispatchBarcodes.resources
@@ -3166,3 +3165,4 @@ C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Relea
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Release\RTIS_Vulcan_UI.csproj.CopyComplete
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Release\RTIS_Vulcan_UI.exe
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Release\RTIS_Vulcan_UI.pdb
+C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Release\RTIS_Vulcan_UI.csprojAssemblyReference.cache

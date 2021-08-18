@@ -69,7 +69,7 @@
             this.gcIsCounted = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcWhseName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcOnST = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ppnlWait = new DevExpress.XtraWaitForm.ProgressPanel();
+            this.dgEquiry = new DevExpress.XtraGrid.GridControl();
             this.gvEnquiry = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -79,15 +79,15 @@
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcUser = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dgEquiry = new DevExpress.XtraGrid.GridControl();
+            this.ppnlWait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.pnlBack.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlLeg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbStockTakes.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvItems)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvEnquiry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgEquiry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvEnquiry)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -499,7 +499,7 @@
             // 
             // gcVarience
             // 
-            this.gcVarience.Caption = "Varience";
+            this.gcVarience.Caption = "Variance";
             this.gcVarience.FieldName = "gcVarience";
             this.gcVarience.Name = "gcVarience";
             this.gcVarience.OptionsColumn.ReadOnly = true;
@@ -539,22 +539,18 @@
             this.gcOnST.FieldName = "gcOnST";
             this.gcOnST.Name = "gcOnST";
             // 
-            // ppnlWait
+            // dgEquiry
             // 
-            this.ppnlWait.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgEquiry.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ppnlWait.AnimationToTextDistance = 10;
-            this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.ppnlWait.Appearance.Options.UseBackColor = true;
-            this.ppnlWait.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ppnlWait.Description = "Loading stock take, this may take a few minutes...";
-            this.ppnlWait.Location = new System.Drawing.Point(4, 4);
-            this.ppnlWait.Margin = new System.Windows.Forms.Padding(4);
-            this.ppnlWait.Name = "ppnlWait";
-            this.ppnlWait.Size = new System.Drawing.Size(1311, 679);
-            this.ppnlWait.TabIndex = 10;
-            this.ppnlWait.Text = "progressPanel1";
+            this.dgEquiry.Location = new System.Drawing.Point(3, 110);
+            this.dgEquiry.MainView = this.gvEnquiry;
+            this.dgEquiry.Name = "dgEquiry";
+            this.dgEquiry.Size = new System.Drawing.Size(1294, 408);
+            this.dgEquiry.TabIndex = 28;
+            this.dgEquiry.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvEnquiry});
             // 
             // gvEnquiry
             // 
@@ -641,18 +637,22 @@
             this.gcDate.Visible = true;
             this.gcDate.VisibleIndex = 6;
             // 
-            // dgEquiry
+            // ppnlWait
             // 
-            this.dgEquiry.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ppnlWait.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgEquiry.Location = new System.Drawing.Point(3, 110);
-            this.dgEquiry.MainView = this.gvEnquiry;
-            this.dgEquiry.Name = "dgEquiry";
-            this.dgEquiry.Size = new System.Drawing.Size(1294, 408);
-            this.dgEquiry.TabIndex = 28;
-            this.dgEquiry.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvEnquiry});
+            this.ppnlWait.AnimationToTextDistance = 10;
+            this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.ppnlWait.Appearance.Options.UseBackColor = true;
+            this.ppnlWait.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ppnlWait.Description = "Loading stock take, this may take a few minutes...";
+            this.ppnlWait.Location = new System.Drawing.Point(4, 4);
+            this.ppnlWait.Margin = new System.Windows.Forms.Padding(4);
+            this.ppnlWait.Name = "ppnlWait";
+            this.ppnlWait.Size = new System.Drawing.Size(1311, 679);
+            this.ppnlWait.TabIndex = 10;
+            this.ppnlWait.Text = "progressPanel1";
             // 
             // ucOpenStockTakes
             // 
@@ -672,8 +672,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbStockTakes.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvItems)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvEnquiry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgEquiry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvEnquiry)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
