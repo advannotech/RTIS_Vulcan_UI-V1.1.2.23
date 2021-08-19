@@ -329,13 +329,23 @@ namespace RTIS_Vulcan_UI.Controls
                                 dtTransfers.Rows.Clear();
                                 whseTransferLines = whseTransferLines.Remove(0, 2);
                                 string[] allTransferLines = whseTransferLines.Split('~');
-                                foreach (string transferLine in allTransferLines)
+                                int count = allTransferLines.Length <= Convert.ToInt32(txtRows.Text) ? allTransferLines.Length : Convert.ToInt32(txtRows.Text);
+                                for (int i = 0; i < count; i++)
                                 {
-                                    if (transferLine != string.Empty)
+                                    //allTransferLines[i]
+                                    if (allTransferLines[i] != string.Empty)
                                     {
-                                        dtTransfers.Rows.Add(transferLine.Split('|'));
+                                        dtTransfers.Rows.Add(allTransferLines[i].Split('|'));
                                     }
                                 }
+
+                                //foreach (string transferLine in allTransferLines)
+                                //{
+                                //    if (transferLine != string.Empty)
+                                //    {
+                                //        dtTransfers.Rows.Add(transferLine.Split('|'));
+                                //    }
+                                //}
 
                                 dgTransfers.DataSource = dtTransfers;
                                 dgTransfers.MainView.GridControl.DataSource = dtTransfers;

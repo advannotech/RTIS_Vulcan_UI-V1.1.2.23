@@ -590,11 +590,11 @@ namespace RTIS_Vulcan_UI.Controls.Stock_Management.Stock_Takes
                     {
                         string qty1 = Convert.ToString(gvItems.GetRowCellValue(i, "gcCounted")).Replace(",", GlobalVars.sep).Replace(".", GlobalVars.sep);
                         string qty2 = Convert.ToString(gvItems.GetRowCellValue(i, "gcCounted2")).Replace(",", GlobalVars.sep).Replace(".", GlobalVars.sep);
-                        if (qty1 != qty2)
-                        {
-                            found = true;
-                            break;
-                        }
+                        //if (qty1 != qty2)
+                        //{
+                        //    found = true;
+                        //    break;
+                        //}
                     }
 
                     if (found == false)
