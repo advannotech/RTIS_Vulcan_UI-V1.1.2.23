@@ -3061,11 +3061,11 @@ namespace RTIS_Vulcan_UI.Classes
                 byte[] receivebytes = new byte[2];
                 ASCIIEncoding ascenc = new ASCIIEncoding();
 
-
                 //Send start request
                 //DataClient.SendTimeout = 60000;
                 //DataClient.ReceiveTimeout = 120000;
                 DataClient.Connect(ServerEP);
+                DataClient.ReceiveTimeout = 2000;
 
                 sendbytes = ascenc.GetBytes("*POSTPOLINESNEW*@" + info);
                 DataClient.Send(sendbytes);
