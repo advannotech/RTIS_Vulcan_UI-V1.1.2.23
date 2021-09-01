@@ -67,129 +67,6 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\DevExpress.BonusSkins.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.Charts.v16.2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.CodeParser.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.CodeParser.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.Data.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.DataAccess.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.DataAccess.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.DataAccess.v16.2.UI">
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.DataAccess.v16.2.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Diagram.v16.2.Core">
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.Diagram.v16.2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Office.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.Office.v16.2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Pdf.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.Pdf.v16.2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.PivotGrid.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.PivotGrid.v16.2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.Printing.v16.2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.RichEdit.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.RichEdit.v16.2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.Utils.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Utils.v16.2.UI, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.Utils.v16.2.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Xpo.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.Xpo.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraBars.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraCharts.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraCharts.v16.2.Extensions">
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraCharts.v16.2.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraCharts.v16.2.Wizard">
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraCharts.v16.2.Wizard.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraDiagram.v16.2">
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraDiagram.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraEditors.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraGauges.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraGauges.v16.2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraGrid.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraLayout.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v16.2">
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraNavBar.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v16.2">
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraPivotGrid.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraPrinting.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraReports.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraReports.v16.2.Extensions, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraReports.v16.2.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraRichEdit.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v16.2.Extensions, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraRichEdit.v16.2.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v16.2">
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraTreeList.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraVerticalGrid.v16.2">
-      <HintPath>..\..\..\..\Downloads\wetransfer-d2a3a3\Source Code 2021\Source Code 2021\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Install\DevExpress.XtraVerticalGrid.v16.2.dll</HintPath>
-    </Reference>
     <Reference Include="Interop.wgssSTU">
       <HintPath>.\Interop.wgssSTU.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -550,9 +427,7 @@
     <Compile Include="Forms\Main\frmQty.Designer.cs">
       <DependentUpon>frmQty.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Main\frmWait.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Forms\Main\frmWait.cs" />
     <Compile Include="Forms\Main\frmWait.Designer.cs">
       <DependentUpon>frmWait.cs</DependentUpon>
     </Compile>
@@ -748,9 +623,7 @@
     <Compile Include="Forms\User Management\frmUserManagement.Designer.cs">
       <DependentUpon>frmUserManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Messages\frmError.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Forms\Messages\frmError.cs" />
     <Compile Include="Forms\Messages\frmError.Designer.cs">
       <DependentUpon>frmError.cs</DependentUpon>
     </Compile>
@@ -779,77 +652,53 @@
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Labels\prntCanning.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Labels\prntCanning.cs" />
     <Compile Include="Labels\prntCanning.Designer.cs">
       <DependentUpon>prntCanning.cs</DependentUpon>
     </Compile>
-    <Compile Include="Labels\prntFGBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Labels\prntFGBox.cs" />
     <Compile Include="Labels\prntFGBox.Designer.cs">
       <DependentUpon>prntFGBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Labels\prntRMPallet.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Labels\prntRMPallet.cs" />
     <Compile Include="Labels\prntRMPallet.Designer.cs">
       <DependentUpon>prntRMPallet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Labels\prntFGPallet.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Labels\prntFGPallet.cs" />
     <Compile Include="Labels\prntFGPallet.Designer.cs">
       <DependentUpon>prntFGPallet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Labels\prntStkLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Labels\prntStkLabel.cs" />
     <Compile Include="Labels\prntStkLabel.Designer.cs">
       <DependentUpon>prntStkLabel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Labels\prntAWConfig.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Labels\prntAWConfig.cs" />
     <Compile Include="Labels\prntAWConfig.Designer.cs">
       <DependentUpon>prntAWConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Labels\prntZectConfig.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Labels\prntZectConfig.cs" />
     <Compile Include="Labels\prntZectConfig.Designer.cs">
       <DependentUpon>prntZectConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Labels\prntAWLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Labels\prntAWLabel.cs" />
     <Compile Include="Labels\prntAWLabel.Designer.cs">
       <DependentUpon>prntAWLabel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Labels\prntZectLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Labels\prntZectLabel.cs" />
     <Compile Include="Labels\prntZectLabel.Designer.cs">
       <DependentUpon>prntZectLabel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\rptInvCount.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Reports\rptInvCount.cs" />
     <Compile Include="Reports\rptInvCount.Designer.cs">
       <DependentUpon>rptInvCount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\rptPalletLines.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Reports\rptPalletLines.cs" />
     <Compile Include="Reports\rptPalletLines.Designer.cs">
       <DependentUpon>rptPalletLines.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\rptPORec.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Reports\rptPORec.cs" />
     <Compile Include="Reports\rptPORec.Designer.cs">
       <DependentUpon>rptPORec.cs</DependentUpon>
     </Compile>
