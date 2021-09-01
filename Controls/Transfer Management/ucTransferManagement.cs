@@ -300,6 +300,12 @@ namespace RTIS_Vulcan_UI.Controls
                 }
                 else
                 {
+                    if (groupBox2.Enabled == false)
+                    {
+                        startDateFailed = "";
+                        endDateFailed = "";
+                    }
+                    
                     dataLines = Client.getWhseTransferLines(string.Format("{0}|{1}|{2}{3}{4}{5}{6}", comboStatus, procName , txtRows.Text, startDateTransferred, endDateTransferred, startDateFailed, endDateFailed));
                     dataPulled = true;
                 }               
@@ -839,6 +845,26 @@ namespace RTIS_Vulcan_UI.Controls
         private void tglDateFailed_Toggled(object sender, EventArgs e)
         {
             dateFailedStatus();
+        }
+
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbStatus.Text == "Pending" || cmbStatus.Text == "All")
+            {
+                groupBox2.Enabled = false;
+            }
+            else
+            {
+                groupBox2.Enabled = true;
+            }
+        }
+
+        private void txtRows_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

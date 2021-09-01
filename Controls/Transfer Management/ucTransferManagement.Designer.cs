@@ -359,6 +359,7 @@
             this.txtRows.Name = "txtRows";
             this.txtRows.Size = new System.Drawing.Size(267, 22);
             this.txtRows.TabIndex = 95;
+            this.txtRows.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRows_KeyPress);
             // 
             // groupBox1
             // 
@@ -513,6 +514,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbStatus.Size = new System.Drawing.Size(292, 22);
             this.cmbStatus.TabIndex = 41;
+            this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
             // 
             // groupBox4
             // 
