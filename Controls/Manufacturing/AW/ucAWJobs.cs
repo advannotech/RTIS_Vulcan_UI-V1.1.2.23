@@ -38,7 +38,10 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
         {
             setUpDatatable();
             dtpStartDate.Value = DateTime.Now;
-            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
+            dtpStartDate.MaxDate = DateTime.Now;
+            dtpEndDate.MinDate = dtpStartDate.Value;
+            dtpEndDate.MaxDate = dtpStartDate.Value;
+            
             refreshItems();
         }
         public void setUpDatatable()
@@ -65,6 +68,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
         }
         public void refreshItems()
         {
+            ppnlWait.Visible = true;
             ppnlWait.BringToFront();
             dataPulled = false;
             Application.DoEvents();
@@ -72,12 +76,13 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
             Thread thread = new Thread(getAWJobs);
             thread.Start();
         }
+            
         public void getAWJobs()
         {
             try
             {
-                string StartDate = dtpStartDate.Value.ToString("yyyy-MM-dd") + " 00:00:01"; //.Split(' ')[0]
-                string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd") + " 23:59:59"; //.Split(' ')[0]
+                string StartDate = dtpStartDate.Value.ToString("yyyy-MM-dd");
+                string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd");
 
                 dataLines = Client.getAWJobs(StartDate + "|" + EndDate);
                 if (!dataLines.Equals(string.Empty))
@@ -86,6 +91,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
                 }
 
                 dataPulled = true;
+                ppnlWait.Visible = false;
             }
             catch (Exception ex)
             {
@@ -212,7 +218,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
 
         private void dtpStartDate_ValueChanged(object sender, EventArgs e)
         {
-            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
+            dtpEndDate.MinDate = dtpStartDate.Value;
         }
 
         public DateTime getEndDate(DateTime minDate)

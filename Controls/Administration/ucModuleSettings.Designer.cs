@@ -359,7 +359,7 @@
             this.btnSaveFG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveFG.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnSaveFG.Appearance.Options.UseBackColor = true;
-            this.btnSaveFG.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveFG.Image")));
+            this.btnSaveFG.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveFG.ImageOptions.Image")));
             this.btnSaveFG.Location = new System.Drawing.Point(1121, 139);
             this.btnSaveFG.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnSaveFG.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -441,7 +441,7 @@
             this.btnSaveSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveSP.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnSaveSP.Appearance.Options.UseBackColor = true;
-            this.btnSaveSP.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveSP.Image")));
+            this.btnSaveSP.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveSP.ImageOptions.Image")));
             this.btnSaveSP.Location = new System.Drawing.Point(1121, 110);
             this.btnSaveSP.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnSaveSP.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -477,7 +477,7 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnSave.Appearance.Options.UseBackColor = true;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.Location = new System.Drawing.Point(1121, 174);
             this.btnSave.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnSave.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -490,8 +490,8 @@
             // 
             // btnRemovePerm
             // 
-            this.btnRemovePerm.Image = ((System.Drawing.Image)(resources.GetObject("btnRemovePerm.Image")));
-            this.btnRemovePerm.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnRemovePerm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRemovePerm.ImageOptions.Image")));
+            this.btnRemovePerm.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnRemovePerm.Location = new System.Drawing.Point(612, 173);
             this.btnRemovePerm.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnRemovePerm.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -503,8 +503,8 @@
             // 
             // btnAddPerm
             // 
-            this.btnAddPerm.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPerm.Image")));
-            this.btnAddPerm.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnAddPerm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPerm.ImageOptions.Image")));
+            this.btnAddPerm.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnAddPerm.Location = new System.Drawing.Point(612, 58);
             this.btnAddPerm.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnAddPerm.LookAndFeel.UseDefaultLookAndFeel = false;

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucOpenStockTakes));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pnlBack = new System.Windows.Forms.Panel();
             this.btnSwitch = new DevExpress.XtraEditors.SimpleButton();
@@ -128,7 +127,6 @@
             this.btnSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSwitch.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnSwitch.Appearance.Options.UseBackColor = true;
-            this.btnSwitch.Image = ((System.Drawing.Image)(resources.GetObject("btnSwitch.Image")));
             this.btnSwitch.Location = new System.Drawing.Point(434, 573);
             this.btnSwitch.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnSwitch.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -144,7 +142,6 @@
             this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExport.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnExport.Appearance.Options.UseBackColor = true;
-            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
             this.btnExport.Location = new System.Drawing.Point(610, 573);
             this.btnExport.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnExport.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -160,7 +157,6 @@
             this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnRefresh.Appearance.Options.UseBackColor = true;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.Location = new System.Drawing.Point(962, 573);
             this.btnRefresh.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnRefresh.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -176,7 +172,6 @@
             this.btnReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReport.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnReport.Appearance.Options.UseBackColor = true;
-            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
             this.btnReport.Location = new System.Drawing.Point(786, 573);
             this.btnReport.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnReport.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -192,7 +187,6 @@
             this.btnComplete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnComplete.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnComplete.Appearance.Options.UseBackColor = true;
-            this.btnComplete.Image = ((System.Drawing.Image)(resources.GetObject("btnComplete.Image")));
             this.btnComplete.Location = new System.Drawing.Point(1138, 573);
             this.btnComplete.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnComplete.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -388,10 +382,10 @@
             this.dgItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgItems.Location = new System.Drawing.Point(3, 54);
+            this.dgItems.Location = new System.Drawing.Point(3, 110);
             this.dgItems.MainView = this.gvItems;
             this.dgItems.Name = "dgItems";
-            this.dgItems.Size = new System.Drawing.Size(1294, 503);
+            this.dgItems.Size = new System.Drawing.Size(1294, 408);
             this.dgItems.TabIndex = 12;
             this.dgItems.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvItems});
@@ -505,7 +499,7 @@
             // 
             // gcVarience
             // 
-            this.gcVarience.Caption = "Varience";
+            this.gcVarience.Caption = "Variance";
             this.gcVarience.FieldName = "gcVarience";
             this.gcVarience.Name = "gcVarience";
             this.gcVarience.OptionsColumn.ReadOnly = true;
@@ -550,10 +544,10 @@
             this.dgEquiry.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgEquiry.Location = new System.Drawing.Point(3, 54);
+            this.dgEquiry.Location = new System.Drawing.Point(3, 110);
             this.dgEquiry.MainView = this.gvEnquiry;
             this.dgEquiry.Name = "dgEquiry";
-            this.dgEquiry.Size = new System.Drawing.Size(1294, 503);
+            this.dgEquiry.Size = new System.Drawing.Size(1294, 408);
             this.dgEquiry.TabIndex = 28;
             this.dgEquiry.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvEnquiry});
@@ -651,7 +645,6 @@
             this.ppnlWait.AnimationToTextDistance = 10;
             this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.ppnlWait.Appearance.Options.UseBackColor = true;
-            this.ppnlWait.BarAnimationElementThickness = 2;
             this.ppnlWait.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.ppnlWait.Description = "Loading stock take, this may take a few minutes...";
             this.ppnlWait.Location = new System.Drawing.Point(4, 4);

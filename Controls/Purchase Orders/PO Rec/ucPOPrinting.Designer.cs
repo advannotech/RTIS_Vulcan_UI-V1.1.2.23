@@ -110,7 +110,6 @@
             this.panelControl1.Controls.Add(this.btnCancel);
             this.panelControl1.Controls.Add(this.pnlSearch);
             this.panelControl1.Controls.Add(this.btnComplete);
-            this.panelControl1.Controls.Add(this.lblPO);
             this.panelControl1.Controls.Add(this.dgPOItems);
             this.panelControl1.Controls.Add(this.ppnlWait);
             this.panelControl1.Location = new System.Drawing.Point(5, 57);
@@ -183,6 +182,7 @@
             this.gbOptions.Controls.Add(this.btnSearch);
             this.gbOptions.Controls.Add(this.cmbPOs);
             this.gbOptions.Controls.Add(this.cmbSuppliers);
+            this.gbOptions.Controls.Add(this.lblPO);
             this.gbOptions.Controls.Add(this.labelControl9);
             this.gbOptions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbOptions.Location = new System.Drawing.Point(0, 0);
@@ -282,10 +282,10 @@
             this.lblPO.Appearance.Options.UseTextOptions = true;
             this.lblPO.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblPO.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblPO.Location = new System.Drawing.Point(757, 112);
+            this.lblPO.Location = new System.Drawing.Point(819, 32);
             this.lblPO.Margin = new System.Windows.Forms.Padding(4);
             this.lblPO.Name = "lblPO";
-            this.lblPO.Size = new System.Drawing.Size(539, 47);
+            this.lblPO.Size = new System.Drawing.Size(402, 47);
             this.lblPO.TabIndex = 41;
             // 
             // dgPOItems

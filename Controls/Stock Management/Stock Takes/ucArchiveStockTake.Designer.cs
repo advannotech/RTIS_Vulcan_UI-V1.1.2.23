@@ -66,17 +66,17 @@
             this.gcIsCounted = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcWhseName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcOnST = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.cmbStockTakes = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ppnlWait = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.pnlBack.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvItems)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbStockTakes.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbStockTakes.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -115,7 +115,7 @@
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRemove.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnRemove.Appearance.Options.UseBackColor = true;
-            this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
+            this.btnRemove.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.ImageOptions.Image")));
             this.btnRemove.Location = new System.Drawing.Point(1138, 573);
             this.btnRemove.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnRemove.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -131,7 +131,7 @@
             this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExport.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnExport.Appearance.Options.UseBackColor = true;
-            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
+            this.btnExport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.ImageOptions.Image")));
             this.btnExport.Location = new System.Drawing.Point(610, 573);
             this.btnExport.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnExport.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -147,7 +147,7 @@
             this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnRefresh.Appearance.Options.UseBackColor = true;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.ImageOptions.Image")));
             this.btnRefresh.Location = new System.Drawing.Point(962, 573);
             this.btnRefresh.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnRefresh.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -163,7 +163,7 @@
             this.btnReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReport.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnReport.Appearance.Options.UseBackColor = true;
-            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
+            this.btnReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.ImageOptions.Image")));
             this.btnReport.Location = new System.Drawing.Point(786, 573);
             this.btnReport.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnReport.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -485,6 +485,11 @@
             this.gcOnST.FieldName = "gcOnST";
             this.gcOnST.Name = "gcOnST";
             // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.dgItems;
+            this.gridView1.Name = "gridView1";
+            // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(20, 5);
@@ -513,7 +518,6 @@
             this.ppnlWait.AnimationToTextDistance = 10;
             this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.ppnlWait.Appearance.Options.UseBackColor = true;
-            this.ppnlWait.BarAnimationElementThickness = 2;
             this.ppnlWait.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.ppnlWait.Description = "Loading stock take, this may take a few minutes...";
             this.ppnlWait.Location = new System.Drawing.Point(4, 4);
@@ -522,11 +526,6 @@
             this.ppnlWait.Size = new System.Drawing.Size(1311, 679);
             this.ppnlWait.TabIndex = 11;
             this.ppnlWait.Text = "progressPanel1";
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.dgItems;
-            this.gridView1.Name = "gridView1";
             // 
             // ucArchiveStockTake
             // 
@@ -546,8 +545,8 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvItems)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbStockTakes.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbStockTakes.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

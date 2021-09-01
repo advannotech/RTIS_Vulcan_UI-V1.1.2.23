@@ -115,34 +115,12 @@ namespace RTIS_Vulcan_UI.Classes
             {
                 string returnData = string.Empty;
                 SqlConnection conn = new SqlConnection(RTString);
-                SqlCommand comm = new SqlCommand(@"SELECT
-	                                                il.[idInvCountLines] AS [gclineID]
-	                                                ,s.[Code] AS [gcItemCode]
-	                                                , s.[Bar_Code] AS [gcBarcode]
-	                                                , s.[Description_1] AS [gcItemDesc]
-	                                                , b.[cBinLocationName] AS [gcBin]
-	                                                , l.[cLotDescription] AS [gcLot]
-	                                                , ROUND(il.[fCountQty], 4) AS [gcCounted]
-	                                                , ROUND(il.[fCountQty2], 4) AS [gcCounted2]
-	                                                , ROUND(il.[fSystemQty], 4) AS [gcSystem]
-	                                                , CASE WHEN(il.[fCountQty] = il.[fCountQty2])  
-		                                                THEN CAST([dbo].[fn_CalculateVariance]([dbo].[fn_GetDifference](il.[fCountQty],il.[fSystemQty]), [dbo].[fn_GetTolerance](s.[ItemGroup]))AS VARCHAR(50))
-	                                                ELSE 'SV: ' + CAST([dbo].[fn_GetDifference](il.[fCountQty],il.[fSystemQty]) AS VARCHAR(50)) END AS [gcVarience]
-	                                                , w.[Code] AS [gcWhseCode]
-	                                                , w.[Name] AS [gcWhseName]
-	                                                , il.[bIsCounted] AS [gcIsCounted]
-	                                                , il.[bOnST] AS [gcOnST]
-	                                                FROM[RTIS_InvCountLines] il
-	                                                INNER JOIN[RTIS_InvCount] i ON i.[idInvCount] = [iInvCountID]
-	                                                INNER JOIN [" + GlobalVars.EvoDB + @"].[dbo].[StkItem] s ON s.[StockLink] = il.[iStockID]
-	                                                INNER JOIN [" + GlobalVars.EvoDB + @"].[dbo].[WhseMst] w ON w.[WhseLink] = il.[iWarehouseID]
-	                                                LEFT JOIN [" + GlobalVars.EvoDB + @"].[dbo].[_etblLotTracking] l ON il.[iLotTrackingID] = l.[idLotTracking]
-	                                                LEFT JOIN [" + GlobalVars.EvoDB + @"].[dbo].[_btblBINLocation] b ON il.[iBinLocationId] = b.[idBinLocation]
-	                                                WHERE i.[cInvCountNo] = @1  
-	                                                ORDER BY
-	                                                CASE WHEN(il.[fSystemQty] - il.[fCountQty]) < 0 THEN il.[fCountQty]
-	                                                WHEN(il.[fCountQty] - il.[fSystemQty]) < 0 THEN il.[fCountQty] END DESC", conn);
-                comm.Parameters.Add(new SqlParameter("@1", stNum));
+                SqlCommand comm = new SqlCommand(string.Format(@"SELECT * FROM [dbo].[vw_GetStockTakeVariances] 
+                                                                WHERE [vw_GetStockTakeVariances].[cInvCountNo] = '{0}' 
+                                                                ORDER BY
+                                                                CASE WHEN([vw_GetStockTakeVariances].[gcSystem] - [vw_GetStockTakeVariances].[gcCounted]) < 0 THEN [vw_GetStockTakeVariances].[gcCounted]
+                                                                WHEN([vw_GetStockTakeVariances].[gcCounted] - [vw_GetStockTakeVariances].[gcSystem]) < 0 THEN [vw_GetStockTakeVariances].[gcCounted] END DESC", stNum), conn);
+                //comm.Parameters.Add(new SqlParameter("@1", stNum));
                 conn.Open();
 
                 DataTable dt = new DataTable();

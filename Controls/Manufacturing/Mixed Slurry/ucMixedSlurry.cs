@@ -38,7 +38,9 @@ namespace RTIS_Vulcan_UI.Controls
         {
             setUpDatatable();
             dtpStartDate.Value = DateTime.Now;
-            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
+            dtpStartDate.MaxDate = DateTime.Now;
+            dtpEndDate.MinDate = dtpStartDate.Value;
+            dtpEndDate.MaxDate = dtpStartDate.Value;
             refreshItems();
         }
         public void setUpDatatable()
@@ -67,8 +69,8 @@ namespace RTIS_Vulcan_UI.Controls
         {
             try
             {
-                string StartDate = dtpStartDate.Value.ToString("yyyy-MM-dd") + " 00:00:01";
-                string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd") + " 23:59:59";
+                string StartDate = dtpStartDate.Value.ToString("yyyy-MM-dd");
+                string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd");
                 dataLines = Client.getMixedSlurryLines(StartDate + "|" + EndDate);
                 dataPulled = true;
             }
@@ -301,7 +303,7 @@ namespace RTIS_Vulcan_UI.Controls
 
         private void dtpStartDate_ValueChanged_1(object sender, EventArgs e)
         {
-            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
+            dtpEndDate.MinDate = dtpStartDate.Value;
         }
     }
 }
