@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucPGMJobs));
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -51,7 +52,9 @@
             this.ppnlWait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.tmrItems = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvItems)).BeginInit();
@@ -107,7 +110,7 @@
             this.groupBox1.Size = new System.Drawing.Size(351, 100);
             this.groupBox1.TabIndex = 102;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Date Transferred";
+            this.groupBox1.Text = "Date Started";
             // 
             // dtpStartDate
             // 
@@ -156,6 +159,8 @@
             // 
             this.btnSearch.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnSearch.Appearance.Options.UseBackColor = true;
+            this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
+            this.btnSearch.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnSearch.Location = new System.Drawing.Point(379, 63);
             this.btnSearch.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnSearch.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -163,7 +168,6 @@
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(56, 52);
             this.btnSearch.TabIndex = 38;
-            this.btnSearch.Text = "Search";
             this.btnSearch.ToolTip = "Search";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -275,7 +279,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ppnlWait.Appearance.BackColor = System.Drawing.Color.White;
             this.ppnlWait.Appearance.Options.UseBackColor = true;
-            this.ppnlWait.BarAnimationElementThickness = 2;
             this.ppnlWait.Location = new System.Drawing.Point(4, 4);
             this.ppnlWait.Margin = new System.Windows.Forms.Padding(4);
             this.ppnlWait.Name = "ppnlWait";
@@ -299,7 +302,9 @@
             this.Size = new System.Drawing.Size(1319, 791);
             this.Load += new System.EventHandler(this.ucPGMJobs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).EndInit();

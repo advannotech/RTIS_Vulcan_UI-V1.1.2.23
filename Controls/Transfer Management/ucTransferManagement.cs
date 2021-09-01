@@ -55,9 +55,16 @@ namespace RTIS_Vulcan_UI.Controls
         private void ucTransferManagement_Load(object sender, EventArgs e)
         {
             dtpStartDate.Value = DateTime.Now;
+            dtpStartDate.MaxDate = DateTime.Now;
+            dtpEndDate.MinDate = dtpStartDate.Value;
+            dtpEndDate.MaxDate = DateTime.Now;
+
+            //dtpStartDate.Value = DateTime.Now;
             dtpFailedStartDate.Value = DateTime.Now;
-            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
-            dtpFailedEndDate.MinDate = getEndDate(dtpFailedStartDate.Value);
+            //dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
+            dtpFailedStartDate.MaxDate = DateTime.Now;
+            dtpFailedEndDate.MinDate = dtpFailedStartDate.Value;
+            dtpFailedEndDate.MaxDate = DateTime.Now;
             dateTransferredStatus();
             dateFailedStatus();
             setUpDatatables();
@@ -266,10 +273,10 @@ namespace RTIS_Vulcan_UI.Controls
         {
             try
             {
-                string startDateTransferred = tglDateTransferred.IsOn == true ? "|t" + dtpStartDate.Value.ToString() : null;
-                string endDateTransferred = tglDateTransferred.IsOn == true ? "|" + dtpEndDate.Value.ToString() : null;
-                string startDateFailed = tglDateFailed.IsOn == true ? "|f" + dtpFailedStartDate.Value.ToString() : null;
-                string endDateFailed = tglDateFailed.IsOn == true ? "|" + dtpFailedEndDate.Value.ToString() : null;
+                string startDateTransferred = tglDateTransferred.IsOn == true ? "|t" + dtpStartDate.Value.ToString("yyyy-MM-dd") : null;
+                string endDateTransferred = tglDateTransferred.IsOn == true ? "|" + dtpEndDate.Value.ToString("yyyy-MM-dd") : null;
+                string startDateFailed = tglDateFailed.IsOn == true ? "|f" + dtpFailedStartDate.Value.ToString("yyyy-MM-dd") : null;
+                string endDateFailed = tglDateFailed.IsOn == true ? "|" + dtpFailedEndDate.Value.ToString("yyyy-MM-dd") : null;
                 int comboStatusIndex = cmbStatus.SelectedIndex;
                 string comboStatus = cmbStatus.Properties.Items[comboStatusIndex].ToString();
 
@@ -288,11 +295,17 @@ namespace RTIS_Vulcan_UI.Controls
                 }
                 else if (comboStatus == "All")
                 {
-                    dataLines = Client.getWhseTransferLinesAll(string.Format("{0}|{1}{2}{3}{4}{5}", comboStatus, txtRows.Text, startDateTransferred, endDateTransferred, startDateFailed, endDateFailed));
+                    dataLines = Client.getWhseTransferLinesAll(string.Format("{0}|{1}{2}{3}{4}{5}", procName, txtRows.Text, startDateTransferred, endDateTransferred, startDateFailed, endDateFailed));
                     dataPulled = true;
                 }
                 else
                 {
+                    if (groupBox2.Enabled == false)
+                    {
+                        startDateFailed = "";
+                        endDateFailed = "";
+                    }
+                    
                     dataLines = Client.getWhseTransferLines(string.Format("{0}|{1}|{2}{3}{4}{5}{6}", comboStatus, procName , txtRows.Text, startDateTransferred, endDateTransferred, startDateFailed, endDateFailed));
                     dataPulled = true;
                 }               
@@ -322,13 +335,23 @@ namespace RTIS_Vulcan_UI.Controls
                                 dtTransfers.Rows.Clear();
                                 whseTransferLines = whseTransferLines.Remove(0, 2);
                                 string[] allTransferLines = whseTransferLines.Split('~');
-                                foreach (string transferLine in allTransferLines)
+                                int count = allTransferLines.Length <= Convert.ToInt32(txtRows.Text) ? allTransferLines.Length : Convert.ToInt32(txtRows.Text);
+                                for (int i = 0; i < count; i++)
                                 {
-                                    if (transferLine != string.Empty)
+                                    //allTransferLines[i]
+                                    if (allTransferLines[i] != string.Empty)
                                     {
-                                        dtTransfers.Rows.Add(transferLine.Split('|'));
+                                        dtTransfers.Rows.Add(allTransferLines[i].Split('|'));
                                     }
                                 }
+
+                                //foreach (string transferLine in allTransferLines)
+                                //{
+                                //    if (transferLine != string.Empty)
+                                //    {
+                                //        dtTransfers.Rows.Add(transferLine.Split('|'));
+                                //    }
+                                //}
 
                                 dgTransfers.DataSource = dtTransfers;
                                 dgTransfers.MainView.GridControl.DataSource = dtTransfers;
@@ -508,7 +531,7 @@ namespace RTIS_Vulcan_UI.Controls
         {
             try
             {
-                status = gvTransfers.GetRowCellValue(gvTransfers.FocusedRowHandle, "gcStatus").ToString();
+                //status = gvTransfers.GetRowCellValue(gvTransfers.FocusedRowHandle, "gcStatus").ToString();
                 //if (gvTransfers.FocusedRowHandle != -1)
                 //{
                 //    string newID = gvTransfers.GetRowCellValue(gvTransfers.FocusedRowHandle, "gcID").ToString();                 
@@ -773,17 +796,17 @@ namespace RTIS_Vulcan_UI.Controls
 
         public DateTime getEndDate(DateTime minDate)
         {
-            return minDate.AddDays(1);
+            return minDate;
         }
 
         private void dtpStartDate_ValueChanged_1(object sender, EventArgs e)
         {
-            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
+            dtpEndDate.MinDate = dtpStartDate.Value;
         }
 
         private void dtpFailedStartDate_ValueChanged(object sender, EventArgs e)
         {
-            dtpFailedEndDate.MinDate = getEndDate(dtpFailedStartDate.Value);
+            dtpFailedEndDate.MinDate = dtpFailedStartDate.Value;
         }
 
         private void tglDateTransferred_Toggled(object sender, EventArgs e)
@@ -822,6 +845,26 @@ namespace RTIS_Vulcan_UI.Controls
         private void tglDateFailed_Toggled(object sender, EventArgs e)
         {
             dateFailedStatus();
+        }
+
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbStatus.Text == "Pending" || cmbStatus.Text == "All")
+            {
+                groupBox2.Enabled = false;
+            }
+            else
+            {
+                groupBox2.Enabled = true;
+            }
+        }
+
+        private void txtRows_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -59,6 +59,7 @@
             this.tmrItems = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvItems)).BeginInit();
@@ -114,7 +115,7 @@
             this.groupBox1.Size = new System.Drawing.Size(351, 100);
             this.groupBox1.TabIndex = 103;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Date Transferred";
+            this.groupBox1.Text = "Date Started";
             // 
             // dtpStartDate
             // 
@@ -345,6 +346,7 @@
             this.ppnlWait.Size = new System.Drawing.Size(1311, 787);
             this.ppnlWait.TabIndex = 38;
             this.ppnlWait.Text = "progressPanel1";
+            this.ppnlWait.Visible = false;
             // 
             // tmrItems
             // 
@@ -363,6 +365,7 @@
             this.Load += new System.EventHandler(this.ucAWJobs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).EndInit();
