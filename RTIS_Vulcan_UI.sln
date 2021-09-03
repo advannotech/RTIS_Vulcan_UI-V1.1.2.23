@@ -1,11 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-<<<<<<< HEAD
-VisualStudioVersion = 16.0.31313.79
-=======
 VisualStudioVersion = 16.0.31205.134
->>>>>>> f0d994e73ac05a73aac72a52fcb19b18ee606753
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTIS_Vulcan_UI", "RTIS_Vulcan_UI.csproj", "{D6D0EB05-EFE9-40D6-9EBE-D08091C63BC7}"
 EndProject
@@ -24,6 +20,7 @@ Global
 		{D6D0EB05-EFE9-40D6-9EBE-D08091C63BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6D0EB05-EFE9-40D6-9EBE-D08091C63BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6D0EB05-EFE9-40D6-9EBE-D08091C63BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78D77A8A-2507-4E71-9044-3DAAB7E0DB89}.All|Any CPU.ActiveCfg = Release
 		{78D77A8A-2507-4E71-9044-3DAAB7E0DB89}.Debug|Any CPU.ActiveCfg = Debug
 		{78D77A8A-2507-4E71-9044-3DAAB7E0DB89}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
@@ -31,10 +28,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-<<<<<<< HEAD
-		SolutionGuid = {34864234-321E-47F9-A951-E4A949529926}
-=======
 		SolutionGuid = {DC3E463C-BDB0-47C7-9EA2-2C21C05C8456}
->>>>>>> f0d994e73ac05a73aac72a52fcb19b18ee606753
 	EndGlobalSection
 EndGlobal
