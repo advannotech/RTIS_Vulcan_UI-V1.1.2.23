@@ -62,12 +62,10 @@
             this.ppnlWait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.tmrItems = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgSlurry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSlurry)).BeginInit();
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbOptions)).BeginInit();
-            this.gbOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProcess.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPowderPrep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPowderPrep)).BeginInit();
@@ -81,9 +79,10 @@
             this.lblHeader.Appearance.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblHeader.Appearance.Options.UseFont = true;
             this.lblHeader.Appearance.Options.UseForeColor = true;
-            this.lblHeader.Location = new System.Drawing.Point(3, 3);
+            this.lblHeader.Location = new System.Drawing.Point(4, 4);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(201, 36);
+            this.lblHeader.Size = new System.Drawing.Size(250, 44);
             this.lblHeader.TabIndex = 31;
             this.lblHeader.Text = "RM Manufacture";
             // 
@@ -96,9 +95,10 @@
             this.panelControl1.Controls.Add(this.pnlSearch);
             this.panelControl1.Controls.Add(this.dgPowderPrep);
             this.panelControl1.Controls.Add(this.ppnlWait);
-            this.panelControl1.Location = new System.Drawing.Point(4, 46);
+            this.panelControl1.Location = new System.Drawing.Point(5, 57);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(982, 594);
+            this.panelControl1.Size = new System.Drawing.Size(1309, 731);
             this.panelControl1.TabIndex = 32;
             // 
             // dgSlurry
@@ -106,10 +106,15 @@
             this.dgSlurry.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgSlurry.Location = new System.Drawing.Point(6, 86);
+            // 
+            // 
+            // 
+            this.dgSlurry.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgSlurry.Location = new System.Drawing.Point(8, 106);
             this.dgSlurry.MainView = this.gvSlurry;
+            this.dgSlurry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgSlurry.Name = "dgSlurry";
-            this.dgSlurry.Size = new System.Drawing.Size(971, 503);
+            this.dgSlurry.Size = new System.Drawing.Size(1295, 619);
             this.dgSlurry.TabIndex = 42;
             this.dgSlurry.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSlurry});
@@ -244,9 +249,10 @@
             this.pnlSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSearch.Controls.Add(this.gbOptions);
-            this.pnlSearch.Location = new System.Drawing.Point(6, 5);
+            this.pnlSearch.Location = new System.Drawing.Point(8, 6);
+            this.pnlSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(971, 75);
+            this.pnlSearch.Size = new System.Drawing.Size(1295, 92);
             this.pnlSearch.TabIndex = 20;
             // 
             // gbOptions
@@ -256,8 +262,9 @@
             this.gbOptions.Controls.Add(this.labelControl9);
             this.gbOptions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbOptions.Location = new System.Drawing.Point(0, 0);
+            this.gbOptions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbOptions.Name = "gbOptions";
-            this.gbOptions.Size = new System.Drawing.Size(971, 75);
+            this.gbOptions.Size = new System.Drawing.Size(1295, 92);
             this.gbOptions.TabIndex = 0;
             this.gbOptions.Text = "Search Options";
             // 
@@ -267,29 +274,35 @@
             this.btnSearch.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnSearch.Appearance.Options.UseBackColor = true;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(922, 24);
+            this.btnSearch.Location = new System.Drawing.Point(1229, 30);
             this.btnSearch.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnSearch.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(44, 40);
+            this.btnSearch.Size = new System.Drawing.Size(59, 49);
             this.btnSearch.TabIndex = 87;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbProcess
             // 
-            this.cmbProcess.Location = new System.Drawing.Point(13, 42);
+            this.cmbProcess.Location = new System.Drawing.Point(17, 52);
+            this.cmbProcess.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbProcess.Name = "cmbProcess";
+            // 
+            // 
+            // 
             this.cmbProcess.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbProcess.Size = new System.Drawing.Size(219, 20);
+            this.cmbProcess.Size = new System.Drawing.Size(292, 22);
             this.cmbProcess.TabIndex = 40;
             this.cmbProcess.SelectedIndexChanged += new System.EventHandler(this.cmbProcess_SelectedIndexChanged);
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(13, 23);
+            this.labelControl9.Location = new System.Drawing.Point(17, 28);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(73, 13);
+            this.labelControl9.Size = new System.Drawing.Size(88, 16);
             this.labelControl9.TabIndex = 39;
             this.labelControl9.Text = "Select Process:";
             // 
@@ -298,10 +311,15 @@
             this.dgPowderPrep.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgPowderPrep.Location = new System.Drawing.Point(6, 86);
+            // 
+            // 
+            // 
+            this.dgPowderPrep.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgPowderPrep.Location = new System.Drawing.Point(8, 106);
             this.dgPowderPrep.MainView = this.gvPowderPrep;
+            this.dgPowderPrep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgPowderPrep.Name = "dgPowderPrep";
-            this.dgPowderPrep.Size = new System.Drawing.Size(971, 503);
+            this.dgPowderPrep.Size = new System.Drawing.Size(1295, 619);
             this.dgPowderPrep.TabIndex = 0;
             this.dgPowderPrep.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPowderPrep});
@@ -395,9 +413,10 @@
             this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.ppnlWait.Appearance.Options.UseBackColor = true;
             this.ppnlWait.BarAnimationElementThickness = 2;
-            this.ppnlWait.Location = new System.Drawing.Point(6, 5);
+            this.ppnlWait.Location = new System.Drawing.Point(8, 6);
+            this.ppnlWait.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ppnlWait.Name = "ppnlWait";
-            this.ppnlWait.Size = new System.Drawing.Size(971, 584);
+            this.ppnlWait.Size = new System.Drawing.Size(1295, 719);
             this.ppnlWait.TabIndex = 33;
             this.ppnlWait.Text = "progressPanel1";
             // 
@@ -407,22 +426,20 @@
             // 
             // ucPrepManufacture
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.lblHeader);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucPrepManufacture";
-            this.Size = new System.Drawing.Size(989, 643);
+            this.Size = new System.Drawing.Size(1319, 791);
             this.Load += new System.EventHandler(this.ucPrepManufacture_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgSlurry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSlurry)).EndInit();
             this.pnlSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbOptions)).EndInit();
-            this.gbOptions.ResumeLayout(false);
-            this.gbOptions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProcess.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPowderPrep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPowderPrep)).EndInit();

@@ -39,6 +39,12 @@ namespace RTIS_Vulcan_UI.Controls.Transfer_Management
             setUpDatatables();
             dtpStartDate.Value = DateTime.Now;
             dtpEndDate.Value = DateTime.Now.AddDays(1);
+            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
+        }
+
+        public DateTime getEndDate(DateTime minDate)
+        {
+            return minDate.AddDays(1);
         }
         public void setUpDatatables()
         {
@@ -300,6 +306,11 @@ namespace RTIS_Vulcan_UI.Controls.Transfer_Management
             {
 
             }
+        }
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
         }
     }
 }

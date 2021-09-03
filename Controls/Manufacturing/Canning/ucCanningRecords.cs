@@ -39,8 +39,10 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing.Canning
         private void ucCanningRecords_Load(object sender, EventArgs e)
         {
             setUpDatatable();
-            dtpStartDate.Value = DateTime.Now.AddDays(-30);
-            dtpEndDate.Value = DateTime.Now;
+            dtpStartDate.Value = DateTime.Now;
+            dtpStartDate.MaxDate = DateTime.Now;
+            dtpEndDate.MinDate = dtpStartDate.Value;
+            dtpEndDate.MaxDate = dtpStartDate.Value;
             refreshItems();
         }
         public void setUpDatatable()
@@ -74,8 +76,8 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing.Canning
         {
             try
             {
-                string StartDate = dtpStartDate.Value.ToString("yyyy-MM-dd") + " 00:00:01"; //.Split(' ')[0]
-                string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd") + " 23:59:59"; //.Split(' ')[0]
+                string StartDate = dtpStartDate.Value.ToString("yyyy-MM-dd"); 
+                string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd"); 
 
                 dataLines = Client.getCanningRecords(StartDate + "|" + EndDate);
                 dataPulled = true;
@@ -198,6 +200,26 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing.Canning
             {
                 ExHandler.showErrorEx(ex);
             }
+        }
+
+        public DateTime getEndDate(DateTime minDate)
+        {
+            return minDate.AddDays(1);
+        }
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtpEndDate.MinDate = dtpStartDate.Value;
+        }
+
+        private void pnlBack_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ppnlWait_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

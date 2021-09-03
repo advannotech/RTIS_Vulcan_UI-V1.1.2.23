@@ -3065,8 +3065,12 @@ namespace RTIS_Vulcan_UI.Classes
                 //DataClient.SendTimeout = 60000;
                 //DataClient.ReceiveTimeout = 120000;
                 DataClient.Connect(ServerEP);
+<<<<<<< HEAD
                 DataClient.ReceiveTimeout = 2000;
 
+=======
+                System.Threading.Thread.Sleep(2000);
+>>>>>>> f0d994e73ac05a73aac72a52fcb19b18ee606753
                 sendbytes = ascenc.GetBytes("*POSTPOLINESNEW*@" + info);
                 DataClient.Send(sendbytes);
 

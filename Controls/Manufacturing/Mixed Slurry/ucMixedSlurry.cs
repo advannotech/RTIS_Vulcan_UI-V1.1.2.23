@@ -37,8 +37,10 @@ namespace RTIS_Vulcan_UI.Controls
         private void ucMixedSlurry_Load(object sender, EventArgs e)
         {
             setUpDatatable();
-            dtpStartDate.Value = DateTime.Now.AddDays(-30);
-            dtpEndDate.Value = DateTime.Now;
+            dtpStartDate.Value = DateTime.Now;
+            dtpStartDate.MaxDate = DateTime.Now;
+            dtpEndDate.MinDate = dtpStartDate.Value;
+            dtpEndDate.MaxDate = dtpStartDate.Value;
             refreshItems();
         }
         public void setUpDatatable()
@@ -67,8 +69,8 @@ namespace RTIS_Vulcan_UI.Controls
         {
             try
             {
-                string StartDate = dtpStartDate.Value.ToString("yyyy-MM-dd") + " 00:00:01";
-                string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd") + " 23:59:59";
+                string StartDate = dtpStartDate.Value.ToString("yyyy-MM-dd");
+                string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd");
                 dataLines = Client.getMixedSlurryLines(StartDate + "|" + EndDate);
                 dataPulled = true;
             }
@@ -287,6 +289,21 @@ namespace RTIS_Vulcan_UI.Controls
         private void btnSearch_Click(object sender, EventArgs e)
         {
             refreshItems();
+        }
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtpEndDate.MinDate = getEndDate(dtpStartDate.Value);
+        }
+
+        public DateTime getEndDate(DateTime minDate)
+        {
+            return minDate.AddDays(1);
+        }
+
+        private void dtpStartDate_ValueChanged_1(object sender, EventArgs e)
+        {
+            dtpEndDate.MinDate = dtpStartDate.Value;
         }
     }
 }

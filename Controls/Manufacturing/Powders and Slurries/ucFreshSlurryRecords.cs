@@ -36,8 +36,10 @@ namespace RTIS_Vulcan_UI.Controls
         private void ucFreshSlurryRecords_Load(object sender, EventArgs e)
         {
             setUpDatatable();
-            dtpStartDate.Value = DateTime.Now.AddDays(-30);
-            dtpEndDate.Value = DateTime.Now;
+            dtpStartDate.Value = DateTime.Now;
+            dtpStartDate.MaxDate = DateTime.Now;
+            dtpEndDate.MinDate = dtpStartDate.Value;
+            dtpEndDate.MaxDate = dtpStartDate.Value;
             refreshItems();
         }
         public void setUpDatatable()
@@ -82,8 +84,8 @@ namespace RTIS_Vulcan_UI.Controls
         {
             try
             {
-                string StartDate = dtpStartDate.Value.ToString("yyyy-MM-dd") + " 00:00:01";
-                string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd") + " 23:59:59";
+                string StartDate = dtpStartDate.Value.ToString("yyyy-MM-dd");
+                string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd");
                 dataLines = Client.GetFreshSlurryRecordsByDate(StartDate + "|" + EndDate);
                 dataPulled = true;
                 if (IsHandleCreated)
@@ -203,6 +205,16 @@ namespace RTIS_Vulcan_UI.Controls
             {
                 ExHandler.showErrorEx(ex);
             }
+        }
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtpEndDate.MinDate = dtpStartDate.Value;
+        }
+
+        public DateTime getEndDate(DateTime minDate)
+        {
+            return minDate.AddDays(1);
         }
     }
 }
