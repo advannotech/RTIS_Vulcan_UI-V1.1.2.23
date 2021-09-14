@@ -180,7 +180,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ppnlWaitLink.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.ppnlWaitLink.Appearance.Options.UseBackColor = true;
-            this.ppnlWaitLink.BarAnimationElementThickness = 2;
             this.ppnlWaitLink.Location = new System.Drawing.Point(4, 4);
             this.ppnlWaitLink.Margin = new System.Windows.Forms.Padding(4);
             this.ppnlWaitLink.Name = "ppnlWaitLink";
@@ -278,7 +277,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pplWaitVendors.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pplWaitVendors.Appearance.Options.UseBackColor = true;
-            this.pplWaitVendors.BarAnimationElementThickness = 2;
             this.pplWaitVendors.Location = new System.Drawing.Point(4, 4);
             this.pplWaitVendors.Margin = new System.Windows.Forms.Padding(4);
             this.pplWaitVendors.Name = "pplWaitVendors";
@@ -302,7 +300,7 @@
             this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnRefresh.Appearance.Options.UseBackColor = true;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.ImageOptions.Image")));
             this.btnRefresh.Location = new System.Drawing.Point(1256, 4);
             this.btnRefresh.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnRefresh.LookAndFeel.UseDefaultLookAndFeel = false;

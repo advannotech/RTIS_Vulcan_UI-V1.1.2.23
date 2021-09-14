@@ -27,6 +27,7 @@ using RTIS_Vulcan_UI.Controls.Palletizing;
 using RTIS_Vulcan_UI.Controls.Purchase_Orders;
 using RTIS_Vulcan_UI.Controls.Purchase_Orders.COA;
 using static RTIS_Vulcan_UI.Classes.GlobalVars;
+using RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec;
 
 namespace RTIS_Vulcan_UI
 {
@@ -577,6 +578,28 @@ namespace RTIS_Vulcan_UI
             bool found = false;
             switch (e.Node.Text)
             {
+                case "PO Reprinting":
+                    found = false;
+                    foreach (XtraTabPage page in xtcMain.TabPages)
+                    {
+                        if (page.Text == "PO Reprinting")
+                        {
+                            found = true;
+                            xtcMain.SelectedTabPage = page;
+                        }
+                    }
+
+                    if (found == false)
+                    {
+                        xp.Text = "PO Reprinting";
+                        ucPOReprinting ucCntrl = new ucPOReprinting();
+                        xp.Controls.Add(ucCntrl);
+                        xtcMain.TabPages.Add(xp);
+                        xtcMain.SelectedTabPage = xp;
+                    }
+
+                    break;
+
                 case "Receiving Admin":
                     found = false;
                     foreach (XtraTabPage page in xtcMain.TabPages)
@@ -597,6 +620,7 @@ namespace RTIS_Vulcan_UI
                         xtcMain.SelectedTabPage = xp;
                     }
                     break;
+
                 case "PO Printing":
                     found = false;
                     foreach (XtraTabPage page in xtcMain.TabPages)
@@ -617,6 +641,9 @@ namespace RTIS_Vulcan_UI
                         xtcMain.SelectedTabPage = xp;
                     }
                     break;
+
+               
+
                 case "CMS Admin":
                     found = false;
                     foreach (XtraTabPage page in xtcMain.TabPages)
@@ -1754,6 +1781,10 @@ namespace RTIS_Vulcan_UI
                 }
             }
         }
+
+
         #endregion
+
+
     }
 }

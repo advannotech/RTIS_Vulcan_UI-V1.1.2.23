@@ -16,6 +16,7 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraReports.UI;
 using RTIS_Vulcan_UI.Reports;
 using DevExpress.DataAccess.ConnectionParameters;
+using RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec;
 
 namespace RTIS_Vulcan_UI.Controls
 {
@@ -823,6 +824,7 @@ namespace RTIS_Vulcan_UI.Controls
                     string desc = gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcDesc").ToString();
                     string lot = gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotNum").ToString();
                     bool isLot = Convert.ToBoolean(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotLine"));
+                    isLot = true;
                     if (isLot == true && lot != string.Empty)
                     {
                         #region Lot Items
@@ -1561,8 +1563,12 @@ namespace RTIS_Vulcan_UI.Controls
         {
             gvPOItems.RefreshData();
         }
+
+
+
+
         #endregion
 
-        
     }
+    
 }

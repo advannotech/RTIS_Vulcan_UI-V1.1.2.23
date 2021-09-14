@@ -33,6 +33,9 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders
         {
             InitializeComponent();
         }
+
+
+      
         private void ucCMSAdmin_Load(object sender, EventArgs e)
         {
             setupItemDataTable();

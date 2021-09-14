@@ -44,6 +44,7 @@
             this.bbtnCanningLabel = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnFGBox = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnFGPallet = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtnRMPallet = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnExistingLabel = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnLogOut = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnExit = new DevExpress.XtraBars.BarButtonItem();
@@ -66,7 +67,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.bar2 = new DevExpress.XtraBars.Bar();
-            this.bbtnRMPallet = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.bmMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pmLlbOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pmLabelTypes)).BeginInit();
@@ -231,6 +231,13 @@
             this.bbtnFGPallet.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.bbtnFGPallet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnFGPallet_ItemClick);
             // 
+            // bbtnRMPallet
+            // 
+            this.bbtnRMPallet.Caption = "RM Pallet Label";
+            this.bbtnRMPallet.Id = 17;
+            this.bbtnRMPallet.Name = "bbtnRMPallet";
+            this.bbtnRMPallet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnRMPallet_ItemClick);
+            // 
             // bbtnExistingLabel
             // 
             this.bbtnExistingLabel.Caption = "Existing Label";
@@ -286,10 +293,10 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 739);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 744);
             this.barDockControlBottom.Manager = this.bmMain;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1587, 25);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1587, 20);
             // 
             // barDockControlLeft
             // 
@@ -298,7 +305,7 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.bmMain;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 709);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 714);
             // 
             // barDockControlRight
             // 
@@ -307,7 +314,7 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1587, 30);
             this.barDockControlRight.Manager = this.bmMain;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 709);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 714);
             // 
             // dmMain
             // 
@@ -338,7 +345,7 @@
             this.dpMenu.Margin = new System.Windows.Forms.Padding(4);
             this.dpMenu.Name = "dpMenu";
             this.dpMenu.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dpMenu.Size = new System.Drawing.Size(200, 709);
+            this.dpMenu.Size = new System.Drawing.Size(200, 714);
             this.dpMenu.Text = "User Menu";
             this.dpMenu.DockChanged += new System.EventHandler(this.dpMenu_DockChanged);
             // 
@@ -346,10 +353,10 @@
             // 
             this.dockPanel1_Container.Controls.Add(this.pictureEdit2);
             this.dockPanel1_Container.Controls.Add(this.tvMain);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(5, 27);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 32);
             this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(4);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(188, 677);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(190, 678);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // pictureEdit2
@@ -364,8 +371,7 @@
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.pictureEdit2.Properties.ZoomAccelerationFactor = 1D;
-            this.pictureEdit2.Size = new System.Drawing.Size(176, 112);
+            this.pictureEdit2.Size = new System.Drawing.Size(178, 112);
             this.pictureEdit2.TabIndex = 14;
             // 
             // tvMain
@@ -378,7 +384,7 @@
             this.tvMain.Location = new System.Drawing.Point(4, 123);
             this.tvMain.Margin = new System.Windows.Forms.Padding(4);
             this.tvMain.Name = "tvMain";
-            this.tvMain.Size = new System.Drawing.Size(180, 550);
+            this.tvMain.Size = new System.Drawing.Size(182, 550);
             this.tvMain.TabIndex = 13;
             this.tvMain.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvMain_NodeMouseClick);
             // 
@@ -407,7 +413,7 @@
             this.xtraTabPage1.Controls.Add(this.labelControl1);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1369, 659);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1374, 663);
             this.xtraTabPage1.Text = "Welcome";
             // 
             // labelControl1
@@ -478,13 +484,6 @@
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
-            // 
-            // bbtnRMPallet
-            // 
-            this.bbtnRMPallet.Caption = "RM Pallet Label";
-            this.bbtnRMPallet.Id = 17;
-            this.bbtnRMPallet.Name = "bbtnRMPallet";
-            this.bbtnRMPallet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnRMPallet_ItemClick);
             // 
             // frmMain
             // 

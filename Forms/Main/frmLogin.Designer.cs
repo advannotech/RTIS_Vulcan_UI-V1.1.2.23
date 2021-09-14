@@ -52,7 +52,6 @@
             this.ppnlWait.Appearance.ForeColor = System.Drawing.Color.Gray;
             this.ppnlWait.Appearance.Options.UseBackColor = true;
             this.ppnlWait.Appearance.Options.UseForeColor = true;
-            this.ppnlWait.BarAnimationElementThickness = 2;
             this.ppnlWait.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.ppnlWait.Location = new System.Drawing.Point(17, 348);
             this.ppnlWait.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -85,7 +84,7 @@
             this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogin.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnLogin.Appearance.Options.UseBackColor = true;
-            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
+            this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
             this.btnLogin.Location = new System.Drawing.Point(193, 395);
             this.btnLogin.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnLogin.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -101,7 +100,7 @@
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnExit.Appearance.Options.UseBackColor = true;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageOptions.Image")));
             this.btnExit.Location = new System.Drawing.Point(17, 395);
             this.btnExit.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnExit.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -182,7 +181,6 @@
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.pictureEdit1.Properties.ZoomAccelerationFactor = 1D;
             this.pictureEdit1.Size = new System.Drawing.Size(347, 180);
             this.pictureEdit1.TabIndex = 33;
             // 

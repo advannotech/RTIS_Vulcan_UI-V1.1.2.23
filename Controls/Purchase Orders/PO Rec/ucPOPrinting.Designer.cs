@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucPOPrinting));
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.hyperReprintLabel = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.btnReprint = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrintDocument = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
@@ -42,9 +43,9 @@
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.cmbPOs = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbSuppliers = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.lblPO = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.btnComplete = new DevExpress.XtraEditors.SimpleButton();
-            this.lblPO = new DevExpress.XtraEditors.LabelControl();
             this.dgPOItems = new DevExpress.XtraGrid.GridControl();
             this.gvPOItems = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcCode = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,12 +54,12 @@
             this.gcLotNum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcOrderQty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcReceive = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcBack1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPrint = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcBack2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcRecQty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcLotLine = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcViewable = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcBack1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcBack2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcRecQty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcRTOrderQty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcRTLastOrderQty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcRTRecQty = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -105,6 +106,7 @@
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.hyperReprintLabel);
             this.panelControl1.Controls.Add(this.btnReprint);
             this.panelControl1.Controls.Add(this.btnPrintDocument);
             this.panelControl1.Controls.Add(this.btnCancel);
@@ -117,6 +119,13 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1309, 731);
             this.panelControl1.TabIndex = 32;
+            // 
+            // hyperReprintLabel
+            // 
+            this.hyperReprintLabel.Location = new System.Drawing.Point(0, 0);
+            this.hyperReprintLabel.Name = "hyperReprintLabel";
+            this.hyperReprintLabel.Size = new System.Drawing.Size(0, 0);
+            this.hyperReprintLabel.TabIndex = 0;
             // 
             // btnReprint
             // 
@@ -248,6 +257,22 @@
             this.cmbSuppliers.TabIndex = 40;
             this.cmbSuppliers.SelectedIndexChanged += new System.EventHandler(this.cmbSuppliers_SelectedIndexChanged);
             // 
+            // lblPO
+            // 
+            this.lblPO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPO.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblPO.Appearance.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPO.Appearance.Options.UseBackColor = true;
+            this.lblPO.Appearance.Options.UseFont = true;
+            this.lblPO.Appearance.Options.UseTextOptions = true;
+            this.lblPO.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblPO.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPO.Location = new System.Drawing.Point(819, 32);
+            this.lblPO.Margin = new System.Windows.Forms.Padding(4);
+            this.lblPO.Name = "lblPO";
+            this.lblPO.Size = new System.Drawing.Size(402, 47);
+            this.lblPO.TabIndex = 41;
+            // 
             // labelControl9
             // 
             this.labelControl9.Location = new System.Drawing.Point(7, 28);
@@ -272,29 +297,13 @@
             this.btnComplete.Text = "Complete";
             this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
             // 
-            // lblPO
-            // 
-            this.lblPO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPO.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblPO.Appearance.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPO.Appearance.Options.UseBackColor = true;
-            this.lblPO.Appearance.Options.UseFont = true;
-            this.lblPO.Appearance.Options.UseTextOptions = true;
-            this.lblPO.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblPO.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblPO.Location = new System.Drawing.Point(819, 32);
-            this.lblPO.Margin = new System.Windows.Forms.Padding(4);
-            this.lblPO.Name = "lblPO";
-            this.lblPO.Size = new System.Drawing.Size(402, 47);
-            this.lblPO.TabIndex = 41;
-            // 
             // dgPOItems
             // 
             this.dgPOItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgPOItems.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.dgPOItems.Location = new System.Drawing.Point(8, 106);
+            this.dgPOItems.Location = new System.Drawing.Point(8, 104);
             this.dgPOItems.MainView = this.gvPOItems;
             this.dgPOItems.Margin = new System.Windows.Forms.Padding(4);
             this.dgPOItems.Name = "dgPOItems";
@@ -312,12 +321,12 @@
             this.gcLotNum,
             this.gcOrderQty,
             this.gcReceive,
-            this.gcBack1,
             this.gcPrint,
-            this.gcBack2,
-            this.gcRecQty,
             this.gcLotLine,
             this.gcViewable,
+            this.gcBack1,
+            this.gcBack2,
+            this.gcRecQty,
             this.gcRTOrderQty,
             this.gcRTLastOrderQty,
             this.gcRTRecQty,
@@ -363,6 +372,7 @@
             this.gcDesc2.OptionsColumn.AllowEdit = false;
             this.gcDesc2.Visible = true;
             this.gcDesc2.VisibleIndex = 2;
+            this.gcDesc2.Width = 121;
             // 
             // gcLotNum
             // 
@@ -391,14 +401,6 @@
             this.gcReceive.Visible = true;
             this.gcReceive.VisibleIndex = 5;
             // 
-            // gcBack1
-            // 
-            this.gcBack1.Caption = "Qty to receive";
-            this.gcBack1.FieldName = "gcBack1";
-            this.gcBack1.Name = "gcBack1";
-            this.gcBack1.Visible = true;
-            this.gcBack1.VisibleIndex = 6;
-            // 
             // gcPrint
             // 
             this.gcPrint.Caption = "Print";
@@ -406,22 +408,6 @@
             this.gcPrint.Name = "gcPrint";
             this.gcPrint.Visible = true;
             this.gcPrint.VisibleIndex = 7;
-            // 
-            // gcBack2
-            // 
-            this.gcBack2.Caption = "Qty Received";
-            this.gcBack2.FieldName = "gcBack2";
-            this.gcBack2.Name = "gcBack2";
-            this.gcBack2.OptionsColumn.AllowEdit = false;
-            this.gcBack2.Visible = true;
-            this.gcBack2.VisibleIndex = 8;
-            this.gcBack2.Width = 108;
-            // 
-            // gcRecQty
-            // 
-            this.gcRecQty.Caption = "Evo Received Qty";
-            this.gcRecQty.FieldName = "gcRecQty";
-            this.gcRecQty.Name = "gcRecQty";
             // 
             // gcLotLine
             // 
@@ -438,6 +424,30 @@
             this.gcViewable.Caption = "Viewable";
             this.gcViewable.FieldName = "gcViewable";
             this.gcViewable.Name = "gcViewable";
+            // 
+            // gcBack1
+            // 
+            this.gcBack1.Caption = "Qty to receive";
+            this.gcBack1.FieldName = "gcBack1";
+            this.gcBack1.Name = "gcBack1";
+            this.gcBack1.Visible = true;
+            this.gcBack1.VisibleIndex = 6;
+            // 
+            // gcBack2
+            // 
+            this.gcBack2.Caption = "Qty Received";
+            this.gcBack2.FieldName = "gcBack2";
+            this.gcBack2.Name = "gcBack2";
+            this.gcBack2.OptionsColumn.AllowEdit = false;
+            this.gcBack2.Visible = true;
+            this.gcBack2.VisibleIndex = 8;
+            this.gcBack2.Width = 108;
+            // 
+            // gcRecQty
+            // 
+            this.gcRecQty.Caption = "Evo Received Qty";
+            this.gcRecQty.FieldName = "gcRecQty";
+            this.gcRecQty.Name = "gcRecQty";
             // 
             // gcRTOrderQty
             // 
@@ -548,6 +558,7 @@
             this.Load += new System.EventHandler(this.ucPOPrinting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.pnlSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbOptions)).EndInit();
             this.gbOptions.ResumeLayout(false);
@@ -566,8 +577,6 @@
 
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraGrid.GridControl dgPOItems;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvPOItems;
         private DevExpress.XtraEditors.SimpleButton btnComplete;
         private System.Windows.Forms.Panel pnlSearch;
         private DevExpress.XtraEditors.GroupControl gbOptions;
@@ -576,21 +585,31 @@
         private DevExpress.XtraEditors.ComboBoxEdit cmbSuppliers;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.SimpleButton btnSearch;
+        private DevExpress.XtraWaitForm.ProgressPanel ppnlWait;
+        private System.Windows.Forms.Timer tmrItems;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private DevExpress.XtraEditors.CheckEdit cbAllLines;
+        private DevExpress.XtraEditors.SimpleButton btnPrintDocument;
+        private DevExpress.XtraEditors.SimpleButton btnReprint;
+        private DevExpress.XtraWaitForm.ProgressPanel ppnlPrint;
+        private System.Windows.Forms.Timer tmrPrint;
+        private System.Windows.Forms.Timer tmrReprint;
+        private DevExpress.XtraEditors.HyperlinkLabelControl hyperReprintLabel;
+        private DevExpress.XtraGrid.GridControl dgPOItems;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvPOItems;
         private DevExpress.XtraGrid.Columns.GridColumn gcCode;
         private DevExpress.XtraGrid.Columns.GridColumn gcDesc;
         private DevExpress.XtraGrid.Columns.GridColumn gcDesc2;
-        private DevExpress.XtraGrid.Columns.GridColumn gcReceive;
-        private DevExpress.XtraGrid.Columns.GridColumn gcOrderQty;
-        private DevExpress.XtraGrid.Columns.GridColumn gcRecQty;
-        private DevExpress.XtraGrid.Columns.GridColumn gcPrint;
-        private DevExpress.XtraWaitForm.ProgressPanel ppnlWait;
-        private System.Windows.Forms.Timer tmrItems;
         private DevExpress.XtraGrid.Columns.GridColumn gcLotNum;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private DevExpress.XtraGrid.Columns.GridColumn gcOrderQty;
+        private DevExpress.XtraGrid.Columns.GridColumn gcReceive;
+        private DevExpress.XtraGrid.Columns.GridColumn gcBack1;
+        private DevExpress.XtraGrid.Columns.GridColumn gcPrint;
+        private DevExpress.XtraGrid.Columns.GridColumn gcBack2;
+        private DevExpress.XtraGrid.Columns.GridColumn gcRecQty;
         private DevExpress.XtraGrid.Columns.GridColumn gcLotLine;
         private DevExpress.XtraGrid.Columns.GridColumn gcViewable;
-        private DevExpress.XtraEditors.CheckEdit cbAllLines;
         private DevExpress.XtraGrid.Columns.GridColumn gcRTOrderQty;
         private DevExpress.XtraGrid.Columns.GridColumn gcRTLastOrderQty;
         private DevExpress.XtraGrid.Columns.GridColumn gcRTRecQty;
@@ -599,13 +618,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gcRTLastPrintQty;
         private DevExpress.XtraGrid.Columns.GridColumn gcValidated;
         private DevExpress.XtraGrid.Columns.GridColumn gcScanned;
-        private DevExpress.XtraGrid.Columns.GridColumn gcBack1;
-        private DevExpress.XtraGrid.Columns.GridColumn gcBack2;
         private DevExpress.XtraGrid.Columns.GridColumn gcBack3;
-        private DevExpress.XtraEditors.SimpleButton btnPrintDocument;
-        private DevExpress.XtraEditors.SimpleButton btnReprint;
-        private DevExpress.XtraWaitForm.ProgressPanel ppnlPrint;
-        private System.Windows.Forms.Timer tmrPrint;
-        private System.Windows.Forms.Timer tmrReprint;
     }
 }

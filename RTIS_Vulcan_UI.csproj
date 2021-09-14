@@ -191,6 +191,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\DevExpress.XtraNavBar.v20.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraPdfViewer.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPivotGrid.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\DevExpress.XtraPivotGrid.v20.2.dll</HintPath>
@@ -444,6 +445,12 @@
     </Compile>
     <Compile Include="Controls\Administration\Transfer Management\ucRecTransferManagement.Designer.cs">
       <DependentUpon>ucRecTransferManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.Designer.cs">
+      <DependentUpon>ucPOReprinting.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Stock Management\Stock Takes\ucArchiveStockTake.cs">
       <SubType>UserControl</SubType>
@@ -972,6 +979,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Administration\Transfer Management\ucWhseAdmin.resx">
       <DependentUpon>ucWhseAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.resx">
+      <DependentUpon>ucPOReprinting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Stock Management\Stock Takes\ucArchiveStockTake.resx">
       <DependentUpon>ucArchiveStockTake.cs</DependentUpon>
