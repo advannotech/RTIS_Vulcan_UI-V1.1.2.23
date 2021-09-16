@@ -86,7 +86,7 @@
             this.xtraTabPage1.Controls.Add(this.txtName);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(582, 373);
+            this.xtraTabPage1.Size = new System.Drawing.Size(587, 377);
             this.xtraTabPage1.Text = "General";
             // 
             // txtDesc
@@ -128,7 +128,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtName.Properties.NullValuePrompt = "Enter a role name";
-            this.txtName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtName.Size = new System.Drawing.Size(551, 22);
             this.txtName.TabIndex = 52;
             // 
@@ -144,7 +143,7 @@
             this.xtraTabPage2.Controls.Add(this.lbAvailable);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(582, 373);
+            this.xtraTabPage2.Size = new System.Drawing.Size(587, 377);
             this.xtraTabPage2.Text = "Permissions";
             // 
             // label5
@@ -176,7 +175,7 @@
             this.btnDone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDone.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnDone.Appearance.Options.UseBackColor = true;
-            this.btnDone.Image = ((System.Drawing.Image)(resources.GetObject("btnDone.Image")));
+            this.btnDone.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDone.ImageOptions.Image")));
             this.btnDone.Location = new System.Drawing.Point(409, 320);
             this.btnDone.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnDone.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -201,8 +200,8 @@
             // btnAddAllPerms
             // 
             this.btnAddAllPerms.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddAllPerms.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAllPerms.Image")));
-            this.btnAddAllPerms.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnAddAllPerms.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAllPerms.ImageOptions.Image")));
+            this.btnAddAllPerms.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnAddAllPerms.Location = new System.Drawing.Point(252, 223);
             this.btnAddAllPerms.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnAddAllPerms.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -215,8 +214,8 @@
             // btnRemovePerm
             // 
             this.btnRemovePerm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRemovePerm.Image = ((System.Drawing.Image)(resources.GetObject("btnRemovePerm.Image")));
-            this.btnRemovePerm.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnRemovePerm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRemovePerm.ImageOptions.Image")));
+            this.btnRemovePerm.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnRemovePerm.Location = new System.Drawing.Point(252, 166);
             this.btnRemovePerm.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnRemovePerm.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -229,8 +228,8 @@
             // btnAddPerm
             // 
             this.btnAddPerm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddPerm.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPerm.Image")));
-            this.btnAddPerm.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnAddPerm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPerm.ImageOptions.Image")));
+            this.btnAddPerm.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnAddPerm.Location = new System.Drawing.Point(252, 110);
             this.btnAddPerm.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnAddPerm.LookAndFeel.UseDefaultLookAndFeel = false;

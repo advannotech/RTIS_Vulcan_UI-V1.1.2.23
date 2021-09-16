@@ -17,6 +17,7 @@ using DevExpress.XtraReports.UI;
 using RTIS_Vulcan_UI.Reports;
 using DevExpress.DataAccess.ConnectionParameters;
 using RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec;
+using System.IO;
 
 namespace RTIS_Vulcan_UI.Controls
 {
@@ -1158,6 +1159,7 @@ namespace RTIS_Vulcan_UI.Controls
                             {
                                 case "1":
                                     dataSend = true;
+                                    
                                     rptPORec poReport = new rptPORec();
                                     string connectionString = "Data Source=" + GlobalVars.SQLServer + "; Initial Catalog=" + GlobalVars.RTDB +
                                     "; user ID=" + GlobalVars.SqlUser + "; password=" + GlobalVars.SqlPass + ";Max Pool Size=99999;";
@@ -1171,7 +1173,9 @@ namespace RTIS_Vulcan_UI.Controls
                                     poReport.Supplier.Value = poVendor;
                                     poReport.CreateDocument();
                                     ReportPrintTool printTool = new ReportPrintTool(poReport);
-                                    poReport.ExportToPdf(GlobalVars.RSCFolder + @"\" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + ".pdf");
+                                    string poversion = System.DateTime.Now.Year.ToString() + System.DateTime.Now.Month.ToString() + System.DateTime.Now.Second.ToString();
+                                    poReport.ExportToPdf(System.IO.Directory.CreateDirectory(Path.GetFileName(GlobalVars.RSCFolder+"\\"+lblPO.Text))+ @"\" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) +"_"+ poversion+ ".pdf");
+  
                                     printTool.ShowPreview();
 
                                     lblPO.Text = string.Empty;

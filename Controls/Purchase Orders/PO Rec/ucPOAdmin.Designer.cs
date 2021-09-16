@@ -37,6 +37,7 @@
             this.gcLinkID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcSupplier = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcLinkPO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPOs = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ricbOrders = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
@@ -122,6 +123,7 @@
             this.gcLinkID,
             this.gcSupplier,
             this.gcPO,
+            this.gcLinkPO,
             this.gcDate,
             this.gcPOs});
             this.gvLink.GridControl = this.dgLink;
@@ -152,13 +154,23 @@
             this.gcPO.Visible = true;
             this.gcPO.VisibleIndex = 1;
             // 
+            // gcLinkPO
+            // 
+            this.gcLinkPO.Caption = "Update Link Line";
+            this.gcLinkPO.FieldName = "gcLinkPO";
+            this.gcLinkPO.MinWidth = 25;
+            this.gcLinkPO.Name = "gcLinkPO";
+            this.gcLinkPO.Visible = true;
+            this.gcLinkPO.VisibleIndex = 2;
+            this.gcLinkPO.Width = 94;
+            // 
             // gcDate
             // 
             this.gcDate.Caption = "Date Updated";
             this.gcDate.FieldName = "gcDate";
             this.gcDate.Name = "gcDate";
             this.gcDate.Visible = true;
-            this.gcDate.VisibleIndex = 2;
+            this.gcDate.VisibleIndex = 3;
             // 
             // gcPOs
             // 
@@ -308,7 +320,6 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(43, 41);
             this.btnRefresh.TabIndex = 89;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // label1
             // 
@@ -383,5 +394,6 @@
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraGrid.Columns.GridColumn gcLinkPO;
     }
 }

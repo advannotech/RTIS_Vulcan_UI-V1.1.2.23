@@ -19,6 +19,7 @@ using DevExpress.DataAccess.ConnectionParameters;
 using RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
+using System.IO;
 
 namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
 {
@@ -1296,8 +1297,14 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
                         poReport.Supplier.Value = poVendor;
                         poReport.CreateDocument();
                         ReportPrintTool printTool = new ReportPrintTool(poReport);
-                        poReport.ExportToPdf(GlobalVars.RSCFolder + @"\" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + ".pdf");
+          
+                        string poversion = System.DateTime.Now.Year.ToString().Substring(2, 2) + System.DateTime.Now.ToString("MM") + System.DateTime.Now.Day.ToString() + System.DateTime.Now.ToString("HHmmss");
+                        poReport.ExportToPdf(System.IO.Directory.CreateDirectory(Path.GetFileName(GlobalVars.RSCFolder + "\\" + lblPO.Text)) + @"\" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + "_" + poversion + ".pdf");
                         printTool.ShowPreview();
+
+
+                            
+               
                     }
 
                     else
