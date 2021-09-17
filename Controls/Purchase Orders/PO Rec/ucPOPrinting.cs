@@ -1173,9 +1173,9 @@ namespace RTIS_Vulcan_UI.Controls
                                     poReport.Supplier.Value = poVendor;
                                     poReport.CreateDocument();
                                     ReportPrintTool printTool = new ReportPrintTool(poReport);
-                                    string poversion = System.DateTime.Now.Year.ToString() + System.DateTime.Now.Month.ToString() + System.DateTime.Now.Second.ToString();
-                                    poReport.ExportToPdf(System.IO.Directory.CreateDirectory(Path.GetFileName(GlobalVars.RSCFolder+"\\"+lblPO.Text))+ @"\" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) +"_"+ poversion+ ".pdf");
-  
+                                    //poReport.ExportToPdf(GlobalVars.RSCFolder + @"\" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + ".pdf");
+                                    string poversion = System.DateTime.Now.Year.ToString().Substring(2, 2) + System.DateTime.Now.ToString("MM") + System.DateTime.Now.Day.ToString() + System.DateTime.Now.ToString("HHmmss");
+                                    poReport.ExportToPdf(GlobalVars.RSCFolder + "\\" + System.IO.Directory.CreateDirectory(Path.Combine(GlobalVars.RSCFolder, "" + "" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + "")) + @"\" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + "_v" + poversion + ".pdf");
                                     printTool.ShowPreview();
 
                                     lblPO.Text = string.Empty;

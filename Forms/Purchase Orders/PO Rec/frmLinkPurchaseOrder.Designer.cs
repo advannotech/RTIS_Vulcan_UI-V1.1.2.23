@@ -33,7 +33,6 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.xtcRoles = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.txtSelectedSupplier = new System.Windows.Forms.TextBox();
-            this.txtLinkedPOs = new DevExpress.XtraEditors.MemoEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
@@ -46,13 +45,14 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnAddPO = new DevExpress.XtraEditors.SimpleButton();
             this.lbAvailable = new DevExpress.XtraEditors.ListBoxControl();
             this.lblSupplier = new System.Windows.Forms.Label();
+            this.listLinkedPOs = new DevExpress.XtraEditors.ListBoxControl();
             ((System.ComponentModel.ISupportInitialize)(this.xtcRoles)).BeginInit();
             this.xtcRoles.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLinkedPOs.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbSelected)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbAvailable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listLinkedPOs)).BeginInit();
             this.SuspendLayout();
             // 
             // xtcRoles
@@ -61,17 +61,16 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.xtcRoles.Margin = new System.Windows.Forms.Padding(4);
             this.xtcRoles.Name = "xtcRoles";
             this.xtcRoles.SelectedTabPage = this.xtraTabPage1;
-            this.xtcRoles.Size = new System.Drawing.Size(673, 429);
+            this.xtcRoles.Size = new System.Drawing.Size(709, 429);
             this.xtcRoles.TabIndex = 50;
             this.xtcRoles.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2});
-      
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.listLinkedPOs);
             this.xtraTabPage1.Controls.Add(this.txtSelectedSupplier);
-            this.xtraTabPage1.Controls.Add(this.txtLinkedPOs);
             this.xtraTabPage1.Controls.Add(this.label3);
             this.xtraTabPage1.Controls.Add(this.label2);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4);
@@ -86,17 +85,6 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.txtSelectedSupplier.Name = "txtSelectedSupplier";
             this.txtSelectedSupplier.Size = new System.Drawing.Size(551, 23);
             this.txtSelectedSupplier.TabIndex = 58;
-            // 
-            // txtLinkedPOs
-            // 
-            this.txtLinkedPOs.Enabled = false;
-            this.txtLinkedPOs.Location = new System.Drawing.Point(16, 119);
-            this.txtLinkedPOs.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLinkedPOs.Name = "txtLinkedPOs";
-            this.txtLinkedPOs.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtLinkedPOs.Properties.NullValuePrompt = "Already Linked Standing Orders";
-            this.txtLinkedPOs.Size = new System.Drawing.Size(551, 268);
-            this.txtLinkedPOs.TabIndex = 55;
             // 
             // label3
             // 
@@ -132,16 +120,15 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.xtraTabPage2.Controls.Add(this.lbAvailable);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(671, 399);
+            this.xtraTabPage2.Size = new System.Drawing.Size(707, 399);
             this.xtraTabPage2.Text = "Link Standing Purchase Order";
-       
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(373, 20);
+            this.label5.Location = new System.Drawing.Point(391, 20);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(295, 23);
@@ -153,7 +140,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 20);
+            this.label4.Location = new System.Drawing.Point(20, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(270, 23);
@@ -166,7 +153,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnLink.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnLink.Appearance.Options.UseBackColor = true;
             this.btnLink.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLink.ImageOptions.Image")));
-            this.btnLink.Location = new System.Drawing.Point(493, 343);
+            this.btnLink.Location = new System.Drawing.Point(529, 343);
             this.btnLink.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnLink.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnLink.Margin = new System.Windows.Forms.Padding(4);
@@ -180,7 +167,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.lbSelected.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbSelected.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbSelected.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbSelected.Location = new System.Drawing.Point(6, 49);
+            this.lbSelected.Location = new System.Drawing.Point(24, 49);
             this.lbSelected.Margin = new System.Windows.Forms.Padding(4);
             this.lbSelected.Name = "lbSelected";
             this.lbSelected.Size = new System.Drawing.Size(268, 287);
@@ -191,7 +178,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnAddAllPOs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddAllPOs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAllPOs.ImageOptions.Image")));
             this.btnAddAllPOs.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnAddAllPOs.Location = new System.Drawing.Point(294, 242);
+            this.btnAddAllPOs.Location = new System.Drawing.Point(312, 242);
             this.btnAddAllPOs.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnAddAllPOs.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnAddAllPOs.Margin = new System.Windows.Forms.Padding(4);
@@ -204,7 +191,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnRemovePO.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRemovePO.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRemovePO.ImageOptions.Image")));
             this.btnRemovePO.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRemovePO.Location = new System.Drawing.Point(294, 185);
+            this.btnRemovePO.Location = new System.Drawing.Point(312, 185);
             this.btnRemovePO.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnRemovePO.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnRemovePO.Margin = new System.Windows.Forms.Padding(4);
@@ -217,7 +204,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnAddPO.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddPO.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPO.ImageOptions.Image")));
             this.btnAddPO.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnAddPO.Location = new System.Drawing.Point(294, 129);
+            this.btnAddPO.Location = new System.Drawing.Point(312, 129);
             this.btnAddPO.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnAddPO.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnAddPO.Margin = new System.Windows.Forms.Padding(4);
@@ -230,12 +217,11 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.lbAvailable.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbAvailable.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbAvailable.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbAvailable.Location = new System.Drawing.Point(377, 50);
+            this.lbAvailable.Location = new System.Drawing.Point(395, 50);
             this.lbAvailable.Margin = new System.Windows.Forms.Padding(4);
             this.lbAvailable.Name = "lbAvailable";
-            this.lbAvailable.Size = new System.Drawing.Size(284, 286);
+            this.lbAvailable.Size = new System.Drawing.Size(302, 286);
             this.lbAvailable.TabIndex = 62;
- 
             // 
             // lblSupplier
             // 
@@ -248,12 +234,20 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.lblSupplier.TabIndex = 51;
             this.lblSupplier.Text = "Supplier";
             // 
+            // listLinkedPOs
+            // 
+            this.listLinkedPOs.Enabled = false;
+            this.listLinkedPOs.Location = new System.Drawing.Point(16, 117);
+            this.listLinkedPOs.Name = "listLinkedPOs";
+            this.listLinkedPOs.Size = new System.Drawing.Size(551, 268);
+            this.listLinkedPOs.TabIndex = 59;
+            // 
             // frmLinkPurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(693, 486);
+            this.ClientSize = new System.Drawing.Size(722, 486);
             this.Controls.Add(this.lblSupplier);
             this.Controls.Add(this.xtcRoles);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -267,11 +261,11 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.xtcRoles.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLinkedPOs.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbSelected)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbAvailable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listLinkedPOs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,7 +275,6 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
 
         private DevExpress.XtraTab.XtraTabControl xtcRoles;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
-        private DevExpress.XtraEditors.MemoEdit txtLinkedPOs;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
@@ -295,5 +288,6 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
         private DevExpress.XtraEditors.ListBoxControl lbAvailable;
         private System.Windows.Forms.Label lblSupplier;
         private System.Windows.Forms.TextBox txtSelectedSupplier;
+        private DevExpress.XtraEditors.ListBoxControl listLinkedPOs;
     }
 }

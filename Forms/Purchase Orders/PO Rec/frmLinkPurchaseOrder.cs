@@ -65,7 +65,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             {
                 lblSupplier.Text = supplier;
                 txtSelectedSupplier.Text = supplier;
-                txtLinkedPOs.Text = ponumber;
+                listLinkedPOs.Items.Add(ponumber);
                 vendorsPulled = true;
             }
             catch (Exception ex)
