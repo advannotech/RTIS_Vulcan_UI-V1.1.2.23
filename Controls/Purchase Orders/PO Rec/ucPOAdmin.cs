@@ -278,9 +278,15 @@ namespace RTIS_Vulcan_UI.Controls
                     try
                     {
                        
+<<<<<<< HEAD
                         frmLinkPurchaseOrder frmRm = new frmLinkPurchaseOrder(linkid, supplier, ponumber, dateupdated);
                         DialogResult dr = frmRm.ShowDialog();
                         if (dr == DialogResult.OK)
+=======
+                       frmLinkPurchaseOrder frmRm = new frmLinkPurchaseOrder(linkid, supplier, ponumber, dateupdated);
+                       DialogResult dr = frmRm.ShowDialog();
+                       if (dr == DialogResult.OK)
+>>>>>>> 4109af29ce94747bc728d1dd0641d55d3120f098
                         {
                             //getPOs();
                         }

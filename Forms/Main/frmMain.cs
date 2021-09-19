@@ -216,7 +216,7 @@ namespace RTIS_Vulcan_UI
                 return "-1";
             }
         }
-        public void  getPermissions()
+        public void getPermissions()
         {
             try
             {
@@ -297,7 +297,7 @@ namespace RTIS_Vulcan_UI
                                 ExHandler.showErrorST(st, msgStr, infoStr);
                                 break;
                         }
-                    }                    
+                    }
                 }
             }
             catch (Exception ex)
@@ -642,7 +642,11 @@ namespace RTIS_Vulcan_UI
                     }
                     break;
 
+<<<<<<< HEAD
                
+=======
+
+>>>>>>> 4109af29ce94747bc728d1dd0641d55d3120f098
 
                 case "CMS Admin":
                     found = false;
@@ -1144,7 +1148,7 @@ namespace RTIS_Vulcan_UI
                         xtcMain.TabPages.Add(xp);
                         xtcMain.SelectedTabPage = xp;
                     }
-                    break;          
+                    break;
                 case "AW RMs":
                     found = false;
                     foreach (XtraTabPage page in xtcMain.TabPages)
@@ -1379,7 +1383,7 @@ namespace RTIS_Vulcan_UI
             XRDesignPanel panel = (XRDesignPanel)sender;
             panel.AddCommandHandler(new SaveCommandHandler(panel));
         }
-        
+
         private void bbtnExistingLabel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
@@ -1420,8 +1424,8 @@ namespace RTIS_Vulcan_UI
                     int width = Convert.ToInt32(nameLabel._width);
                     int height = Convert.ToInt32(nameLabel._height);
 
-                    prntStkLabel custLbl = new prntStkLabel();                   
-                    custLbl.PaperKind = System.Drawing.Printing.PaperKind.Custom; 
+                    prntStkLabel custLbl = new prntStkLabel();
+                    custLbl.PaperKind = System.Drawing.Printing.PaperKind.Custom;
                     custLbl.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
                     custLbl.PageHeight = height * 10;
                     custLbl.PageWidth = width * 10;
@@ -1430,7 +1434,7 @@ namespace RTIS_Vulcan_UI
                     //custLbl.TopMargin.HeightF = 0;
                     //custLbl.BottomMargin.HeightF = 0;                  
                     custLbl.ShowPrintMarginsWarning = false;
-                    
+
 
                     XRDesignForm repNew = new XRDesignForm();
                     repNew.Text = "New Stock Label";
@@ -1569,7 +1573,7 @@ namespace RTIS_Vulcan_UI
                     {
                         mdiController.ActiveDesignPanel.CloseReport();
                     }
-                }              
+                }
             }
             catch (Exception ex)
             {
@@ -1640,11 +1644,11 @@ namespace RTIS_Vulcan_UI
                     //custLbl.BottomMargin.HeightF = 0;                  
                     custLbl.ShowPrintMarginsWarning = false;
 
-                    
+
 
                     XRDesignForm repNew = new XRDesignForm();
                     repNew.Text = "New Canning Label";
-                    XRDesignPanel desPnl = repNew.ActiveDesignPanel;                   
+                    XRDesignPanel desPnl = repNew.ActiveDesignPanel;
                     XRDesignMdiController mdiController = repNew.DesignMdiController;
                     mdiController.DesignPanelLoaded += new DesignerLoadedEventHandler(mdiController_DesignPanelLoaded);
                     mdiController.OpenReport(custLbl);

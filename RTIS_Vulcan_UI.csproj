@@ -449,9 +449,13 @@
     <Compile Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.cs">
       <SubType>UserControl</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.Designer.cs">
       <DependentUpon>ucPOReprinting.cs</DependentUpon>
     </Compile>
+=======
+    <Compile Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.Designer.cs" />
+>>>>>>> 4109af29ce94747bc728d1dd0641d55d3120f098
     <Compile Include="Controls\Stock Management\Stock Takes\ucArchiveStockTake.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -671,9 +675,13 @@
     <Compile Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.Designer.cs">
       <DependentUpon>frmLinkPurchaseOrder.cs</DependentUpon>
     </Compile>
+=======
+    <Compile Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.Designer.cs" />
+>>>>>>> 4109af29ce94747bc728d1dd0641d55d3120f098
     <Compile Include="Forms\Stock Take\frmCSVBuilder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -986,9 +994,13 @@
     <EmbeddedResource Include="Controls\Administration\Transfer Management\ucWhseAdmin.resx">
       <DependentUpon>ucWhseAdmin.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.resx">
       <DependentUpon>ucPOReprinting.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <EmbeddedResource Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.resx" />
+>>>>>>> 4109af29ce94747bc728d1dd0641d55d3120f098
     <EmbeddedResource Include="Controls\Stock Management\Stock Takes\ucArchiveStockTake.resx">
       <DependentUpon>ucArchiveStockTake.cs</DependentUpon>
     </EmbeddedResource>
@@ -1103,9 +1115,13 @@
     <EmbeddedResource Include="Forms\Purchase Orders\CMS Management\frmVeiwApproval.resx">
       <DependentUpon>frmVeiwApproval.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.resx">
       <DependentUpon>frmLinkPurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <EmbeddedResource Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.resx" />
+>>>>>>> 4109af29ce94747bc728d1dd0641d55d3120f098
     <EmbeddedResource Include="Forms\Stock Take\frmCSVBuilder.resx">
       <DependentUpon>frmCSVBuilder.cs</DependentUpon>
     </EmbeddedResource>
