@@ -1297,8 +1297,9 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
                         poReport.Supplier.Value = poVendor;
                         poReport.CreateDocument();
                         ReportPrintTool printTool = new ReportPrintTool(poReport);
+                        string porpath = GlobalVars.RSCFolder + "\\" + System.IO.Directory.CreateDirectory(Path.Combine(GlobalVars.RSCFolder, "PO Reprints"));
                         string poversion = System.DateTime.Now.Year.ToString().Substring(2, 2) + System.DateTime.Now.ToString("MM") + System.DateTime.Now.Day.ToString() + System.DateTime.Now.ToString("HHmmss");
-                        poReport.ExportToPdf(GlobalVars.RSCFolder + "\\" + System.IO.Directory.CreateDirectory(Path.Combine(GlobalVars.RSCFolder,"" + "" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + "")) + @"\" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + "_v" + poversion + ".pdf");
+                        poReport.ExportToPdf(porpath + "\\" + System.IO.Directory.CreateDirectory(Path.Combine(porpath, "" + "" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + "")) + @"\" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + "_v" + poversion + ".pdf");
                         printTool.ShowPreview();
                     }
 

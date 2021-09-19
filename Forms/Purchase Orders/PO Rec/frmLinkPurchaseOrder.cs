@@ -18,7 +18,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
 
         public string vendorLines = string.Empty;
         public bool vendorsPulled = false;
-   
+
 
         public string LinkLines = string.Empty;
         public bool LinksPulled = false;
@@ -36,22 +36,23 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
 
         public string linkid = string.Empty;
         public string supplier = string.Empty;
-        public string ponumber = string.Empty;
+        public string ponumbers = string.Empty;
         public string dateupdated = string.Empty;
 
 
-        public frmLinkPurchaseOrder(string _linkid, string _supplier, string _ponumber, string _dateupdated)
+        public frmLinkPurchaseOrder(string _linkid, string _supplier, string _ponumbers, string _dateupdated)
         {
             InitializeComponent();
             linkid = _linkid;
             supplier = _supplier;
-            ponumber = _ponumber;
+            ponumbers = _ponumbers;
             dateupdated = _dateupdated;
         }
 
         private void frmLinkPurchaseOrder_Load(object sender, EventArgs e)
         {
             refreshVendors();
+            setCurrentPONumber();
         }
         public void refreshVendors()
         {
@@ -65,8 +66,96 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             {
                 lblSupplier.Text = supplier;
                 txtSelectedSupplier.Text = supplier;
-                listLinkedPOs.Items.Add(ponumber);
+                if (ponumbers != string.Empty)
+                {
+                    foreach (string item in ponumbers.Split(','))
+                    {
+                        if (item != string.Empty)
+                        {
+                            listLinkedPOs.Items.Add(item);
+                        }
+                    }
+                }
                 vendorsPulled = true;
+            }
+            catch (Exception ex)
+            {
+                ExHandler.showErrorEx(ex);
+            }
+        }
+
+        public void setCurrentPONumber()
+        {
+            try
+            {
+                if (ponumbers != string.Empty)
+                {
+                    foreach (string item in ponumbers.Split(','))
+                    {
+                        if (item != string.Empty)
+                        {
+                            lbSelected.Items.Add(item);
+                            lbAvailable.Items.Remove(item);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ExHandler.showErrorEx(ex);
+            }
+        }
+
+        private void btnRemovePO_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lbSelected.SelectedItems.Count > 0)
+                {
+                    object selected = lbSelected.SelectedItem;
+                    lbAvailable.Items.Add(selected);
+                    lbSelected.Items.Remove(selected);
+                }
+            }
+            catch (Exception ex)
+            {
+                ExHandler.showErrorEx(ex);
+            }
+
+        }
+
+        private void btnAddPO_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lbAvailable.SelectedItems.Count > 0)
+                {
+                    object selected = lbAvailable.SelectedItem;
+                    lbSelected.Items.Add(selected);
+                    lbAvailable.Items.Remove(selected);
+                }
+            }
+            catch (Exception ex)
+            {
+                ExHandler.showErrorEx(ex);
+            }
+        }
+
+        private void btnAddAllPOs_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<string> itemList = new List<string>();
+                foreach (string item in lbAvailable.Items)
+                {
+                    itemList.Add(item);
+                }
+
+                foreach (string item in itemList)
+                {
+                    lbSelected.Items.Add(item);
+                    lbAvailable.Items.Remove(item);
+                }
             }
             catch (Exception ex)
             {

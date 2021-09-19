@@ -571,14 +571,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="3926488">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="3927512">
       <assemblyIdentity name="RTIS_Vulcan_UI" version="1.1.2.23" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/pDgx7joYt0RJVSKFHj/+FwJFUq4QOXbB3Kc5qygMJ0=</dsig:DigestValue>
+        <dsig:DigestValue>ewFcGxlY/YkhCNCKWbmyzezht/EEPxbnsA1INWOPVe4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

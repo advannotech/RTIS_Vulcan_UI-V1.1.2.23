@@ -32,6 +32,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLinkPurchaseOrder));
             this.xtcRoles = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.listLinkedPOs = new DevExpress.XtraEditors.ListBoxControl();
             this.txtSelectedSupplier = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,14 +46,13 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnAddPO = new DevExpress.XtraEditors.SimpleButton();
             this.lbAvailable = new DevExpress.XtraEditors.ListBoxControl();
             this.lblSupplier = new System.Windows.Forms.Label();
-            this.listLinkedPOs = new DevExpress.XtraEditors.ListBoxControl();
             ((System.ComponentModel.ISupportInitialize)(this.xtcRoles)).BeginInit();
             this.xtcRoles.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listLinkedPOs)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbSelected)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbAvailable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listLinkedPOs)).BeginInit();
             this.SuspendLayout();
             // 
             // xtcRoles
@@ -75,8 +75,16 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.xtraTabPage1.Controls.Add(this.label2);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(671, 399);
+            this.xtraTabPage1.Size = new System.Drawing.Size(707, 399);
             this.xtraTabPage1.Text = "Supplier Info";
+            // 
+            // listLinkedPOs
+            // 
+            this.listLinkedPOs.Enabled = false;
+            this.listLinkedPOs.Location = new System.Drawing.Point(16, 117);
+            this.listLinkedPOs.Name = "listLinkedPOs";
+            this.listLinkedPOs.Size = new System.Drawing.Size(551, 268);
+            this.listLinkedPOs.TabIndex = 59;
             // 
             // txtSelectedSupplier
             // 
@@ -185,6 +193,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnAddAllPOs.Name = "btnAddAllPOs";
             this.btnAddAllPOs.Size = new System.Drawing.Size(67, 49);
             this.btnAddAllPOs.TabIndex = 65;
+            this.btnAddAllPOs.Click += new System.EventHandler(this.btnAddAllPOs_Click);
             // 
             // btnRemovePO
             // 
@@ -198,6 +207,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnRemovePO.Name = "btnRemovePO";
             this.btnRemovePO.Size = new System.Drawing.Size(67, 49);
             this.btnRemovePO.TabIndex = 64;
+            this.btnRemovePO.Click += new System.EventHandler(this.btnRemovePO_Click);
             // 
             // btnAddPO
             // 
@@ -211,6 +221,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnAddPO.Name = "btnAddPO";
             this.btnAddPO.Size = new System.Drawing.Size(67, 49);
             this.btnAddPO.TabIndex = 63;
+            this.btnAddPO.Click += new System.EventHandler(this.btnAddPO_Click);
             // 
             // lbAvailable
             // 
@@ -234,14 +245,6 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.lblSupplier.TabIndex = 51;
             this.lblSupplier.Text = "Supplier";
             // 
-            // listLinkedPOs
-            // 
-            this.listLinkedPOs.Enabled = false;
-            this.listLinkedPOs.Location = new System.Drawing.Point(16, 117);
-            this.listLinkedPOs.Name = "listLinkedPOs";
-            this.listLinkedPOs.Size = new System.Drawing.Size(551, 268);
-            this.listLinkedPOs.TabIndex = 59;
-            // 
             // frmLinkPurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -261,11 +264,11 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.xtcRoles.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listLinkedPOs)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbSelected)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbAvailable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listLinkedPOs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

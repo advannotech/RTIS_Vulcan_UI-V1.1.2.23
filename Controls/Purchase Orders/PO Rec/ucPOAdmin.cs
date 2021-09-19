@@ -274,8 +274,22 @@ namespace RTIS_Vulcan_UI.Controls
             {
                 if (gvLink.FocusedRowHandle != -1)
                 {
-                    frmLinkPurchaseOrder frmRm = new frmLinkPurchaseOrder(linkid,supplier,ponumber,dateupdated);
-                    DialogResult dr = frmRm.ShowDialog();
+
+                    try
+                    {
+                       
+                        frmLinkPurchaseOrder frmRm = new frmLinkPurchaseOrder(linkid, supplier, ponumber, dateupdated);
+                        DialogResult dr = frmRm.ShowDialog();
+                        if (dr == DialogResult.OK)
+                        {
+                            //getPOs();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        ExHandler.showErrorEx(ex);
+                    }
+
                 }
                 else
                 {

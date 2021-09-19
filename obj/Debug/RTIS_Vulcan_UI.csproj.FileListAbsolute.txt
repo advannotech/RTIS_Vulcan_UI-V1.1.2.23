@@ -397,3 +397,4 @@ C:\Users\advannotechdev1\source\repos\cataler\UI\bin\Debug\es\DevExpress.XtraPdf
 C:\Users\advannotechdev1\source\repos\cataler\UI\bin\Debug\ja\DevExpress.XtraPdfViewer.v20.2.resources.dll
 C:\Users\advannotechdev1\source\repos\cataler\UI\bin\Debug\ru\DevExpress.XtraPdfViewer.v20.2.resources.dll
 C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec.frmLinkPurchaseOrder.resources
+C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.csprojAssemblyReference.cache

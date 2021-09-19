@@ -527,7 +527,7 @@
             this.xrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(341.3333F, 23F);
             this.xrPageInfo1.StylePriority.UseFont = false;
-            this.xrPageInfo1.TextFormatString = "{0:dddd, dd MMMM yyyy HH:mm}";
+            this.xrPageInfo1.TextFormatString = "{0:dddd, dd MMMM yyyy HH:mm:ss}";
             // 
             // xrPageInfo2
             // 

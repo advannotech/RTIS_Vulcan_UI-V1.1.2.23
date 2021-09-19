@@ -198,7 +198,6 @@
             // 
             // cbAllLines
             // 
-            this.cbAllLines.EditValue = true;
             this.cbAllLines.Enabled = false;
             this.cbAllLines.Location = new System.Drawing.Point(635, 52);
             this.cbAllLines.Margin = new System.Windows.Forms.Padding(4);
@@ -353,6 +352,8 @@
             this.gcOrderQty.FieldName = "gcOrderQty";
             this.gcOrderQty.Name = "gcOrderQty";
             this.gcOrderQty.OptionsColumn.AllowEdit = false;
+            this.gcOrderQty.Visible = true;
+            this.gcOrderQty.VisibleIndex = 4;
             this.gcOrderQty.Width = 132;
             // 
             // gcReceive
@@ -379,8 +380,6 @@
             this.gcBack2.FieldName = "gcBack2";
             this.gcBack2.Name = "gcBack2";
             this.gcBack2.OptionsColumn.AllowEdit = false;
-            this.gcBack2.Visible = true;
-            this.gcBack2.VisibleIndex = 4;
             this.gcBack2.Width = 108;
             // 
             // gcRecQty
