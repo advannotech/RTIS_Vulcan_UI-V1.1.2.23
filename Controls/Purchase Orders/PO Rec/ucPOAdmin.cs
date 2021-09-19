@@ -15,6 +15,7 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
+using RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec;
 
 namespace RTIS_Vulcan_UI.Controls
 {
@@ -277,9 +278,9 @@ namespace RTIS_Vulcan_UI.Controls
                     try
                     {
                        
-                       // frmLinkPurchaseOrder frmRm = new frmLinkPurchaseOrder(linkid, supplier, ponumber, dateupdated);
-                       // DialogResult dr = frmRm.ShowDialog();
-                        //if (dr == DialogResult.OK)
+                       frmLinkPurchaseOrder frmRm = new frmLinkPurchaseOrder(linkid, supplier, ponumber, dateupdated);
+                       DialogResult dr = frmRm.ShowDialog();
+                       if (dr == DialogResult.OK)
                         {
                             //getPOs();
                         }

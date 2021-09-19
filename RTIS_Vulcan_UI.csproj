@@ -534,6 +534,10 @@
     <Compile Include="Forms\Purchase Orders\CMS Management\frmVeiwApproval.Designer.cs">
       <DependentUpon>frmVeiwApproval.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.Designer.cs" />
     <Compile Include="Forms\Stock Take\frmCSVBuilder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -961,6 +965,7 @@
     <EmbeddedResource Include="Forms\Purchase Orders\CMS Management\frmVeiwApproval.resx">
       <DependentUpon>frmVeiwApproval.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.resx" />
     <EmbeddedResource Include="Forms\Stock Take\frmCSVBuilder.resx">
       <DependentUpon>frmCSVBuilder.cs</DependentUpon>
     </EmbeddedResource>

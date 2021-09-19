@@ -307,3 +307,4 @@ C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.applic
 C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.csproj.CopyComplete
 C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.exe
 C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.pdb
+C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec.frmLinkPurchaseOrder.resources
