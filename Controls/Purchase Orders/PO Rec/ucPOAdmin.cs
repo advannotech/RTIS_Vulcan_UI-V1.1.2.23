@@ -261,12 +261,67 @@ namespace RTIS_Vulcan_UI.Controls
         {
             InitializeComponent();
         }
+
+        private void btnLinkPO_Click(object sender, EventArgs e)
+        {
+            string linkid = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcLinkID").ToString();
+            string supplier = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcSupplier").ToString();
+            string ponumber = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcPO").ToString();
+            string dateupdated = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcDate").ToString();
+
+            try
+            {
+                if (gvLink.FocusedRowHandle != -1)
+                {
+
+                    try
+                    {
+                       
+                       // frmLinkPurchaseOrder frmRm = new frmLinkPurchaseOrder(linkid, supplier, ponumber, dateupdated);
+                       // DialogResult dr = frmRm.ShowDialog();
+                        //if (dr == DialogResult.OK)
+                        {
+                            //getPOs();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        ExHandler.showErrorEx(ex);
+                    }
+
+                }
+                else
+                {
+                    msg = new frmMsg("No Supplier Found", "Cannot Link Vendor!", GlobalVars.msgState.Info);
+                    msg.ShowDialog();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ExHandler.showErrorEx(ex);
+            }
+        }
         private void ucPOAdmin_Load(object sender, EventArgs e)
         {
             setUpVendorTable();
             refreshVendors();
             setUpLinkTable();
             refreshLinks();
+
+            DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnLinkPO = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            btnLinkPO.Buttons[0].Width = 85;
+            dgLink.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { btnLinkPO });
+            btnLinkPO.Click += btnLinkPO_Click;
+            gcLinkPO.ColumnEdit = btnLinkPO;
+            gcLinkPO.Width = 93;
+            gcLinkPO.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
+            btnLinkPO.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+
+            //DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit ricbRec = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            //dgLink.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { ricbRec });
+            //gcLinkPO.ColumnEdit = ricbRec;
+
         }
         private void btnTest_Click(object sender, EventArgs e)
         {
@@ -432,11 +487,6 @@ namespace RTIS_Vulcan_UI.Controls
             }
             catch (Exception)
             { }          
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            refreshLinks();
         }
     }
 }

@@ -2843,6 +2843,50 @@ namespace RTIS_Vulcan_UI.Classes
                 return "-2*Cannot connect to server: " + Environment.NewLine + Environment.NewLine + ex.Message;
             }
         }
+
+        public static string ReprintVendorPOLines(string vendor)
+        {
+            try
+            {
+                string ServerDetails = "";
+
+                IPAddress ServerIPAddress = null;
+                ServerIPAddress = IPAddress.Parse(GlobalVars.ServerIP);
+                IPEndPoint ServerEP = new IPEndPoint(ServerIPAddress, Convert.ToInt32(GlobalVars.ServerPort));
+                Socket DataClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+                byte[] sendbytes = new byte[21];
+                byte[] receivebytes = new byte[3];
+                ASCIIEncoding ascenc = new ASCIIEncoding();
+
+
+                //Send start request
+                DataClient.SendTimeout = 60000;
+                DataClient.ReceiveTimeout = 60000;
+                DataClient.Connect(ServerEP);
+
+                sendbytes = ascenc.GetBytes("*REPRINTVENDORPOLINES*@" + vendor);
+                DataClient.Send(sendbytes);
+
+                receivebytes = new byte[131073];
+                int length = DataClient.Receive(receivebytes);
+                for (int i = 0; i <= length - 1; i++)
+                {
+                    ServerDetails += Convert.ToChar(receivebytes[i]);
+                }
+
+                DataClient.Close();
+                return ServerDetails;
+            }
+            catch (Exception ex)
+            {
+                return "-2*Cannot connect to server: " + Environment.NewLine + Environment.NewLine + ex.Message;
+            }
+        }
+
+
+
+
         public static string GetVendorPOLines(string vendor)
         {
             try
@@ -2882,6 +2926,173 @@ namespace RTIS_Vulcan_UI.Classes
                 return "-2*Cannot connect to server: " + Environment.NewLine + Environment.NewLine + ex.Message;
             }
         }
+
+
+
+        public static string getPOIreprint(string orderNum)
+        {
+            try
+            {
+                string ServerDetails = "";
+
+                IPAddress ServerIPAddress = null;
+                ServerIPAddress = IPAddress.Parse(GlobalVars.ServerIP);
+                IPEndPoint ServerEP = new IPEndPoint(ServerIPAddress, Convert.ToInt32(GlobalVars.ServerPort));
+                Socket DataClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+                byte[] sendbytes = new byte[21];
+                byte[] receivebytes = new byte[3];
+                ASCIIEncoding ascenc = new ASCIIEncoding();
+
+
+                //Send start request
+                DataClient.SendTimeout = 60000;
+                DataClient.ReceiveTimeout = 60000;
+                DataClient.Connect(ServerEP);
+
+                sendbytes = ascenc.GetBytes("*GETPOLINESFORREPRINT*@" + orderNum);
+                DataClient.Send(sendbytes);
+
+                receivebytes = new byte[131073];
+                int length = DataClient.Receive(receivebytes);
+                for (int i = 0; i <= length - 1; i++)
+                {
+                    ServerDetails += Convert.ToChar(receivebytes[i]);
+                }
+
+                DataClient.Close();
+                return ServerDetails;
+            }
+            catch (Exception ex)
+            {
+                return "-2*Cannot connect to server: " + Environment.NewLine + Environment.NewLine + ex.Message;
+            }
+        }
+
+
+        public static string getPOLinesreprint(string orderNum)
+        {
+            try
+            {
+                string ServerDetails = "";
+
+                IPAddress ServerIPAddress = null;
+                ServerIPAddress = IPAddress.Parse(GlobalVars.ServerIP);
+                IPEndPoint ServerEP = new IPEndPoint(ServerIPAddress, Convert.ToInt32(GlobalVars.ServerPort));
+                Socket DataClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+                byte[] sendbytes = new byte[21];
+                byte[] receivebytes = new byte[3];
+                ASCIIEncoding ascenc = new ASCIIEncoding();
+
+
+                //Send start request
+                DataClient.SendTimeout = 60000;
+                DataClient.ReceiveTimeout = 60000;
+                DataClient.Connect(ServerEP);
+
+                sendbytes = ascenc.GetBytes("*GETPOLINESREPRINT*@" + orderNum);
+                DataClient.Send(sendbytes);
+
+                receivebytes = new byte[131073];
+                int length = DataClient.Receive(receivebytes);
+                for (int i = 0; i <= length - 1; i++)
+                {
+                    ServerDetails += Convert.ToChar(receivebytes[i]);
+                }
+
+                DataClient.Close();
+                return ServerDetails;
+            }
+            catch (Exception ex)
+            {
+                return "-2*Cannot connect to server: " + Environment.NewLine + Environment.NewLine + ex.Message;
+            }
+        }
+
+
+
+        public static string GetreprintPOLines(string orderNum)
+        {
+            try
+            {
+                string ServerDetails = "";
+
+                IPAddress ServerIPAddress = null;
+                ServerIPAddress = IPAddress.Parse(GlobalVars.ServerIP);
+                IPEndPoint ServerEP = new IPEndPoint(ServerIPAddress, Convert.ToInt32(GlobalVars.ServerPort));
+                Socket DataClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+                byte[] sendbytes = new byte[21];
+                byte[] receivebytes = new byte[3];
+                ASCIIEncoding ascenc = new ASCIIEncoding();
+
+
+                //Send start request
+                DataClient.SendTimeout = 60000;
+                DataClient.ReceiveTimeout = 60000;
+                DataClient.Connect(ServerEP);
+
+                sendbytes = ascenc.GetBytes("*GETREPRINTPOLINES*@" + orderNum);
+                DataClient.Send(sendbytes);
+
+                receivebytes = new byte[131073];
+                int length = DataClient.Receive(receivebytes);
+                for (int i = 0; i <= length - 1; i++)
+                {
+                    ServerDetails += Convert.ToChar(receivebytes[i]);
+                }
+
+                DataClient.Close();
+                return ServerDetails;
+            }
+            catch (Exception ex)
+            {
+                return "-2*Cannot connect to server: " + Environment.NewLine + Environment.NewLine + ex.Message;
+            }
+        }
+
+        public static string ReprintPOLines(string orderNum)
+        {
+            try
+            {
+                string ServerDetails = "";
+
+                IPAddress ServerIPAddress = null;
+                ServerIPAddress = IPAddress.Parse(GlobalVars.ServerIP);
+                IPEndPoint ServerEP = new IPEndPoint(ServerIPAddress, Convert.ToInt32(GlobalVars.ServerPort));
+                Socket DataClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+                byte[] sendbytes = new byte[21];
+                byte[] receivebytes = new byte[3];
+                ASCIIEncoding ascenc = new ASCIIEncoding();
+
+
+                //Send start request
+                DataClient.SendTimeout = 60000;
+                DataClient.ReceiveTimeout = 60000;
+                DataClient.Connect(ServerEP);
+
+                sendbytes = ascenc.GetBytes("*REPRINTPOLINES*@" + orderNum);
+                DataClient.Send(sendbytes);
+
+                receivebytes = new byte[131073];
+                int length = DataClient.Receive(receivebytes);
+                for (int i = 0; i <= length - 1; i++)
+                {
+                    ServerDetails += Convert.ToChar(receivebytes[i]);
+                }
+
+                DataClient.Close();
+                return ServerDetails;
+            }
+            catch (Exception ex)
+            {
+                return "-2*Cannot connect to server: " + Environment.NewLine + Environment.NewLine + ex.Message;
+            }
+        }
+
+
         public static string GetPOLines(string orderNum)
         {
             try
