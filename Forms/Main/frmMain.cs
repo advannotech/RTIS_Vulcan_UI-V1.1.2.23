@@ -718,7 +718,7 @@ namespace RTIS_Vulcan_UI
                         xtcMain.SelectedTabPage = xp;
                     }
                     break;
-                case "Production Planning":
+                case "Production RM":
                     found = false;
                     foreach (XtraTabPage page in xtcMain.TabPages)
                     {
@@ -738,7 +738,7 @@ namespace RTIS_Vulcan_UI
                         xtcMain.SelectedTabPage = xp;
                     }
                     break;
-                case "PGM Planning":
+                case "PGM RM":
                     found = false;
                     foreach (XtraTabPage page in xtcMain.TabPages)
                     {
