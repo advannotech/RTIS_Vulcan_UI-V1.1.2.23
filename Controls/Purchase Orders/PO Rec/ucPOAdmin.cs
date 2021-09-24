@@ -126,7 +126,7 @@ namespace RTIS_Vulcan_UI.Controls
                         msg = new frmMsg("A connection level error has occured", "No data was returned from the server", GlobalVars.msgState.Error);
                         msg.ShowDialog();
                     }
-                }                
+                }
             }
             catch (Exception ex)
             {
@@ -171,13 +171,13 @@ namespace RTIS_Vulcan_UI.Controls
                 {
                     string poLinks = LinkLines;
                     if (poLinks != string.Empty)
-                    {                        
+                    {
                         switch (poLinks.Split('*')[0])
                         {
                             case "1":
                                 dtLink.Rows.Clear();
                                 poLinks = poLinks.Remove(0, 2);
-                                
+
                                 string[] LinkArray = poLinks.Split('*');
                                 foreach (string link in LinkArray)
                                 {
@@ -277,13 +277,8 @@ namespace RTIS_Vulcan_UI.Controls
 
                     try
                     {
-                       
-                       frmLinkPurchaseOrder frmRm = new frmLinkPurchaseOrder(linkid, supplier, ponumber, dateupdated);
-                       DialogResult dr = frmRm.ShowDialog();
-                       if (dr == DialogResult.OK)
-                        {
-                            //getPOs();
-                        }
+                        frmLinkPurchaseOrder frmRm = new frmLinkPurchaseOrder(linkid, supplier, ponumber, dateupdated);
+                        DialogResult dr = frmRm.ShowDialog();
                     }
                     catch (Exception ex)
                     {
@@ -350,7 +345,7 @@ namespace RTIS_Vulcan_UI.Controls
                             switch (updated.Split('*')[0])
                             {
                                 case "1":
-                                    
+
                                     break;
                                 case "0":
                                     updated = updated.Remove(0, 2);
@@ -380,7 +375,7 @@ namespace RTIS_Vulcan_UI.Controls
                             msg = new frmMsg("A connection level error has occured", "No data was returned from the server", GlobalVars.msgState.Error);
                             msg.ShowDialog();
                         }
-                    }                       
+                    }
                 }
             }
             catch (Exception ex)
@@ -446,14 +441,14 @@ namespace RTIS_Vulcan_UI.Controls
                         else
                         {
                             gvLink.SetRowCellValue(gvLink.FocusedRowHandle, "gcPO", "- Select Order -");
-                        }                       
+                        }
                     }
-                   
+
                 }
-            }          
+            }
         }
         private void tmrLinks_Tick(object sender, EventArgs e)
-        {            
+        {
             setLinkLines();
         }
         private void gvLink_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
@@ -482,12 +477,18 @@ namespace RTIS_Vulcan_UI.Controls
                                 e.Appearance.BackColor = Color.Salmon;
                                 e.Appearance.BackColor2 = Color.Salmon;
                             }
-                        }                        
+                        }
                     }
                 }
             }
             catch (Exception)
-            { }          
+            { }
+        }
+
+
+        private void btnRefresh_Click_1(object sender, EventArgs e)
+        {
+            refreshLinks();
         }
     }
 }

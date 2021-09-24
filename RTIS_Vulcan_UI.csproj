@@ -317,7 +317,9 @@
     <Compile Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.Designer.cs" />
+    <Compile Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.Designer.cs">
+      <DependentUpon>ucPOReprinting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Stock Management\Stock Takes\ucArchiveStockTake.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -537,7 +539,15 @@
     <Compile Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.Designer.cs" />
+    <Compile Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.Designer.cs">
+      <DependentUpon>frmLinkPurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase Orders\PO Rec\frmPOReprintlostlbl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase Orders\PO Rec\frmPOReprintlostlbl.Designer.cs">
+      <DependentUpon>frmPOReprintlostlbl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Stock Take\frmCSVBuilder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -763,6 +773,12 @@
     <Compile Include="Reports\rptPORec.Designer.cs">
       <DependentUpon>rptPORec.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\rptPOReprintrec.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptPOReprintrec.Designer.cs">
+      <DependentUpon>rptPOReprintrec.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Controls\Administration\Transfer Management\ucRecTransferManagement.resx">
       <DependentUpon>ucRecTransferManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -850,7 +866,9 @@
     <EmbeddedResource Include="Controls\Administration\Transfer Management\ucWhseAdmin.resx">
       <DependentUpon>ucWhseAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.resx" />
+    <EmbeddedResource Include="Controls\Purchase Orders\PO Rec\ucPOReprinting.resx">
+      <DependentUpon>ucPOReprinting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Stock Management\Stock Takes\ucArchiveStockTake.resx">
       <DependentUpon>ucArchiveStockTake.cs</DependentUpon>
     </EmbeddedResource>
@@ -965,7 +983,12 @@
     <EmbeddedResource Include="Forms\Purchase Orders\CMS Management\frmVeiwApproval.resx">
       <DependentUpon>frmVeiwApproval.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.resx" />
+    <EmbeddedResource Include="Forms\Purchase Orders\PO Rec\frmLinkPurchaseOrder.resx">
+      <DependentUpon>frmLinkPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase Orders\PO Rec\frmPOReprintlostlbl.resx">
+      <DependentUpon>frmPOReprintlostlbl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stock Take\frmCSVBuilder.resx">
       <DependentUpon>frmCSVBuilder.cs</DependentUpon>
     </EmbeddedResource>
@@ -1081,6 +1104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptPORec.resx">
       <DependentUpon>rptPORec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPOReprintrec.resx">
+      <DependentUpon>rptPOReprintrec.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -205,6 +205,7 @@
             this.cbAllLines.Properties.Caption = "Show all lines";
             this.cbAllLines.Size = new System.Drawing.Size(141, 24);
             this.cbAllLines.TabIndex = 89;
+            this.cbAllLines.Visible = false;
             // 
             // labelControl1
             // 

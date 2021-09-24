@@ -320,6 +320,7 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(43, 41);
             this.btnRefresh.TabIndex = 89;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click_1);
             // 
             // label1
             // 

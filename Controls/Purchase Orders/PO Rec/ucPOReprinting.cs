@@ -20,6 +20,7 @@ using RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using System.IO;
+using RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec;
 
 namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
 {
@@ -810,11 +811,12 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
                     string desc = gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcDesc").ToString();
                     string lot = gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotNum").ToString();
                     bool isLot = Convert.ToBoolean(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotLine"));
+                    string qty = gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcOrderQty").ToString();
                     isLot = true;
                     if (isLot == true && lot != string.Empty)
                     {
                         #region Lot Items
-                        frmPOReprint print = new frmPOReprint(code, desc, lot);
+                        frmPOReprintlostlbl print = new frmPOReprintlostlbl(code, desc, lot, qty);
                         print.ShowDialog();
                         DialogResult res = print.DialogResult;
                         if (res == DialogResult.OK)
@@ -829,7 +831,7 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
                     else if (isLot == true && lot == string.Empty)
                     {
                         #region Non Lot Items
-                        frmPOReprint print = new frmPOReprint(code, desc, "NA");
+                        frmPOReprintlostlbl print = new frmPOReprintlostlbl(code, desc, "NA", qty);
                         print.ShowDialog();
                         DialogResult res = print.DialogResult;
                         if (res == DialogResult.OK)
@@ -1284,7 +1286,7 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
                     {
                         string row = code + "|" + desc + "|" + lot + "|" + orderQty;
                         dtrep.Rows.Add(row.Split('|'));
-                        rptPORec poReport = new rptPORec();
+                        rptPOReprintrec poReport = new rptPOReprintrec();
                         string connectionString = "Data Source=" + GlobalVars.SQLServer + "; Initial Catalog=" + GlobalVars.RTDB +
                         "; user ID=" + GlobalVars.SqlUser + "; password=" + GlobalVars.SqlPass + ";Max Pool Size=99999;";
                         CustomStringConnectionParameters connectionParams = new CustomStringConnectionParameters(connectionString);
