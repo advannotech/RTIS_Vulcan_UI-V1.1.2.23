@@ -282,10 +282,12 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
                             {
                                 case "1":
                                     dateupdated = Convert.ToString(DateTime.Now);
-                                    msg = new frmMsg("Link PO", "Link Success!",
-                                    GlobalVars.msgState.Success);
-                                    msg.ShowDialog();
+                                    //msg = new frmMsg("Link PO", "Link Success!",
+                                    //GlobalVars.msgState.Success);
+                                    //msg.ShowDialog();
                                     this.Close();
+
+
                                     break;
                                 case "0":
                                     linked = linked.Remove(0, 2);
