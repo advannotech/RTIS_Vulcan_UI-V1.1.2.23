@@ -199,7 +199,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
 
                 //itemCode, lotNumber, jobQty, manufQty, line, running, started, userStarted, stopped, userStopped, reopened, userReopened
 
-                frmZECTJobInfo ji = new frmZECTJobInfo(idParam, jobCodeParam, dtGenInfo);
+                frmZECTJobInfo ji = new frmZECTJobInfo(idParam, jobCodeParam, dtGenInfo, lotNumber.Split('|')[1], Convert.ToBoolean(running.Split('|')[1]));
                 ji.ShowDialog();
 
             }

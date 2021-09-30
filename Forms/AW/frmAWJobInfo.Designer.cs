@@ -54,13 +54,14 @@
             this.gcPalletQty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPalletUser = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPalletDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcManuf = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcDateManuf = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcUserManuf = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.ppnlWait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.tmrInputs = new System.Windows.Forms.Timer(this.components);
             this.tmrOutputs = new System.Windows.Forms.Timer(this.components);
-            this.gcManuf = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcDateManuf = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcUserManuf = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnManuallyClose = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -118,7 +119,7 @@
             // 
             this.xtraTabPage1.Controls.Add(this.dgInfo);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1105, 357);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1110, 361);
             this.xtraTabPage1.Text = "General Information";
             // 
             // dgInfo
@@ -163,7 +164,7 @@
             this.xtraTabPage2.Controls.Add(this.labelControl19);
             this.xtraTabPage2.Controls.Add(this.dgInputs);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1105, 357);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1110, 361);
             this.xtraTabPage2.Text = "Inputs";
             // 
             // labelControl19
@@ -252,7 +253,7 @@
             this.xtraTabPage3.Controls.Add(this.dgOutputs);
             this.xtraTabPage3.Controls.Add(this.labelControl1);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1105, 357);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1110, 361);
             this.xtraTabPage3.Text = "Outputs";
             // 
             // dgOutputs
@@ -317,41 +318,6 @@
             this.gcPalletDate.Visible = true;
             this.gcPalletDate.VisibleIndex = 3;
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(2, 2);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(182, 33);
-            this.labelControl1.TabIndex = 46;
-            this.labelControl1.Text = "ZECT Job Ouputs";
-            // 
-            // ppnlWait
-            // 
-            this.ppnlWait.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.ppnlWait.Appearance.Options.UseBackColor = true;
-            this.ppnlWait.BarAnimationElementThickness = 2;
-            this.ppnlWait.Location = new System.Drawing.Point(13, 3);
-            this.ppnlWait.Margin = new System.Windows.Forms.Padding(4);
-            this.ppnlWait.Name = "ppnlWait";
-            this.ppnlWait.Size = new System.Drawing.Size(1123, 473);
-            this.ppnlWait.TabIndex = 39;
-            this.ppnlWait.Text = "progressPanel1";
-            // 
-            // tmrInputs
-            // 
-            this.tmrInputs.Tick += new System.EventHandler(this.tmrInputs_Tick);
-            // 
-            // tmrOutputs
-            // 
-            this.tmrOutputs.Tick += new System.EventHandler(this.tmrOutputs_Tick);
-            // 
             // gcManuf
             // 
             this.gcManuf.Caption = "Manufactured";
@@ -379,12 +345,65 @@
             this.gcUserManuf.Visible = true;
             this.gcUserManuf.VisibleIndex = 6;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
+            this.labelControl1.Location = new System.Drawing.Point(2, 2);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(182, 33);
+            this.labelControl1.TabIndex = 46;
+            this.labelControl1.Text = "ZECT Job Ouputs";
+            // 
+            // ppnlWait
+            // 
+            this.ppnlWait.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.ppnlWait.Appearance.Options.UseBackColor = true;
+            this.ppnlWait.Location = new System.Drawing.Point(13, 3);
+            this.ppnlWait.Margin = new System.Windows.Forms.Padding(4);
+            this.ppnlWait.Name = "ppnlWait";
+            this.ppnlWait.Size = new System.Drawing.Size(1123, 473);
+            this.ppnlWait.TabIndex = 39;
+            this.ppnlWait.Text = "progressPanel1";
+            // 
+            // tmrInputs
+            // 
+            this.tmrInputs.Tick += new System.EventHandler(this.tmrInputs_Tick);
+            // 
+            // tmrOutputs
+            // 
+            this.tmrOutputs.Tick += new System.EventHandler(this.tmrOutputs_Tick);
+            // 
+            // btnManuallyClose
+            // 
+            this.btnManuallyClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnManuallyClose.Appearance.BackColor = System.Drawing.Color.Black;
+            this.btnManuallyClose.Appearance.Font = new System.Drawing.Font("Calibri", 9.75F);
+            this.btnManuallyClose.Appearance.Options.UseBackColor = true;
+            this.btnManuallyClose.Appearance.Options.UseFont = true;
+            this.btnManuallyClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnManuallyClose.ImageOptions.Image")));
+            this.btnManuallyClose.Location = new System.Drawing.Point(924, 9);
+            this.btnManuallyClose.LookAndFeel.SkinName = "DevExpress Dark Style";
+            this.btnManuallyClose.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnManuallyClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManuallyClose.Name = "btnManuallyClose";
+            this.btnManuallyClose.Size = new System.Drawing.Size(207, 49);
+            this.btnManuallyClose.TabIndex = 104;
+            this.btnManuallyClose.Text = "Manually Close";
+            this.btnManuallyClose.Click += new System.EventHandler(this.btnManuallyClose_Click);
+            // 
             // frmAWJobInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1148, 479);
+            this.Controls.Add(this.btnManuallyClose);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.labelControl13);
             this.Controls.Add(this.ppnlWait);
@@ -449,5 +468,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gcManuf;
         private DevExpress.XtraGrid.Columns.GridColumn gcDateManuf;
         private DevExpress.XtraGrid.Columns.GridColumn gcUserManuf;
+        private DevExpress.XtraEditors.SimpleButton btnManuallyClose;
     }
 }

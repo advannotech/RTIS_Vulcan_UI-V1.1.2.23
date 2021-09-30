@@ -45,6 +45,19 @@
             this.radSecond = new System.Windows.Forms.RadioButton();
             this.radFirst = new System.Windows.Forms.RadioButton();
             this.lblOptionsHeader = new DevExpress.XtraEditors.LabelControl();
+            this.dgProcess = new DevExpress.XtraGrid.GridControl();
+            this.gvProcess = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcAWCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcCatalystCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcSlurryCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcPowderCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcCoatNum = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcDateAdd = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcUserAdd = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcDateEdit = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcUserEdit = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ppnlWait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.dgSelectSP = new DevExpress.XtraGrid.GridControl();
             this.gvSelectSP = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcEvoIDSP = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,19 +78,6 @@
             this.gcEvoAWCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcEvoAWDesc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcSelectedCS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dgProcess = new DevExpress.XtraGrid.GridControl();
-            this.gvProcess = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gcID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcAWCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcCatalystCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcSlurryCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPowderCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcCoatNum = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcDateAdd = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcUserAdd = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcDateEdit = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcUserEdit = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ppnlWait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.tmrItems = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -86,12 +86,12 @@
             this.gbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProcess.Properties)).BeginInit();
             this.pnlOptions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProcess)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvProcess)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgSelectSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSelectSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgSelectCS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSelectCS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgProcess)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProcess)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -105,9 +105,9 @@
             this.lblHeader.Location = new System.Drawing.Point(4, 4);
             this.lblHeader.Margin = new System.Windows.Forms.Padding(4);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(296, 44);
+            this.lblHeader.Size = new System.Drawing.Size(221, 44);
             this.lblHeader.TabIndex = 31;
-            this.lblHeader.Text = "Production Planning";
+            this.lblHeader.Text = "Production RM";
             // 
             // panelControl1
             // 
@@ -161,7 +161,7 @@
             this.btnAdd.Appearance.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.btnAdd.Appearance.Options.UseBackColor = true;
             this.btnAdd.Appearance.Options.UseFont = true;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
             this.btnAdd.Location = new System.Drawing.Point(1035, 30);
             this.btnAdd.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnAdd.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -180,7 +180,7 @@
             this.btnEdit.Appearance.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.btnEdit.Appearance.Options.UseBackColor = true;
             this.btnEdit.Appearance.Options.UseFont = true;
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
             this.btnEdit.Location = new System.Drawing.Point(1211, 30);
             this.btnEdit.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnEdit.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -197,7 +197,7 @@
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnSearch.Appearance.Options.UseBackColor = true;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
             this.btnSearch.Location = new System.Drawing.Point(1387, 30);
             this.btnSearch.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnSearch.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -309,6 +309,160 @@
             this.lblOptionsHeader.Size = new System.Drawing.Size(483, 28);
             this.lblOptionsHeader.TabIndex = 32;
             this.lblOptionsHeader.Text = "ZECT Manufacture - Please select a production coat:";
+            // 
+            // dgProcess
+            // 
+            this.dgProcess.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgProcess.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.dgProcess.Location = new System.Drawing.Point(8, 106);
+            this.dgProcess.MainView = this.gvProcess;
+            this.dgProcess.Margin = new System.Windows.Forms.Padding(4);
+            this.dgProcess.Name = "dgProcess";
+            this.dgProcess.Size = new System.Drawing.Size(1460, 622);
+            this.dgProcess.TabIndex = 0;
+            this.dgProcess.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvProcess});
+            this.dgProcess.Click += new System.EventHandler(this.dgProcess_Click);
+            // 
+            // gvProcess
+            // 
+            this.gvProcess.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gcID,
+            this.gcAWCode,
+            this.gcCatalystCode,
+            this.gcSlurryCode,
+            this.gcPowderCode,
+            this.gcCoatNum,
+            this.gcDateAdd,
+            this.gcUserAdd,
+            this.gcDateEdit,
+            this.gcUserEdit});
+            this.gvProcess.GridControl = this.dgProcess;
+            this.gvProcess.Name = "gvProcess";
+            this.gvProcess.OptionsFind.AlwaysVisible = true;
+            this.gvProcess.OptionsView.ColumnAutoWidth = false;
+            // 
+            // gcID
+            // 
+            this.gcID.Caption = "ID";
+            this.gcID.FieldName = "gcID";
+            this.gcID.Name = "gcID";
+            this.gcID.OptionsColumn.AllowEdit = false;
+            this.gcID.Width = 60;
+            // 
+            // gcAWCode
+            // 
+            this.gcAWCode.Caption = "A&W Code";
+            this.gcAWCode.FieldName = "gcAWCode";
+            this.gcAWCode.Name = "gcAWCode";
+            this.gcAWCode.OptionsColumn.AllowEdit = false;
+            this.gcAWCode.Visible = true;
+            this.gcAWCode.VisibleIndex = 8;
+            // 
+            // gcCatalystCode
+            // 
+            this.gcCatalystCode.Caption = "Catalyst Code";
+            this.gcCatalystCode.FieldName = "gcCatalystCode";
+            this.gcCatalystCode.Name = "gcCatalystCode";
+            this.gcCatalystCode.OptionsColumn.AllowEdit = false;
+            this.gcCatalystCode.Visible = true;
+            this.gcCatalystCode.VisibleIndex = 0;
+            this.gcCatalystCode.Width = 150;
+            // 
+            // gcSlurryCode
+            // 
+            this.gcSlurryCode.Caption = "Slurry Code";
+            this.gcSlurryCode.FieldName = "gcSlurryCode";
+            this.gcSlurryCode.Name = "gcSlurryCode";
+            this.gcSlurryCode.OptionsColumn.AllowEdit = false;
+            this.gcSlurryCode.Visible = true;
+            this.gcSlurryCode.VisibleIndex = 1;
+            this.gcSlurryCode.Width = 120;
+            // 
+            // gcPowderCode
+            // 
+            this.gcPowderCode.Caption = "Powder Code";
+            this.gcPowderCode.FieldName = "gcPowderCode";
+            this.gcPowderCode.Name = "gcPowderCode";
+            this.gcPowderCode.OptionsColumn.AllowEdit = false;
+            this.gcPowderCode.Visible = true;
+            this.gcPowderCode.VisibleIndex = 2;
+            this.gcPowderCode.Width = 150;
+            // 
+            // gcCoatNum
+            // 
+            this.gcCoatNum.Caption = "Coat Num";
+            this.gcCoatNum.FieldName = "gcCoatNum";
+            this.gcCoatNum.Name = "gcCoatNum";
+            this.gcCoatNum.OptionsColumn.AllowEdit = false;
+            this.gcCoatNum.Visible = true;
+            this.gcCoatNum.VisibleIndex = 3;
+            this.gcCoatNum.Width = 100;
+            // 
+            // gcDateAdd
+            // 
+            this.gcDateAdd.Caption = "Date Added";
+            this.gcDateAdd.FieldName = "gcDateAdd";
+            this.gcDateAdd.Name = "gcDateAdd";
+            this.gcDateAdd.OptionsColumn.AllowEdit = false;
+            this.gcDateAdd.Visible = true;
+            this.gcDateAdd.VisibleIndex = 4;
+            this.gcDateAdd.Width = 140;
+            // 
+            // gcUserAdd
+            // 
+            this.gcUserAdd.Caption = "User Added";
+            this.gcUserAdd.FieldName = "gcUserAdd";
+            this.gcUserAdd.Name = "gcUserAdd";
+            this.gcUserAdd.OptionsColumn.AllowEdit = false;
+            this.gcUserAdd.Visible = true;
+            this.gcUserAdd.VisibleIndex = 5;
+            this.gcUserAdd.Width = 120;
+            // 
+            // gcDateEdit
+            // 
+            this.gcDateEdit.Caption = "Date Edited";
+            this.gcDateEdit.FieldName = "gcDateEdit";
+            this.gcDateEdit.Name = "gcDateEdit";
+            this.gcDateEdit.OptionsColumn.AllowEdit = false;
+            this.gcDateEdit.Visible = true;
+            this.gcDateEdit.VisibleIndex = 6;
+            this.gcDateEdit.Width = 140;
+            // 
+            // gcUserEdit
+            // 
+            this.gcUserEdit.Caption = "User Edited";
+            this.gcUserEdit.FieldName = "gcUserEdit";
+            this.gcUserEdit.Name = "gcUserEdit";
+            this.gcUserEdit.OptionsColumn.AllowEdit = false;
+            this.gcUserEdit.Visible = true;
+            this.gcUserEdit.VisibleIndex = 7;
+            this.gcUserEdit.Width = 120;
+            // 
+            // ppnlWait
+            // 
+            this.ppnlWait.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.ppnlWait.Appearance.Options.UseBackColor = true;
+            this.ppnlWait.Appearance.Options.UseTextOptions = true;
+            this.ppnlWait.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ppnlWait.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.ppnlWait.AppearanceCaption.Options.UseTextOptions = true;
+            this.ppnlWait.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ppnlWait.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.ppnlWait.AppearanceDescription.Options.UseTextOptions = true;
+            this.ppnlWait.AppearanceDescription.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ppnlWait.AppearanceDescription.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.ppnlWait.Location = new System.Drawing.Point(8, 6);
+            this.ppnlWait.Margin = new System.Windows.Forms.Padding(4);
+            this.ppnlWait.Name = "ppnlWait";
+            this.ppnlWait.Size = new System.Drawing.Size(1460, 721);
+            this.ppnlWait.TabIndex = 33;
+            this.ppnlWait.Text = "progressPanel1";
             // 
             // dgSelectSP
             // 
@@ -523,161 +677,6 @@
             this.gcSelectedCS.VisibleIndex = 7;
             this.gcSelectedCS.Width = 120;
             // 
-            // dgProcess
-            // 
-            this.dgProcess.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgProcess.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.dgProcess.Location = new System.Drawing.Point(8, 106);
-            this.dgProcess.MainView = this.gvProcess;
-            this.dgProcess.Margin = new System.Windows.Forms.Padding(4);
-            this.dgProcess.Name = "dgProcess";
-            this.dgProcess.Size = new System.Drawing.Size(1460, 622);
-            this.dgProcess.TabIndex = 0;
-            this.dgProcess.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvProcess});
-            this.dgProcess.Click += new System.EventHandler(this.dgProcess_Click);
-            // 
-            // gvProcess
-            // 
-            this.gvProcess.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gcID,
-            this.gcAWCode,
-            this.gcCatalystCode,
-            this.gcSlurryCode,
-            this.gcPowderCode,
-            this.gcCoatNum,
-            this.gcDateAdd,
-            this.gcUserAdd,
-            this.gcDateEdit,
-            this.gcUserEdit});
-            this.gvProcess.GridControl = this.dgProcess;
-            this.gvProcess.Name = "gvProcess";
-            this.gvProcess.OptionsFind.AlwaysVisible = true;
-            this.gvProcess.OptionsView.ColumnAutoWidth = false;
-            // 
-            // gcID
-            // 
-            this.gcID.Caption = "ID";
-            this.gcID.FieldName = "gcID";
-            this.gcID.Name = "gcID";
-            this.gcID.OptionsColumn.AllowEdit = false;
-            this.gcID.Width = 60;
-            // 
-            // gcAWCode
-            // 
-            this.gcAWCode.Caption = "A&W Code";
-            this.gcAWCode.FieldName = "gcAWCode";
-            this.gcAWCode.Name = "gcAWCode";
-            this.gcAWCode.OptionsColumn.AllowEdit = false;
-            this.gcAWCode.Visible = true;
-            this.gcAWCode.VisibleIndex = 8;
-            // 
-            // gcCatalystCode
-            // 
-            this.gcCatalystCode.Caption = "Catalyst Code";
-            this.gcCatalystCode.FieldName = "gcCatalystCode";
-            this.gcCatalystCode.Name = "gcCatalystCode";
-            this.gcCatalystCode.OptionsColumn.AllowEdit = false;
-            this.gcCatalystCode.Visible = true;
-            this.gcCatalystCode.VisibleIndex = 0;
-            this.gcCatalystCode.Width = 150;
-            // 
-            // gcSlurryCode
-            // 
-            this.gcSlurryCode.Caption = "Slurry Code";
-            this.gcSlurryCode.FieldName = "gcSlurryCode";
-            this.gcSlurryCode.Name = "gcSlurryCode";
-            this.gcSlurryCode.OptionsColumn.AllowEdit = false;
-            this.gcSlurryCode.Visible = true;
-            this.gcSlurryCode.VisibleIndex = 1;
-            this.gcSlurryCode.Width = 120;
-            // 
-            // gcPowderCode
-            // 
-            this.gcPowderCode.Caption = "Powder Code";
-            this.gcPowderCode.FieldName = "gcPowderCode";
-            this.gcPowderCode.Name = "gcPowderCode";
-            this.gcPowderCode.OptionsColumn.AllowEdit = false;
-            this.gcPowderCode.Visible = true;
-            this.gcPowderCode.VisibleIndex = 2;
-            this.gcPowderCode.Width = 150;
-            // 
-            // gcCoatNum
-            // 
-            this.gcCoatNum.Caption = "Coat Num";
-            this.gcCoatNum.FieldName = "gcCoatNum";
-            this.gcCoatNum.Name = "gcCoatNum";
-            this.gcCoatNum.OptionsColumn.AllowEdit = false;
-            this.gcCoatNum.Visible = true;
-            this.gcCoatNum.VisibleIndex = 3;
-            this.gcCoatNum.Width = 100;
-            // 
-            // gcDateAdd
-            // 
-            this.gcDateAdd.Caption = "Date Added";
-            this.gcDateAdd.FieldName = "gcDateAdd";
-            this.gcDateAdd.Name = "gcDateAdd";
-            this.gcDateAdd.OptionsColumn.AllowEdit = false;
-            this.gcDateAdd.Visible = true;
-            this.gcDateAdd.VisibleIndex = 4;
-            this.gcDateAdd.Width = 140;
-            // 
-            // gcUserAdd
-            // 
-            this.gcUserAdd.Caption = "User Added";
-            this.gcUserAdd.FieldName = "gcUserAdd";
-            this.gcUserAdd.Name = "gcUserAdd";
-            this.gcUserAdd.OptionsColumn.AllowEdit = false;
-            this.gcUserAdd.Visible = true;
-            this.gcUserAdd.VisibleIndex = 5;
-            this.gcUserAdd.Width = 120;
-            // 
-            // gcDateEdit
-            // 
-            this.gcDateEdit.Caption = "Date Edited";
-            this.gcDateEdit.FieldName = "gcDateEdit";
-            this.gcDateEdit.Name = "gcDateEdit";
-            this.gcDateEdit.OptionsColumn.AllowEdit = false;
-            this.gcDateEdit.Visible = true;
-            this.gcDateEdit.VisibleIndex = 6;
-            this.gcDateEdit.Width = 140;
-            // 
-            // gcUserEdit
-            // 
-            this.gcUserEdit.Caption = "User Edited";
-            this.gcUserEdit.FieldName = "gcUserEdit";
-            this.gcUserEdit.Name = "gcUserEdit";
-            this.gcUserEdit.OptionsColumn.AllowEdit = false;
-            this.gcUserEdit.Visible = true;
-            this.gcUserEdit.VisibleIndex = 7;
-            this.gcUserEdit.Width = 120;
-            // 
-            // ppnlWait
-            // 
-            this.ppnlWait.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ppnlWait.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.ppnlWait.Appearance.Options.UseBackColor = true;
-            this.ppnlWait.Appearance.Options.UseTextOptions = true;
-            this.ppnlWait.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ppnlWait.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.ppnlWait.AppearanceCaption.Options.UseTextOptions = true;
-            this.ppnlWait.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ppnlWait.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.ppnlWait.AppearanceDescription.Options.UseTextOptions = true;
-            this.ppnlWait.AppearanceDescription.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ppnlWait.AppearanceDescription.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.ppnlWait.BarAnimationElementThickness = 2;
-            this.ppnlWait.Location = new System.Drawing.Point(8, 6);
-            this.ppnlWait.Margin = new System.Windows.Forms.Padding(4);
-            this.ppnlWait.Name = "ppnlWait";
-            this.ppnlWait.Size = new System.Drawing.Size(1460, 721);
-            this.ppnlWait.TabIndex = 33;
-            this.ppnlWait.Text = "progressPanel1";
-            // 
             // tmrItems
             // 
             this.tmrItems.Tick += new System.EventHandler(this.tmrItems_Tick);
@@ -702,12 +701,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbProcess.Properties)).EndInit();
             this.pnlOptions.ResumeLayout(false);
             this.pnlOptions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProcess)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvProcess)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgSelectSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSelectSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgSelectCS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSelectCS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgProcess)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProcess)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
