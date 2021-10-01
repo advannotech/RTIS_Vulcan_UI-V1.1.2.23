@@ -544,7 +544,7 @@ namespace RTIS_Vulcan_UI.Classes
         }
 
 
-        //GET AVAILABLE ORDER NUMBERS FROM SAGE
+        //GET AVAILABLE STANDING PURCHASE ORDER NUMBERS FROM SAGE
         public static string GetAvailablePOs()
         {
             try

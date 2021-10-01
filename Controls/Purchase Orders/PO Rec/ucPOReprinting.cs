@@ -350,73 +350,7 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
         #endregion
 
         #region Print PO Labels
-        private void RibtnPrint_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string poNum = lblPO.Text.Split(':')[1].Replace(" ", string.Empty);
-                string sep = Convert.ToString(Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator);
-                bool lotLine = Convert.ToBoolean(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotLine"));
-                double qtyRec = Convert.ToDouble(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcBack1").ToString().Replace(",", sep).Replace(".", sep));
-                double orderQty = Convert.ToDouble(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcOrderQty").ToString().Replace(",", sep).Replace(".", sep));
-                string itemCode = Convert.ToString(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcCode"));
-                if (qtyRec != 0)
-                {
-                    if (qtyRec <= orderQty)
-                    {
-                        if (lotLine == true)
-                        {
-                            #region Lot Numbers
-                            frmPrint print = new frmPrint(Convert.ToString(qtyRec), itemCode, poNum);
-                            print.ShowDialog();
-                            lotNum = print.lotNum;
-                            qtyPerLabel = print.qtyPerLabel;
-                            LastLabelQty = print.lastLabelQty;
-                            qty = qtyRec;
-
-                            DialogResult res = print.DialogResult;
-                            if (res == DialogResult.OK)
-                            {
-                                lotPrintItem = true;
-                                startPrint();
-                            }
-                            #endregion
-                        }
-                        else
-                        {
-                            #region No Lot
-                            frmPrintNoLot print = new frmPrintNoLot(Convert.ToString(qtyRec), itemCode);
-                            print.ShowDialog();
-                            qtyPerLabel = print.qtyPerLabel;
-                            LastLabelQty = print.lastLabelQty;
-                            qty = qtyRec;
-                            DialogResult res = print.DialogResult;
-                            if (res == DialogResult.OK)
-                            {
-                                lotPrintItem = false;
-                                startPrint();
-                            }
-                            #endregion
-                        }
-
-                    }
-                    else
-                    {
-                        msg = new frmMsg("Cannot print label", "The quantity entered would exceed the total order qty", GlobalVars.msgState.Error);
-                        msg.ShowDialog();
-                    }
-                }
-                else
-                {
-                    msg = new frmMsg("Cannot print label", "Please enter a qty to receive", GlobalVars.msgState.Error);
-                    msg.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-                ExHandler.showErrorEx(ex);
-            }
-        }
+      
         public void startPrint()
         {
             try
@@ -806,37 +740,34 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
             {
                 if (gvPOItems.FocusedRowHandle != -1)
                 {
-                    string poNum = lblPO.Text.Split(':')[1].Replace(" ", string.Empty);
-                    string sep = Convert.ToString(Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator);
-                    bool lotLine = Convert.ToBoolean(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotLine"));
-                    string qtyRec = Convert.ToString(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcOrderQty").ToString().Replace(",", sep).Replace(".", sep));
-                    //double orderQty = Convert.ToDouble(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcOrderQty").ToString().Replace(",", sep).Replace(".", sep));
-                    string itemCode = Convert.ToString(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcCode"));
-                    string descrip = Convert.ToString(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcDesc"));
-                    string lotnumber = Convert.ToString(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotNum"));
+                    string poNumber = lblPO.Text.Split(':')[1].Replace(" ", string.Empty);
+                    string code = gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcCode").ToString();
+                    string desc = gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcDesc").ToString();
+                    string lot = gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotNum").ToString();
+                    double qtyrec = Convert.ToDouble(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcOrderQty"));
                     bool isLot = Convert.ToBoolean(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotLine"));
-
                     isLot = true;
-                    if (isLot == true && lotnumber != string.Empty)
+                    if (isLot == true && lot != string.Empty)
                     {
                         #region Lot Items
-                       //frmPOReprint print = new frmPOReprint(code, desc, lot);
-                        frmPOReprintlostlbl print = new frmPOReprintlostlbl(qtyRec, itemCode, poNum, descrip, lotnumber);
+                        frmPOReprintlostlbl print = new frmPOReprintlostlbl(code, desc, lot, qtyrec);
                         print.ShowDialog();
                         DialogResult res = print.DialogResult;
                         if (res == DialogResult.OK)
                         {
-                            ReprintQty = print.Qtyrec;
+ 
+                            ReprintQty = print.printQty;
                             ReprintQtyPerLabel = print.qtyPerLabel;
+                            LastLabelQty = print.lastLabelQty;
                             lotReprintItem = true;
                             startReprint();
                         }
                         #endregion
                     }
-                    else if (isLot == true && lotnumber == string.Empty)
+                    else if (isLot == false && lot == string.Empty)
                     {
                         #region Non Lot Items
-                        frmPOReprint print = new frmPOReprint(itemCode, descrip, "NA");
+                        frmPOReprint print = new frmPOReprint(code, desc, "NA");
                         print.ShowDialog();
                         DialogResult res = print.DialogResult;
                         if (res == DialogResult.OK)
@@ -860,98 +791,6 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
             {
                 ExHandler.showErrorEx(ex);
             }
-
-            //try
-            //{
-
-            //    if (gvPOItems.FocusedRowHandle != -1)
-            //    {
-
-
-            //        try
-            //        {
-            //            string poNum = lblPO.Text.Split(':')[1].Replace(" ", string.Empty);
-            //            string sep = Convert.ToString(Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator);
-            //            bool lotLine = Convert.ToBoolean(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotLine"));
-            //            double qtyRec = Convert.ToDouble(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcOrderQty").ToString().Replace(",", sep).Replace(".", sep));
-            //            double orderQty = Convert.ToDouble(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcOrderQty").ToString().Replace(",", sep).Replace(".", sep));
-            //            string itemCode = Convert.ToString(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcCode"));
-            //            string descrip = Convert.ToString(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcDesc"));
-            //            string lotnumber = Convert.ToString(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotNum"));
-
-
-            //            if (qtyRec != 0)
-            //            {
-            //                if (qtyRec > 0)
-            //                {
-            //                    if (lotLine == true)
-            //                    {
-            //                        #region Lot Numbers
-            //                        frmPOReprintlostlbl print = new frmPOReprintlostlbl(Convert.ToString(qtyRec), itemCode, poNum, descrip, lotnumber);
-            //                        print.ShowDialog();
-            //                        lotNum = print.lotnumber;
-            //                        qtyPerLabel = print.qtyPerLabel;
-            //                        LastLabelQty = print.lastLabelQty;
-            //                        qty = qtyRec;
-
-            //                        DialogResult res = print.DialogResult;
-            //                        if (res == DialogResult.OK)
-            //                        {
-            //                            lotPrintItem = true;
-            //                            startPrint();
-            //                        }
-            //                        #endregion
-            //                    }
-            //                    else
-            //                    {
-            //                        #region No Lot
-            //                        frmPrintNoLot print = new frmPrintNoLot(Convert.ToString(qtyRec), itemCode);
-            //                        print.ShowDialog();
-            //                        qtyPerLabel = print.qtyPerLabel;
-            //                        LastLabelQty = print.lastLabelQty;
-            //                        qty = qtyRec;
-            //                        DialogResult res = print.DialogResult;
-            //                        if (res == DialogResult.OK)
-            //                        {
-            //                            lotPrintItem = false;
-            //                            startPrint();
-            //                        }
-            //                        #endregion
-            //                    }
-
-            //                }
-            //                else
-            //                {
-            //                    msg = new frmMsg("Cannot print label", "The quantity entered would exceed the total order qty", GlobalVars.msgState.Error);
-            //                    msg.ShowDialog();
-            //                }
-            //            }
-            //            else
-            //            {
-            //                msg = new frmMsg("Cannot print label", "Please enter a qty to receive", GlobalVars.msgState.Error);
-            //                msg.ShowDialog();
-            //            }
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            ExHandler.showErrorEx(ex);
-            //        }
-
-
-
-
-
-            //    }
-            //    else
-            //    {
-            //        msg = new frmMsg("Cannot print label", "Please select item row", GlobalVars.msgState.Error);
-            //        msg.ShowDialog();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    ExHandler.showErrorEx(ex);
-            //}
 
         }
         public void startReprint()
@@ -1314,19 +1153,6 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
             setupDataTable();
             getSuppliers();
             getPOs();
-
-            DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ribtnPrint = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            ribtnPrint.Buttons[0].Width = 85;
-            dgPOItems.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { ribtnPrint });
-            ribtnPrint.Click += RibtnPrint_Click;
-            gcPrint.ColumnEdit = ribtnPrint;
-            gcPrint.Width = 93;
-            gcPrint.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
-            ribtnPrint.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-
-            DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit ricbRec = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            dgPOItems.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { ricbRec });
-            gcReceive.ColumnEdit = ricbRec;
         }
 
         private void cmbPOs_SelectedIndexChanged_1(object sender, EventArgs e)
