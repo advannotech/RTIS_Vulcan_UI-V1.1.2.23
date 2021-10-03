@@ -819,13 +819,13 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
             bool isLot = Convert.ToBoolean(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotLine"));
             if (lotReprintItem == true)
             {
-                string sendString = poNumber + "|" + code + "|" + lot + "|" + ReprintQty + "|" + GlobalVars.userName + "|" + ReprintQtyPerLabel;
+                string sendString = poNumber + "|" + code + "|" + lot + "|" + ReprintQty + "|" + GlobalVars.userName + "|" + ReprintQtyPerLabel+ "|" + LastLabelQty;
                 labelReprintInfo = Client.reprintPOLabelLot(sendString);
                 labelsReprinted = true;
             }
             else
             {
-                string sendString = poNumber + "|" + code + "|" + ReprintQty + "|" + GlobalVars.userName + "|" + ReprintQtyPerLabel;
+                string sendString = poNumber + "|" + code + "|" + ReprintQty + "|" + GlobalVars.userName + "|" + ReprintQtyPerLabel+ "|" + LastLabelQty;
                 labelReprintInfo = Client.reprintPOLabelNoLot(sendString);
                 labelsReprinted = true;
             }
