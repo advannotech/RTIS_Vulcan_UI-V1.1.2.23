@@ -38,6 +38,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.label2 = new System.Windows.Forms.Label();
             this.txtsupplier = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.btnRemoveAllPO = new DevExpress.XtraEditors.SimpleButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLink = new DevExpress.XtraEditors.SimpleButton();
@@ -46,6 +47,9 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnRemovePO = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddPO = new DevExpress.XtraEditors.SimpleButton();
             this.lbAvailable = new DevExpress.XtraEditors.ListBoxControl();
+            this.label1 = new System.Windows.Forms.Label();
+            this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
+            this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
             ((System.ComponentModel.ISupportInitialize)(this.xtcRoles)).BeginInit();
             this.xtcRoles.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -53,13 +57,16 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbSelected)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbAvailable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSupplier
             // 
             this.lblSupplier.AutoSize = true;
             this.lblSupplier.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSupplier.Location = new System.Drawing.Point(13, 9);
+            this.lblSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblSupplier.Location = new System.Drawing.Point(157, 17);
             this.lblSupplier.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSupplier.Name = "lblSupplier";
             this.lblSupplier.Size = new System.Drawing.Size(108, 23);
@@ -68,7 +75,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             // 
             // xtcRoles
             // 
-            this.xtcRoles.Location = new System.Drawing.Point(17, 36);
+            this.xtcRoles.Location = new System.Drawing.Point(17, 57);
             this.xtcRoles.Margin = new System.Windows.Forms.Padding(4);
             this.xtcRoles.Name = "xtcRoles";
             this.xtcRoles.SelectedTabPage = this.xtraTabPage1;
@@ -136,6 +143,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.btnRemoveAllPO);
             this.xtraTabPage2.Controls.Add(this.label5);
             this.xtraTabPage2.Controls.Add(this.label4);
             this.xtraTabPage2.Controls.Add(this.btnLink);
@@ -148,6 +156,20 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(713, 404);
             this.xtraTabPage2.Text = "Link Standing Purchase Order";
+            // 
+            // btnRemoveAllPO
+            // 
+            this.btnRemoveAllPO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRemoveAllPO.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveAllPO.ImageOptions.Image")));
+            this.btnRemoveAllPO.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnRemoveAllPO.Location = new System.Drawing.Point(329, 247);
+            this.btnRemoveAllPO.LookAndFeel.SkinName = "DevExpress Dark Style";
+            this.btnRemoveAllPO.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnRemoveAllPO.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRemoveAllPO.Name = "btnRemoveAllPO";
+            this.btnRemoveAllPO.Size = new System.Drawing.Size(67, 49);
+            this.btnRemoveAllPO.TabIndex = 70;
+            this.btnRemoveAllPO.Click += new System.EventHandler(this.btnRemoveAllPO_Click);
             // 
             // label5
             // 
@@ -208,7 +230,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnAddAllPO.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddAllPO.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAllPO.ImageOptions.Image")));
             this.btnAddAllPO.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnAddAllPO.Location = new System.Drawing.Point(332, 243);
+            this.btnAddAllPO.Location = new System.Drawing.Point(329, 190);
             this.btnAddAllPO.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnAddAllPO.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnAddAllPO.Margin = new System.Windows.Forms.Padding(4);
@@ -222,7 +244,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnRemovePO.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRemovePO.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRemovePO.ImageOptions.Image")));
             this.btnRemovePO.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRemovePO.Location = new System.Drawing.Point(332, 186);
+            this.btnRemovePO.Location = new System.Drawing.Point(329, 133);
             this.btnRemovePO.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnRemovePO.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnRemovePO.Margin = new System.Windows.Forms.Padding(4);
@@ -236,7 +258,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnAddPO.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddPO.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPO.ImageOptions.Image")));
             this.btnAddPO.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnAddPO.Location = new System.Drawing.Point(332, 130);
+            this.btnAddPO.Location = new System.Drawing.Point(329, 77);
             this.btnAddPO.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnAddPO.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnAddPO.Margin = new System.Windows.Forms.Padding(4);
@@ -258,11 +280,40 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.lbAvailable.Size = new System.Drawing.Size(298, 286);
             this.lbAvailable.TabIndex = 62;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(22, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 23);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Supplier Name:";
+            // 
+            // separatorControl1
+            // 
+            this.separatorControl1.Location = new System.Drawing.Point(17, 0);
+            this.separatorControl1.Name = "separatorControl1";
+            this.separatorControl1.Size = new System.Drawing.Size(715, 23);
+            this.separatorControl1.TabIndex = 54;
+            // 
+            // separatorControl2
+            // 
+            this.separatorControl2.Location = new System.Drawing.Point(17, 38);
+            this.separatorControl2.Name = "separatorControl2";
+            this.separatorControl2.Size = new System.Drawing.Size(715, 23);
+            this.separatorControl2.TabIndex = 55;
+            // 
             // frmLinkPurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 474);
+            this.ClientSize = new System.Drawing.Size(754, 500);
+            this.Controls.Add(this.separatorControl2);
+            this.Controls.Add(this.separatorControl1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblSupplier);
             this.Controls.Add(this.xtcRoles);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -282,6 +333,8 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbSelected)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbAvailable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +358,9 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
         private DevExpress.XtraEditors.SimpleButton btnAddPO;
         private DevExpress.XtraEditors.ListBoxControl lbAvailable;
         private System.Windows.Forms.ListBox listLinkedPOs;
+        private DevExpress.XtraEditors.SimpleButton btnRemoveAllPO;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl1;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl2;
     }
 }

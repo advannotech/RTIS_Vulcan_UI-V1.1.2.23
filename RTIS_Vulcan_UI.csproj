@@ -1171,6 +1171,7 @@
     <None Include="Resources\found.png" />
     <None Include="Resources\CAT SCAN LOGO 300dpi TRANSPARENT.jpg" />
     <None Include="Resources\CAT SCAN LOGO 300dpi TRANSPARENT3.png" />
+    <None Include="Resources\doubleprev_32x32.png" />
     <Content Include="SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

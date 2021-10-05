@@ -545,7 +545,7 @@ namespace RTIS_Vulcan_UI.Classes
 
 
         //GET AVAILABLE STANDING PURCHASE ORDER NUMBERS FROM SAGE
-        public static string GetAvailablePOs()
+        public static string GetAvailablePOs(string supplier)
         {
             try
             {
@@ -566,7 +566,7 @@ namespace RTIS_Vulcan_UI.Classes
                 DataClient.ReceiveTimeout = 60000;
                 DataClient.Connect(ServerEP);
 
-                sendbytes = ascenc.GetBytes("*GETACTIVEPOs*@");
+                sendbytes = ascenc.GetBytes("*GETACTIVEPOs*@" + supplier);
                 DataClient.Send(sendbytes);
 
                 receivebytes = new byte[131073];
@@ -584,7 +584,7 @@ namespace RTIS_Vulcan_UI.Classes
                 return "-2*Cannot connect to server: " + Environment.NewLine + Environment.NewLine + ex.Message;
             }
         }
-
+ 
 
         public static string GetAvailablePermissions()
         {
