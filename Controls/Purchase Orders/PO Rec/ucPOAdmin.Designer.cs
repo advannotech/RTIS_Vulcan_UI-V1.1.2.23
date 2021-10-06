@@ -136,7 +136,9 @@
             // 
             this.gcLinkID.Caption = "ID";
             this.gcLinkID.FieldName = "gcLinkID";
+            this.gcLinkID.MinWidth = 25;
             this.gcLinkID.Name = "gcLinkID";
+            this.gcLinkID.Width = 83;
             // 
             // gcSupplier
             // 
@@ -145,6 +147,7 @@
             this.gcSupplier.Name = "gcSupplier";
             this.gcSupplier.Visible = true;
             this.gcSupplier.VisibleIndex = 0;
+            this.gcSupplier.Width = 179;
             // 
             // gcPO
             // 
@@ -153,16 +156,17 @@
             this.gcPO.Name = "gcPO";
             this.gcPO.Visible = true;
             this.gcPO.VisibleIndex = 1;
+            this.gcPO.Width = 188;
             // 
             // gcLinkPO
             // 
-            this.gcLinkPO.Caption = "Update Link Line";
+            this.gcLinkPO.Caption = "Link More Than One Standing Order";
             this.gcLinkPO.FieldName = "gcLinkPO";
             this.gcLinkPO.MinWidth = 25;
             this.gcLinkPO.Name = "gcLinkPO";
             this.gcLinkPO.Visible = true;
             this.gcLinkPO.VisibleIndex = 2;
-            this.gcLinkPO.Width = 94;
+            this.gcLinkPO.Width = 249;
             // 
             // gcDate
             // 
@@ -171,6 +175,7 @@
             this.gcDate.Name = "gcDate";
             this.gcDate.Visible = true;
             this.gcDate.VisibleIndex = 3;
+            this.gcDate.Width = 185;
             // 
             // gcPOs
             // 
@@ -320,6 +325,7 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(43, 41);
             this.btnRefresh.TabIndex = 89;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click_1);
             // 
             // label1
             // 
@@ -382,7 +388,6 @@
         private DevExpress.XtraWaitForm.ProgressPanel pplWaitVendors;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private System.Windows.Forms.Timer tmrVendors;
-        private DevExpress.XtraGrid.Columns.GridColumn gcLinkID;
         private DevExpress.XtraGrid.Columns.GridColumn gcSupplier;
         private DevExpress.XtraGrid.Columns.GridColumn gcPO;
         private DevExpress.XtraGrid.Columns.GridColumn gcDate;
@@ -395,5 +400,6 @@
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraGrid.Columns.GridColumn gcLinkPO;
+        private DevExpress.XtraGrid.Columns.GridColumn gcLinkID;
     }
 }

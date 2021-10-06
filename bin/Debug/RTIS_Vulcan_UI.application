@@ -19,10 +19,14 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dsig:DigestValue>Jbs8TZYvLWwZ/CFMUjgszrblU/bUCVdDgtdK7I8AweM=</dsig:DigestValue>
 =======
         <dsig:DigestValue>z6lap/0ybZVdRe0lgGfkRRj/4dcBy1621+WuTt0lCA4=</dsig:DigestValue>
 >>>>>>> 4109af29ce94747bc728d1dd0641d55d3120f098
+=======
+        <dsig:DigestValue>G4fg+wo60fKSaj3jAjzgbGiBs8COaavu/77GKyjTqGY=</dsig:DigestValue>
+>>>>>>> fac1a4bcb1cf8ddabb04871f0179fd0067b8aa33
       </hash>
     </dependentAssembly>
   </dependency>

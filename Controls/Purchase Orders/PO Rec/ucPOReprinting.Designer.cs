@@ -205,6 +205,7 @@
             this.cbAllLines.Properties.Caption = "Show all lines";
             this.cbAllLines.Size = new System.Drawing.Size(141, 24);
             this.cbAllLines.TabIndex = 89;
+            this.cbAllLines.Visible = false;
             // 
             // labelControl1
             // 
@@ -348,7 +349,7 @@
             // 
             // gcOrderQty
             // 
-            this.gcOrderQty.Caption = "Order Qty";
+            this.gcOrderQty.Caption = "Qty Received";
             this.gcOrderQty.FieldName = "gcOrderQty";
             this.gcOrderQty.Name = "gcOrderQty";
             this.gcOrderQty.OptionsColumn.AllowEdit = false;
@@ -373,6 +374,7 @@
             this.gcPrint.Caption = "Print";
             this.gcPrint.FieldName = "gcPrint";
             this.gcPrint.Name = "gcPrint";
+            this.gcPrint.ShowUnboundExpressionMenu = true;
             // 
             // gcBack2
             // 

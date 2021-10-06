@@ -3361,3 +3361,6 @@ C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Release\RTIS_Vulcan_UI.appl
 C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Release\RTIS_Vulcan_UI.csproj.CopyComplete
 C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Release\RTIS_Vulcan_UI.exe
 C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Release\RTIS_Vulcan_UI.pdb
+C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Release\RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec.frmPOReprintlostlbl.resources
+C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Release\RTIS_Vulcan_UI.Reports.rptPOReprintrec.resources
+C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Release\RTIS_Vulcan_UI.csprojAssemblyReference.cache
