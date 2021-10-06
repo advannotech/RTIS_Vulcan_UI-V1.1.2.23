@@ -796,7 +796,7 @@ namespace RTIS_Vulcan_UI.Controls
 
         public DateTime getEndDate(DateTime minDate)
         {
-            return minDate.AddDays(1);
+            return minDate;
         }
 
         private void dtpStartDate_ValueChanged_1(object sender, EventArgs e)

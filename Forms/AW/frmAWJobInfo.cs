@@ -38,13 +38,17 @@ namespace RTIS_Vulcan_UI.Forms
         public string id { get; set; }
         public string jobCode { get; set; }
         public DataTable genInfo { get; set; }
+        public string lotnumber { get; set; }
+        public bool running { get; set; }
 
-        public frmAWJobInfo(string _id, string _jobCode, DataTable _genInfo)
+        public frmAWJobInfo(string _id, string _jobCode, DataTable _genInfo, string lotNumber, bool running)
         {
             InitializeComponent();
             genInfo = _genInfo;
             id = _id;
             jobCode = _jobCode;
+            this.lotnumber = lotNumber;
+            this.running = running;
         }
 
         private void frmAWJobInfo_Load(object sender, EventArgs e)
@@ -55,6 +59,11 @@ namespace RTIS_Vulcan_UI.Forms
 
             setUpDatatables();
             refreshInputs();
+
+            if (!this.running)
+            {
+                btnManuallyClose.Enabled = false;
+            }
         }
         public void setUpDatatables()
         {
@@ -265,5 +274,21 @@ namespace RTIS_Vulcan_UI.Forms
             setAWOutputs();
         }
         #endregion
+
+        private void btnManuallyClose_Click(object sender, EventArgs e)
+        {
+            var response = Convert.ToInt32(Client.AWManualCloseJob(this.lotnumber));
+            if (Convert.ToBoolean(response))
+            {
+                msg = new frmMsg("Success", "The job has been closed successfully", GlobalVars.msgState.Success);
+                msg.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                msg = new frmMsg("Error", "The job could not be closed\n\n.", GlobalVars.msgState.Error);
+                msg.ShowDialog();
+            }
+        }
     }
 }
