@@ -85,6 +85,11 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
                 string EndDate = dtpEndDate.Value.ToString("yyyy-MM-dd");
 
                 dataLines = Client.getAWJobs(StartDate + "|" + EndDate);
+                if (!dataLines.Equals(string.Empty))
+                {
+                    ppnlWait.Visible = false;
+                }
+
                 dataPulled = true;
                 ppnlWait.Visible = false;
             }
@@ -207,7 +212,7 @@ namespace RTIS_Vulcan_UI.Controls.Manufacturing
             string idParam = gvItems.GetRowCellValue(gvItems.FocusedRowHandle, "gcID").ToString();
             string jobCodeParam = gvItems.GetRowCellValue(gvItems.FocusedRowHandle, "gcJob").ToString();
 
-            frmAWJobInfo jobInfo = new frmAWJobInfo(idParam, jobCodeParam, dtGenInfo);
+            frmAWJobInfo jobInfo = new frmAWJobInfo(idParam, jobCodeParam, dtGenInfo, lotNumber.Split('|')[1], Convert.ToBoolean(running.Split('|')[1]));
             jobInfo.ShowDialog();
         }
 

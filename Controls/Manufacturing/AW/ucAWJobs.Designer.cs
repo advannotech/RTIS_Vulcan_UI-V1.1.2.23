@@ -78,9 +78,9 @@
             this.labelControl13.Location = new System.Drawing.Point(4, 4);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(149, 44);
+            this.labelControl13.Size = new System.Drawing.Size(204, 44);
             this.labelControl13.TabIndex = 35;
-            this.labelControl13.Text = "A&&W Jobs";
+            this.labelControl13.Text = "A&&W Records";
             // 
             // panelControl1
             // 

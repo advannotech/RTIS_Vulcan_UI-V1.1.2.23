@@ -327,10 +327,10 @@
             this.dgItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgItems.Location = new System.Drawing.Point(3, 54);
+            this.dgItems.Location = new System.Drawing.Point(3, 110);
             this.dgItems.MainView = this.gvItems;
             this.dgItems.Name = "dgItems";
-            this.dgItems.Size = new System.Drawing.Size(1294, 503);
+            this.dgItems.Size = new System.Drawing.Size(1294, 447);
             this.dgItems.TabIndex = 12;
             this.dgItems.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvItems,

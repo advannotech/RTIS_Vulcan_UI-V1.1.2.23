@@ -77,9 +77,9 @@
             this.labelControl13.Location = new System.Drawing.Point(4, 4);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(143, 44);
+            this.labelControl13.Size = new System.Drawing.Size(198, 44);
             this.labelControl13.TabIndex = 34;
-            this.labelControl13.Text = "ZECT Jobs";
+            this.labelControl13.Text = "ZECT Records";
             // 
             // ppnlWait
             // 

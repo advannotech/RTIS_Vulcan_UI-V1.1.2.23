@@ -33,6 +33,11 @@
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
+            this.lblDateFrom = new System.Windows.Forms.Label();
+            this.lblDateTo = new System.Windows.Forms.Label();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.dgItems = new DevExpress.XtraGrid.GridControl();
             this.gvItems = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -48,18 +53,13 @@
             this.gcClosed = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tmrItems = new System.Windows.Forms.Timer(this.components);
             this.ppnlWait = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
-            this.lblDateFrom = new System.Windows.Forms.Label();
-            this.lblDateTo = new System.Windows.Forms.Label();
-            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvItems)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelControl13
@@ -100,6 +100,62 @@
             this.groupControl1.Size = new System.Drawing.Size(1295, 138);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Search Options";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dtpStartDate);
+            this.groupBox1.Controls.Add(this.lblDateFrom);
+            this.groupBox1.Controls.Add(this.lblDateTo);
+            this.groupBox1.Controls.Add(this.dtpEndDate);
+            this.groupBox1.Location = new System.Drawing.Point(5, 31);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(351, 100);
+            this.groupBox1.TabIndex = 101;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Date Started";
+            // 
+            // dtpStartDate
+            // 
+            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpStartDate.Location = new System.Drawing.Point(11, 68);
+            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(132, 23);
+            this.dtpStartDate.TabIndex = 43;
+            this.dtpStartDate.Value = new System.DateTime(2017, 10, 23, 13, 27, 30, 0);
+            this.dtpStartDate.ValueChanged += new System.EventHandler(this.dtpStartDate_ValueChanged_1);
+            // 
+            // lblDateFrom
+            // 
+            this.lblDateFrom.AutoSize = true;
+            this.lblDateFrom.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateFrom.Location = new System.Drawing.Point(7, 35);
+            this.lblDateFrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDateFrom.Name = "lblDateFrom";
+            this.lblDateFrom.Size = new System.Drawing.Size(91, 23);
+            this.lblDateFrom.TabIndex = 44;
+            this.lblDateFrom.Text = "Date From";
+            // 
+            // lblDateTo
+            // 
+            this.lblDateTo.AutoSize = true;
+            this.lblDateTo.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTo.Location = new System.Drawing.Point(198, 35);
+            this.lblDateTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDateTo.Name = "lblDateTo";
+            this.lblDateTo.Size = new System.Drawing.Size(67, 23);
+            this.lblDateTo.TabIndex = 46;
+            this.lblDateTo.Text = "Date To";
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEndDate.Location = new System.Drawing.Point(202, 68);
+            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(132, 23);
+            this.dtpEndDate.TabIndex = 45;
+            this.dtpEndDate.Value = new System.DateTime(2017, 10, 23, 13, 27, 52, 0);
             // 
             // btnSearch
             // 
@@ -256,62 +312,6 @@
             this.ppnlWait.TabIndex = 36;
             this.ppnlWait.Text = "progressPanel1";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dtpStartDate);
-            this.groupBox1.Controls.Add(this.lblDateFrom);
-            this.groupBox1.Controls.Add(this.lblDateTo);
-            this.groupBox1.Controls.Add(this.dtpEndDate);
-            this.groupBox1.Location = new System.Drawing.Point(5, 31);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(351, 100);
-            this.groupBox1.TabIndex = 101;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Date Transferred";
-            // 
-            // dtpStartDate
-            // 
-            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpStartDate.Location = new System.Drawing.Point(11, 68);
-            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(132, 23);
-            this.dtpStartDate.TabIndex = 43;
-            this.dtpStartDate.Value = new System.DateTime(2017, 10, 23, 13, 27, 30, 0);
-            this.dtpStartDate.ValueChanged += new System.EventHandler(this.dtpStartDate_ValueChanged_1);
-            // 
-            // lblDateFrom
-            // 
-            this.lblDateFrom.AutoSize = true;
-            this.lblDateFrom.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateFrom.Location = new System.Drawing.Point(7, 35);
-            this.lblDateFrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDateFrom.Name = "lblDateFrom";
-            this.lblDateFrom.Size = new System.Drawing.Size(91, 23);
-            this.lblDateFrom.TabIndex = 44;
-            this.lblDateFrom.Text = "Date From";
-            // 
-            // lblDateTo
-            // 
-            this.lblDateTo.AutoSize = true;
-            this.lblDateTo.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTo.Location = new System.Drawing.Point(198, 35);
-            this.lblDateTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDateTo.Name = "lblDateTo";
-            this.lblDateTo.Size = new System.Drawing.Size(67, 23);
-            this.lblDateTo.TabIndex = 46;
-            this.lblDateTo.Text = "Date To";
-            // 
-            // dtpEndDate
-            // 
-            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEndDate.Location = new System.Drawing.Point(202, 68);
-            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(132, 23);
-            this.dtpEndDate.TabIndex = 45;
-            this.dtpEndDate.Value = new System.DateTime(2017, 10, 23, 13, 27, 52, 0);
-            // 
             // ucMixedSlurry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -327,10 +327,10 @@
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgItems)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvItems)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvItems)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
