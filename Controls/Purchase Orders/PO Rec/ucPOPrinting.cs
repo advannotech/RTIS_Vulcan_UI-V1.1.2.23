@@ -16,6 +16,8 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraReports.UI;
 using RTIS_Vulcan_UI.Reports;
 using DevExpress.DataAccess.ConnectionParameters;
+using RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec;
+using System.IO;
 
 namespace RTIS_Vulcan_UI.Controls
 {
@@ -468,6 +470,9 @@ namespace RTIS_Vulcan_UI.Controls
                 ExHandler.showErrorEx(ex);
             }
         }
+
+
+
         private void tmrPrint_Tick(object sender, EventArgs e)
         {
             PrintLabels();
@@ -823,6 +828,7 @@ namespace RTIS_Vulcan_UI.Controls
                     string desc = gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcDesc").ToString();
                     string lot = gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotNum").ToString();
                     bool isLot = Convert.ToBoolean(gvPOItems.GetRowCellValue(gvPOItems.FocusedRowHandle, "gcLotLine"));
+                    isLot = true;
                     if (isLot == true && lot != string.Empty)
                     {
                         #region Lot Items
@@ -1156,6 +1162,7 @@ namespace RTIS_Vulcan_UI.Controls
                             {
                                 case "1":
                                     dataSend = true;
+                                    
                                     rptPORec poReport = new rptPORec();
                                     string connectionString = "Data Source=" + GlobalVars.SQLServer + "; Initial Catalog=" + GlobalVars.RTDB +
                                     "; user ID=" + GlobalVars.SqlUser + "; password=" + GlobalVars.SqlPass + ";Max Pool Size=99999;";
@@ -1169,7 +1176,9 @@ namespace RTIS_Vulcan_UI.Controls
                                     poReport.Supplier.Value = poVendor;
                                     poReport.CreateDocument();
                                     ReportPrintTool printTool = new ReportPrintTool(poReport);
-                                    poReport.ExportToPdf(GlobalVars.RSCFolder + @"\" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + ".pdf");
+                                    //poReport.ExportToPdf(GlobalVars.RSCFolder + @"\" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + ".pdf");
+                                    string poversion = System.DateTime.Now.Year.ToString().Substring(2, 2) + System.DateTime.Now.ToString("MM") + System.DateTime.Now.Day.ToString() + System.DateTime.Now.ToString("HHmmss");
+                                    poReport.ExportToPdf(GlobalVars.RSCFolder + "\\" + System.IO.Directory.CreateDirectory(Path.Combine(GlobalVars.RSCFolder, "" + "" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + "")) + @"\" + lblPO.Text.Split(':')[1].Replace(" ", string.Empty) + "_v" + poversion + ".pdf");
                                     printTool.ShowPreview();
 
                                     lblPO.Text = string.Empty;
@@ -1561,8 +1570,12 @@ namespace RTIS_Vulcan_UI.Controls
         {
             gvPOItems.RefreshData();
         }
+
+
+
+
         #endregion
 
-        
     }
+    
 }

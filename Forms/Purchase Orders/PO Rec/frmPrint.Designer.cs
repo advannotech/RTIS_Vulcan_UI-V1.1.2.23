@@ -58,7 +58,7 @@
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
+            this.btnOk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.ImageOptions.Image")));
             this.btnOk.Location = new System.Drawing.Point(198, 302);
             this.btnOk.LookAndFeel.SkinMaskColor = System.Drawing.Color.Transparent;
             this.btnOk.LookAndFeel.SkinName = "DevExpress Dark Style";
@@ -118,7 +118,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
             this.btnCancel.Location = new System.Drawing.Point(13, 302);
             this.btnCancel.LookAndFeel.SkinMaskColor = System.Drawing.Color.Transparent;
             this.btnCancel.LookAndFeel.SkinName = "DevExpress Dark Style";
@@ -142,7 +142,6 @@
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit2.Properties.ZoomAccelerationFactor = 1D;
             this.pictureEdit2.Size = new System.Drawing.Size(259, 96);
             this.pictureEdit2.TabIndex = 44;
             // 
@@ -167,7 +166,7 @@
             this.cbRemember.Name = "cbRemember";
             this.cbRemember.Properties.AutoWidth = true;
             this.cbRemember.Properties.Caption = "Remember Entered Lot Number";
-            this.cbRemember.Size = new System.Drawing.Size(203, 20);
+            this.cbRemember.Size = new System.Drawing.Size(209, 24);
             this.cbRemember.TabIndex = 46;
             // 
             // frmPrint

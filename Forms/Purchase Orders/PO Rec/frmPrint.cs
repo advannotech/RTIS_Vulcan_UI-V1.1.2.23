@@ -213,6 +213,6 @@ namespace RTIS_Vulcan_UI.Forms
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
-        }      
+        }
     }
 }
