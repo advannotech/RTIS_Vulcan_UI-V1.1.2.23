@@ -37,6 +37,7 @@
             this.gcLinkID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcSupplier = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcLinkPO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPOs = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ricbOrders = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
@@ -122,6 +123,7 @@
             this.gcLinkID,
             this.gcSupplier,
             this.gcPO,
+            this.gcLinkPO,
             this.gcDate,
             this.gcPOs});
             this.gvLink.GridControl = this.dgLink;
@@ -134,7 +136,9 @@
             // 
             this.gcLinkID.Caption = "ID";
             this.gcLinkID.FieldName = "gcLinkID";
+            this.gcLinkID.MinWidth = 25;
             this.gcLinkID.Name = "gcLinkID";
+            this.gcLinkID.Width = 83;
             // 
             // gcSupplier
             // 
@@ -143,6 +147,7 @@
             this.gcSupplier.Name = "gcSupplier";
             this.gcSupplier.Visible = true;
             this.gcSupplier.VisibleIndex = 0;
+            this.gcSupplier.Width = 179;
             // 
             // gcPO
             // 
@@ -151,6 +156,17 @@
             this.gcPO.Name = "gcPO";
             this.gcPO.Visible = true;
             this.gcPO.VisibleIndex = 1;
+            this.gcPO.Width = 188;
+            // 
+            // gcLinkPO
+            // 
+            this.gcLinkPO.Caption = "Link More Than One Standing Order";
+            this.gcLinkPO.FieldName = "gcLinkPO";
+            this.gcLinkPO.MinWidth = 25;
+            this.gcLinkPO.Name = "gcLinkPO";
+            this.gcLinkPO.Visible = true;
+            this.gcLinkPO.VisibleIndex = 2;
+            this.gcLinkPO.Width = 249;
             // 
             // gcDate
             // 
@@ -158,7 +174,8 @@
             this.gcDate.FieldName = "gcDate";
             this.gcDate.Name = "gcDate";
             this.gcDate.Visible = true;
-            this.gcDate.VisibleIndex = 2;
+            this.gcDate.VisibleIndex = 3;
+            this.gcDate.Width = 185;
             // 
             // gcPOs
             // 
@@ -180,7 +197,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ppnlWaitLink.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.ppnlWaitLink.Appearance.Options.UseBackColor = true;
-            this.ppnlWaitLink.BarAnimationElementThickness = 2;
             this.ppnlWaitLink.Location = new System.Drawing.Point(4, 4);
             this.ppnlWaitLink.Margin = new System.Windows.Forms.Padding(4);
             this.ppnlWaitLink.Name = "ppnlWaitLink";
@@ -278,7 +294,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pplWaitVendors.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pplWaitVendors.Appearance.Options.UseBackColor = true;
-            this.pplWaitVendors.BarAnimationElementThickness = 2;
             this.pplWaitVendors.Location = new System.Drawing.Point(4, 4);
             this.pplWaitVendors.Margin = new System.Windows.Forms.Padding(4);
             this.pplWaitVendors.Name = "pplWaitVendors";
@@ -302,7 +317,7 @@
             this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnRefresh.Appearance.Options.UseBackColor = true;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.ImageOptions.Image")));
             this.btnRefresh.Location = new System.Drawing.Point(1256, 4);
             this.btnRefresh.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnRefresh.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -310,7 +325,7 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(43, 41);
             this.btnRefresh.TabIndex = 89;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click_1);
             // 
             // label1
             // 
@@ -373,7 +388,6 @@
         private DevExpress.XtraWaitForm.ProgressPanel pplWaitVendors;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private System.Windows.Forms.Timer tmrVendors;
-        private DevExpress.XtraGrid.Columns.GridColumn gcLinkID;
         private DevExpress.XtraGrid.Columns.GridColumn gcSupplier;
         private DevExpress.XtraGrid.Columns.GridColumn gcPO;
         private DevExpress.XtraGrid.Columns.GridColumn gcDate;
@@ -385,5 +399,7 @@
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraGrid.Columns.GridColumn gcLinkPO;
+        private DevExpress.XtraGrid.Columns.GridColumn gcLinkID;
     }
 }
