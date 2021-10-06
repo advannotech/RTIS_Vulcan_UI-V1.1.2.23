@@ -42,8 +42,6 @@ namespace RTIS_Vulcan_UI.Forms
             {
                 lblLast.Text = _last;
             }
-            
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

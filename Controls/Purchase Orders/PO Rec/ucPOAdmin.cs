@@ -15,6 +15,8 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
+using RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec;
+using DevExpress.XtraGrid.Columns;
 
 namespace RTIS_Vulcan_UI.Controls
 {
@@ -125,7 +127,7 @@ namespace RTIS_Vulcan_UI.Controls
                         msg = new frmMsg("A connection level error has occured", "No data was returned from the server", GlobalVars.msgState.Error);
                         msg.ShowDialog();
                     }
-                }                
+                }
             }
             catch (Exception ex)
             {
@@ -149,6 +151,8 @@ namespace RTIS_Vulcan_UI.Controls
             Thread thread = new Thread(getLinkLines);
             thread.Start();
         }
+
+
         public void getLinkLines()
         {
             try
@@ -161,6 +165,50 @@ namespace RTIS_Vulcan_UI.Controls
                 ExHandler.showErrorEx(ex);
             }
         }
+
+
+        //bool IsRowsEqual(GridView view, int row1, int row2)
+        //{
+        //    foreach (GridColumn col in view.Columns)
+        //    {
+        //        object val1 = view.GetRowCellValue(row1, col);
+        //        object val2 = view.GetRowCellValue(row2, col);
+        //        int res = gvLink.DataController.ValueComparer.Compare(val1, val2);
+        //        if (res != 0) return false; // if not EQUAL
+        //    }
+        //    return true;
+        //}
+
+        //public void Removeduplicates()
+        //{
+        //    try
+        //    {
+        //        List<int> uniqueRows = new List<int>();
+        //        uniqueRows.Add(0);
+        //        int i = 1;
+        //        while (i < gvLink.RowCount)
+        //        {
+        //            bool deleted = false;
+        //            foreach (int handle in uniqueRows)
+        //                if (IsRowsEqual(gvLink, handle, i))
+        //                {
+        //                    gvLink.DeleteRow(i);
+        //                    deleted = true;
+        //                    break;
+        //                }
+        //            if (!deleted)
+        //            {
+        //                uniqueRows.Add(i);
+        //                i++;
+        //            }
+        //        }
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        ExHandler.showErrorEx(ex);
+        //    }
+        //}
+
         public void setLinkLines()
         {
             if (LinksPulled == true)
@@ -170,13 +218,13 @@ namespace RTIS_Vulcan_UI.Controls
                 {
                     string poLinks = LinkLines;
                     if (poLinks != string.Empty)
-                    {                        
+                    {
                         switch (poLinks.Split('*')[0])
                         {
                             case "1":
                                 dtLink.Rows.Clear();
                                 poLinks = poLinks.Remove(0, 2);
-                                
+
                                 string[] LinkArray = poLinks.Split('*');
                                 foreach (string link in LinkArray)
                                 {
@@ -186,7 +234,15 @@ namespace RTIS_Vulcan_UI.Controls
                                     }
                                 }
 
+                                //var column = dtLink.Rows[3].ItemArray[2] + ",\nPO041074";
+                                //dtLink.Rows[3].ItemArray[2] = column.ToArray();
+                                //var arr = column.Split(',');
+                                //dtLink.Rows[3][2] = arr.ToString();
+
+
+
                                 gcPO.OptionsColumn.AllowEdit = true;
+
                                 ricmbPOs = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
                                 dgLink.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { ricmbPOs });
                                 ricmbPOs.Click += RicmbPOs_Click;
@@ -261,12 +317,65 @@ namespace RTIS_Vulcan_UI.Controls
         {
             InitializeComponent();
         }
+
+        private void btnLinkPO_Click(object sender, EventArgs e)
+        {
+            string linkid = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcLinkID").ToString();
+            string supplier = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcSupplier").ToString();
+            string ponumber = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcPO").ToString();
+            string dateupdated = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcDate").ToString();
+
+            try
+            {
+                if (gvLink.FocusedRowHandle != -1)
+                {
+
+                    try
+                    {
+                        frmLinkPurchaseOrder frmRm = new frmLinkPurchaseOrder(linkid, supplier, ponumber, dateupdated);
+                        DialogResult dr = frmRm.ShowDialog();
+                        this.refreshLinks();
+                    }
+                    catch (Exception ex)
+                    {
+                        ExHandler.showErrorEx(ex);
+                    }
+
+                }
+                else
+                {
+                    msg = new frmMsg("No Supplier Found", "Cannot Link Vendor!", GlobalVars.msgState.Info);
+                    msg.ShowDialog();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ExHandler.showErrorEx(ex);
+            }
+        }
         private void ucPOAdmin_Load(object sender, EventArgs e)
         {
             setUpVendorTable();
             refreshVendors();
             setUpLinkTable();
             refreshLinks();
+           // Removeduplicates();
+
+
+            DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnLinkPO = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            btnLinkPO.Buttons[0].Width = 85;
+            dgLink.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { btnLinkPO });
+            btnLinkPO.Click += btnLinkPO_Click;
+            gcLinkPO.ColumnEdit = btnLinkPO;
+            gcLinkPO.Width = 93;
+            gcLinkPO.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
+            btnLinkPO.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+
+            //DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit ricbRec = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            //dgLink.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { ricbRec });
+            //gcLinkPO.ColumnEdit = ricbRec;
+
         }
         private void btnTest_Click(object sender, EventArgs e)
         {
@@ -294,7 +403,7 @@ namespace RTIS_Vulcan_UI.Controls
                             switch (updated.Split('*')[0])
                             {
                                 case "1":
-                                    
+
                                     break;
                                 case "0":
                                     updated = updated.Remove(0, 2);
@@ -324,7 +433,7 @@ namespace RTIS_Vulcan_UI.Controls
                             msg = new frmMsg("A connection level error has occured", "No data was returned from the server", GlobalVars.msgState.Error);
                             msg.ShowDialog();
                         }
-                    }                       
+                    }
                 }
             }
             catch (Exception ex)
@@ -342,7 +451,7 @@ namespace RTIS_Vulcan_UI.Controls
                     string id = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcLinkID").ToString();
                     string supName = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcSupplier").ToString();
                     string orderNo = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcPO").ToString();
-                    if (orderNo != "- Select Order -")
+                    if (orderNo != "- Not Linked -")
                     {
                         if (orderNo != "No POs found")
                         {
@@ -389,15 +498,15 @@ namespace RTIS_Vulcan_UI.Controls
                         }
                         else
                         {
-                            gvLink.SetRowCellValue(gvLink.FocusedRowHandle, "gcPO", "- Select Order -");
-                        }                       
+                            gvLink.SetRowCellValue(gvLink.FocusedRowHandle, "gcPO", "- Not Linked -");
+                        }
                     }
-                   
+
                 }
-            }          
+            }
         }
         private void tmrLinks_Tick(object sender, EventArgs e)
-        {            
+        {
             setLinkLines();
         }
         private void gvLink_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
@@ -409,7 +518,7 @@ namespace RTIS_Vulcan_UI.Controls
                 {
                     string orderNum = gvLink.GetRowCellValue(e.RowHandle, View.Columns["gcPO"]).ToString();
                     string DateEntered = gvLink.GetRowCellValue(e.RowHandle, View.Columns["gcDate"]).ToString();
-                    if (orderNum == "- Select Order -")
+                    if (orderNum == "- Not Linked -")
                     {
                         e.Appearance.BackColor = Color.LightYellow;
                         e.Appearance.BackColor2 = Color.LightYellow;
@@ -426,17 +535,41 @@ namespace RTIS_Vulcan_UI.Controls
                                 e.Appearance.BackColor = Color.Salmon;
                                 e.Appearance.BackColor2 = Color.Salmon;
                             }
-                        }                        
+                        }
                     }
                 }
             }
             catch (Exception)
-            { }          
+            { }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+
+        private void btnRefresh_Click_1(object sender, EventArgs e)
         {
             refreshLinks();
+            //Removeduplicates();
+        }
+
+        private void dgLink_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            GridView view = sender as GridView;
+
+            if (e.Column.FieldName == "gcSupplier" || e.Column.FieldName == "gcSupplier")
+            {
+                int prevRow = e.RowHandle - 1;
+
+                if (prevRow < 0 || view.IsRowVisible(prevRow) != RowVisibleState.Visible) return;
+
+                object prevValue = view.GetRowCellValue(prevRow, e.Column);
+
+                object curValue = e.CellValue;
+
+                if (curValue != null && curValue.Equals(prevValue))
+                {
+                    e.Handled = true;
+                }
+            }
         }
     }
 }
+

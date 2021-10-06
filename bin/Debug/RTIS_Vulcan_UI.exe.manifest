@@ -1903,14 +1903,22 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="3875800">
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="4042200">
+>>>>>>> 8ff1dd33504e07b3ce7523cfd8cced122fa6a532
       <assemblyIdentity name="RTIS_Vulcan_UI" version="1.1.2.23" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>rTJVPgZ4ifbEqel99RD1GvmgBuVPWU7S/VMH47xNnbA=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>sMpspDBaopGZjN42Z06rQ+wNy2HMo+5hkSq7iIjm9bU=</dsig:DigestValue>
+>>>>>>> 8ff1dd33504e07b3ce7523cfd8cced122fa6a532
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1959,13 +1967,21 @@
       <dsig:DigestValue>g+fc1S3eRQoAR5k1MDAUu4Q/wE5l5t25imLWI/RNyAk=</dsig:DigestValue>
     </hash>
   </file>
+<<<<<<< HEAD
   <file name="RTIS_Vulcan_UI.exe.config" size="852">
+=======
+  <file name="RTIS_Vulcan_UI.exe.config" size="837">
+>>>>>>> 8ff1dd33504e07b3ce7523cfd8cced122fa6a532
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
       <dsig:DigestValue>c34SLY9huiOw1AKMbG9XqBeEhNiqqQUlP3NV7dWGGPA=</dsig:DigestValue>
+=======
+      <dsig:DigestValue>GdF0T1vmqQwFHk3sV6+Q6O/5M/zeh7NZ9TVXNzjALa8=</dsig:DigestValue>
+>>>>>>> 8ff1dd33504e07b3ce7523cfd8cced122fa6a532
     </hash>
   </file>
   <file name="SQLite.Interop.dll" size="1155584">
