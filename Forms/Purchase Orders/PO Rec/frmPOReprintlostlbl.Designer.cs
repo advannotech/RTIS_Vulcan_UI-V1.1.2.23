@@ -3,6 +3,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
 {
     partial class frmPOReprintlostlbl
     {
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -37,22 +38,31 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.lblCode = new DevExpress.XtraEditors.LabelControl();
             this.lblDesc = new DevExpress.XtraEditors.LabelControl();
             this.lblLot = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtqtyreceived = new DevExpress.XtraEditors.TextEdit();
+            this.txtLastLabelQty = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtPrintQty = new DevExpress.XtraEditors.TextEdit();
             this.txtQty = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.btnOk = new DevExpress.XtraEditors.SimpleButton();
+            this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
+            this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtqtyreceived.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLastLabelQty.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrintQty.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQty.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl4
@@ -63,12 +73,12 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.groupControl4.Controls.Add(this.lblCode);
             this.groupControl4.Controls.Add(this.lblDesc);
             this.groupControl4.Controls.Add(this.lblLot);
-            this.groupControl4.Location = new System.Drawing.Point(11, 261);
+            this.groupControl4.Location = new System.Drawing.Point(11, 177);
             this.groupControl4.LookAndFeel.SkinName = "Office 2013";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl4.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(347, 130);
+            this.groupControl4.Size = new System.Drawing.Size(347, 165);
             this.groupControl4.TabIndex = 60;
             this.groupControl4.Text = "Item Information";
             // 
@@ -128,39 +138,20 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.lblLot.TabIndex = 6;
             this.lblLot.Text = "[LotNum]";
             // 
-            // labelControl2
-            // 
-            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Appearance.Options.UseTextOptions = true;
-            this.labelControl2.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(11, 156);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(699, 99);
-            this.labelControl2.TabIndex = 59;
-            this.labelControl2.Text = "(Please note, any labels printed here will not effect quantities on the Purchase " +
-    "Order)";
-            // 
             // labelControl1
             // 
             this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Location = new System.Drawing.Point(308, 120);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(109, 28);
+            this.labelControl1.Size = new System.Drawing.Size(127, 28);
             this.labelControl1.TabIndex = 58;
-            this.labelControl1.Text = "PO Reprints";
+            this.labelControl1.Text = "Reprint Label";
             // 
             // pictureEdit2
             // 
@@ -179,64 +170,116 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.labelControl2);
+            this.groupControl1.Controls.Add(this.txtqtyreceived);
+            this.groupControl1.Controls.Add(this.txtLastLabelQty);
+            this.groupControl1.Controls.Add(this.labelControl8);
             this.groupControl1.Controls.Add(this.txtPrintQty);
             this.groupControl1.Controls.Add(this.txtQty);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.labelControl5);
-            this.groupControl1.Location = new System.Drawing.Point(366, 261);
+            this.groupControl1.Location = new System.Drawing.Point(366, 177);
             this.groupControl1.LookAndFeel.SkinName = "Office 2013";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(347, 130);
+            this.groupControl1.Size = new System.Drawing.Size(347, 165);
             this.groupControl1.TabIndex = 61;
             this.groupControl1.Text = "Quantities";
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(6, 90);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(135, 16);
+            this.labelControl2.TabIndex = 29;
+            this.labelControl2.Text = "Total quantity received:";
+            // 
+            // txtqtyreceived
+            // 
+            this.txtqtyreceived.Enabled = false;
+            this.txtqtyreceived.Location = new System.Drawing.Point(179, 87);
+            this.txtqtyreceived.Margin = new System.Windows.Forms.Padding(4);
+            this.txtqtyreceived.Name = "txtqtyreceived";
+            this.txtqtyreceived.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.txtqtyreceived.Properties.Appearance.Options.UseForeColor = true;
+            this.txtqtyreceived.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtqtyreceived.Size = new System.Drawing.Size(160, 22);
+            this.txtqtyreceived.TabIndex = 28;
+            // 
+            // txtLastLabelQty
+            // 
+            this.txtLastLabelQty.Enabled = false;
+            this.txtLastLabelQty.Location = new System.Drawing.Point(179, 57);
+            this.txtLastLabelQty.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLastLabelQty.Name = "txtLastLabelQty";
+            this.txtLastLabelQty.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.txtLastLabelQty.Properties.Appearance.Options.UseForeColor = true;
+            this.txtLastLabelQty.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtLastLabelQty.Size = new System.Drawing.Size(160, 22);
+            this.txtLastLabelQty.TabIndex = 27;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(6, 60);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(108, 16);
+            this.labelControl8.TabIndex = 26;
+            this.labelControl8.Text = "Last label quantity:";
+            // 
             // txtPrintQty
             // 
-            this.txtPrintQty.Location = new System.Drawing.Point(238, 28);
+            this.txtPrintQty.Enabled = false;
+            this.txtPrintQty.Location = new System.Drawing.Point(179, 117);
             this.txtPrintQty.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrintQty.Name = "txtPrintQty";
+            this.txtPrintQty.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.txtPrintQty.Properties.Appearance.Options.UseForeColor = true;
             this.txtPrintQty.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtPrintQty.Size = new System.Drawing.Size(101, 22);
+            this.txtPrintQty.Size = new System.Drawing.Size(160, 22);
             this.txtPrintQty.TabIndex = 0;
+            this.txtPrintQty.Visible = false;
             // 
             // txtQty
             // 
-            this.txtQty.Location = new System.Drawing.Point(238, 58);
+            this.txtQty.Location = new System.Drawing.Point(179, 28);
             this.txtQty.Margin = new System.Windows.Forms.Padding(4);
             this.txtQty.Name = "txtQty";
             this.txtQty.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtQty.Size = new System.Drawing.Size(101, 22);
+            this.txtQty.Size = new System.Drawing.Size(160, 22);
             this.txtQty.TabIndex = 1;
+            this.txtQty.EditValueChanged += new System.EventHandler(this.txtQty_TextChanged);
             // 
             // labelControl6
             // 
             this.labelControl6.Appearance.Options.UseTextOptions = true;
             this.labelControl6.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.labelControl6.Location = new System.Drawing.Point(6, 64);
+            this.labelControl6.Location = new System.Drawing.Point(6, 30);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(102, 16);
+            this.labelControl6.Size = new System.Drawing.Size(106, 16);
             this.labelControl6.TabIndex = 24;
-            this.labelControl6.Text = "Quantity on labels";
+            this.labelControl6.Text = "Quantity per label:";
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Options.UseTextOptions = true;
             this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.labelControl5.Location = new System.Drawing.Point(6, 34);
+            this.labelControl5.Location = new System.Drawing.Point(6, 120);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(123, 16);
+            this.labelControl5.Size = new System.Drawing.Size(110, 16);
             this.labelControl5.TabIndex = 22;
-            this.labelControl5.Text = "Total Labels To Print:";
+            this.labelControl5.Text = "Total label to print:";
+            this.labelControl5.Visible = false;
             // 
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.ImageOptions.Image")));
-            this.btnOk.Location = new System.Drawing.Point(545, 408);
+            this.btnOk.Location = new System.Drawing.Point(545, 366);
             this.btnOk.LookAndFeel.SkinMaskColor = System.Drawing.Color.Transparent;
             this.btnOk.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnOk.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -247,21 +290,41 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             this.btnOk.Text = "Print";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
+            // separatorControl1
+            // 
+            this.separatorControl1.Location = new System.Drawing.Point(294, 147);
+            this.separatorControl1.Name = "separatorControl1";
+            this.separatorControl1.Size = new System.Drawing.Size(153, 23);
+            this.separatorControl1.TabIndex = 62;
+            // 
+            // separatorControl2
+            // 
+            this.separatorControl2.Location = new System.Drawing.Point(293, 105);
+            this.separatorControl2.Name = "separatorControl2";
+            this.separatorControl2.Size = new System.Drawing.Size(153, 23);
+            this.separatorControl2.TabIndex = 63;
+            // 
             // frmPOReprintlostlbl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(725, 470);
+            this.ClientSize = new System.Drawing.Size(725, 428);
+            this.Controls.Add(this.separatorControl2);
+            this.Controls.Add(this.separatorControl1);
             this.Controls.Add(this.groupControl4);
-            this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.pictureEdit2);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.btnOk);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPOReprintlostlbl";
-            this.Text = "Reprint PO Damaged Labels";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Reprint PO Label";
             this.Load += new System.EventHandler(this.frmPOReprintlostlbl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
@@ -270,15 +333,19 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtqtyreceived.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLastLabelQty.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrintQty.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQty.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
@@ -286,7 +353,6 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
         private DevExpress.XtraEditors.LabelControl lblCode;
         private DevExpress.XtraEditors.LabelControl lblDesc;
         private DevExpress.XtraEditors.LabelControl lblLot;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
@@ -295,5 +361,11 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.SimpleButton btnOk;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit txtqtyreceived;
+        private DevExpress.XtraEditors.TextEdit txtLastLabelQty;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl1;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl2;
     }
 }

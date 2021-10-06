@@ -311,6 +311,7 @@ C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.csproj
 C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.exe
 C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.pdb
 C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec.frmPOReprintlostlbl.resources
+<<<<<<< HEAD
 =======
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\SQLite.Interop.dll
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\RTIS_Vulcan_UI.exe.config
@@ -622,3 +623,6 @@ C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.exe
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.pdb
 >>>>>>> c36c06fa606ad9485cb6b2b6d490c8122c647782
+=======
+C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.csprojAssemblyReference.cache
+>>>>>>> fac1a4bcb1cf8ddabb04871f0179fd0067b8aa33

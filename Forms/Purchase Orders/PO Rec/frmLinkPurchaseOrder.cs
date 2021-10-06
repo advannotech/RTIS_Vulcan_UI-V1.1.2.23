@@ -39,7 +39,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
         public string supplier = string.Empty;
         public string ponumbers = string.Empty;
         public string dateupdated = string.Empty;
-        public frmLinkPurchaseOrder(string _linkid, string _supplier, string _ponumbers, string _dateupdated)
+        public frmLinkPurchaseOrder(string _linkid,string _supplier, string _ponumbers, string _dateupdated)
         {
             InitializeComponent();
             linkid = _linkid;
@@ -146,7 +146,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
         {
             try
             {
-                string availablepo = Client.GetAvailablePOs();
+                string availablepo = Client.GetAvailablePOs(supplier);
                 if (availablepo != string.Empty)
                 {
                     switch (availablepo.Split('*')[0])
@@ -323,6 +323,28 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
                 {
                     ExHandler.showErrorEx(ex);
                 }
+            }
+        }
+
+        private void btnRemoveAllPO_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<string> itemList = new List<string>();
+                foreach (string item in lbSelected.Items)
+                {
+                    itemList.Add(item);
+                }
+
+                foreach (string item in itemList)
+                {
+                    lbAvailable.Items.Add(item);
+                    lbSelected.Items.Remove(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                ExHandler.showErrorEx(ex);
             }
         }
     }
