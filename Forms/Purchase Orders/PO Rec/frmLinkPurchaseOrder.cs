@@ -54,6 +54,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
             refreshPage();
             lblSupplier.Text = supplier;
             setCurrentPOs();
+            getAvailableLinkedOP();
         }
 
         public void refreshVendors()
@@ -158,9 +159,17 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
                             string[] arrPOs = availablepo.Split('~');
                             foreach (string po in arrPOs)
                             {
-                                if (po != "")
+                                if (po !=string.Empty)
                                 {
-                                    lbAvailable.Items.Add(po);
+                                    if(listLinkedPOs.Items.Contains(po))
+                                    {
+                                        lbAvailable.Items.Remove(po);
+                                    }
+                                    else
+                                    {
+                                        lbAvailable.Items.Add(po);
+                                    }
+                                    
                                 }
                             }
                             break;
