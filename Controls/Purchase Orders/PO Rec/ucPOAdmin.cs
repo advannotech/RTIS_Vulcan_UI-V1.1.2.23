@@ -451,7 +451,7 @@ namespace RTIS_Vulcan_UI.Controls
                     string id = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcLinkID").ToString();
                     string supName = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcSupplier").ToString();
                     string orderNo = gvLink.GetRowCellValue(gvLink.FocusedRowHandle, "gcPO").ToString();
-                    if (orderNo != "- Not Linked -")
+                    if (orderNo != "- Select PO -")
                     {
                         if (orderNo != "No POs found")
                         {
@@ -498,7 +498,7 @@ namespace RTIS_Vulcan_UI.Controls
                         }
                         else
                         {
-                            gvLink.SetRowCellValue(gvLink.FocusedRowHandle, "gcPO", "- Not Linked -");
+                            gvLink.SetRowCellValue(gvLink.FocusedRowHandle, "gcPO", "- Select PO -");
                         }
                     }
 
@@ -518,7 +518,7 @@ namespace RTIS_Vulcan_UI.Controls
                 {
                     string orderNum = gvLink.GetRowCellValue(e.RowHandle, View.Columns["gcPO"]).ToString();
                     string DateEntered = gvLink.GetRowCellValue(e.RowHandle, View.Columns["gcDate"]).ToString();
-                    if (orderNum == "- Not Linked -")
+                    if (orderNum == "- Select PO -")
                     {
                         e.Appearance.BackColor = Color.LightYellow;
                         e.Appearance.BackColor2 = Color.LightYellow;

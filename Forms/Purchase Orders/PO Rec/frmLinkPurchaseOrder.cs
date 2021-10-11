@@ -169,7 +169,6 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
                                     {
                                         lbAvailable.Items.Add(po);
                                     }
-                                    
                                 }
                             }
                             break;
@@ -278,7 +277,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
 
         private void btnLink_Click(object sender, EventArgs e)
         {
-            if (lbSelected.Text != "")
+            if (lbSelected.Text != string.Empty)
             {
                 try
                 {
@@ -291,11 +290,15 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
                             {
                                 case "1":
                                     dateupdated = Convert.ToString(DateTime.Now);
-                                    //msg = new frmMsg("Link PO", "Link Success!",
-                                    //GlobalVars.msgState.Success);
-                                    //msg.ShowDialog();
-                                    this.Close();
+                                    string lastpo = lbSelected.Items[lbSelected.Items.Count - 1].ToString();
+                                    if(po==lastpo)
+                                    {
 
+                                        msg = new frmMsg("Link POs", "Link Success!",
+                                        GlobalVars.msgState.Success);
+                                        msg.ShowDialog();
+                                        this.Close();
+                                    }
 
                                     break;
                                 case "0":
@@ -320,6 +323,7 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
                                     errInfo = "Unexpected error while retreiving roles" + Environment.NewLine + "Data Returned:" + Environment.NewLine + linked;
                                     break;
                             }
+
                         }
                         else
                         {
@@ -327,11 +331,18 @@ namespace RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec
                             msg.ShowDialog();
                         }
                     }
+                   
                 }
                 catch(Exception ex)
                 {
                     ExHandler.showErrorEx(ex);
                 }
+            }
+            else
+            {
+                msg = new frmMsg("CATscan", "No PO was selected",   
+                GlobalVars.msgState.Info);
+                msg.ShowDialog();
             }
         }
 
