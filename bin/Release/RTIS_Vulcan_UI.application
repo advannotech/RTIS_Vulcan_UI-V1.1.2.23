@@ -7,13 +7,22 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" codebase="RTIS_Vulcan_UI.exe.manifest" size="118686">
+=======
+<<<<<<< HEAD
+    <dependentAssembly dependencyType="install" codebase="RTIS_Vulcan_UI.exe.manifest" size="118686">
+=======
+    <dependentAssembly dependencyType="install" codebase="RTIS_Vulcan_UI.exe.manifest" size="30018">
+>>>>>>> f0d994e73ac05a73aac72a52fcb19b18ee606753
+>>>>>>> d9eefd642cfd17a4545d84e42907f078f6316097
       <assemblyIdentity name="RTIS_Vulcan_UI.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +36,12 @@
 =======
         <dsig:DigestValue>1+uHCQy8bJGV9xK9BtblEJmLt8mpIpZkwjpCAvuXSo4=</dsig:DigestValue>
 >>>>>>> d1247c1f091e35b9a6be5a84231912dd38c15cf3
+=======
+        <dsig:DigestValue>Kk6+F9W8jAYV88W+gGpQ5TtekWYTfiF1xeZKn+A5iUw=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>79KuD1TvA9dLOcZySPmY+KKn8WcaJDOiM6IodnpkZoE=</dsig:DigestValue>
+>>>>>>> f0d994e73ac05a73aac72a52fcb19b18ee606753
+>>>>>>> d9eefd642cfd17a4545d84e42907f078f6316097
       </hash>
     </dependentAssembly>
   </dependency>

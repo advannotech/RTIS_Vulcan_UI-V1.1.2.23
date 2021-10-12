@@ -73,6 +73,7 @@ namespace RTIS_Vulcan_UI.Controls
                 Application.DoEvents();
                 Thread thread = new Thread(getItemLines);
                 thread.Start();
+                ppnlWait.Visible = false;
             }
             catch (Exception ex)
             {

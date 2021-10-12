@@ -17,6 +17,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dsig:DigestValue>gANTvXv2zWWMBZDmwYUvdfgygHvJ8DLmVRRr1d/UYFE=</dsig:DigestValue>
 =======
         <dsig:DigestValue>+m4Rs+rBRosL3AvacKr3bvCYESKEC2fVANZCze9sjAs=</dsig:DigestValue>
@@ -37,6 +38,12 @@
         <dsig:DigestValue>nsETNUmkPMr0YjRKlTEoaENBtLCdpfxx82AxhWLXxxs=</dsig:DigestValue>
 >>>>>>> 5afcd7c4f2284487ecbbdfc2faa98b162b5daf5a
 >>>>>>> d1247c1f091e35b9a6be5a84231912dd38c15cf3
+=======
+        <dsig:DigestValue>2shMudYxyTHBuAdYCapGUcbM39uHCY3MvLB1WBYxDW0=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>aFrjRrQoM9hv6zpKMmFsldEreEm0Tu0zEBP4HDcRjLc=</dsig:DigestValue>
+>>>>>>> f0d994e73ac05a73aac72a52fcb19b18ee606753
+>>>>>>> d9eefd642cfd17a4545d84e42907f078f6316097
       </hash>
     </dependentAssembly>
   </dependency>

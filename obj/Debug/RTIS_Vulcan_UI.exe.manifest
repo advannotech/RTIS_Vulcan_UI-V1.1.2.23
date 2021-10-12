@@ -1906,6 +1906,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="4013528">
 =======
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="3878872">
@@ -1926,12 +1927,19 @@
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="4045784">
 >>>>>>> 5afcd7c4f2284487ecbbdfc2faa98b162b5daf5a
 >>>>>>> d1247c1f091e35b9a6be5a84231912dd38c15cf3
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="3882016">
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="3875800">
+>>>>>>> f0d994e73ac05a73aac72a52fcb19b18ee606753
+>>>>>>> d9eefd642cfd17a4545d84e42907f078f6316097
       <assemblyIdentity name="RTIS_Vulcan_UI" version="1.1.2.23" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1955,6 +1963,12 @@
         <dsig:DigestValue>p7I9znxq68BFfyy8/T0+U5jm8vvQx/2/Kx0eLjbWavc=</dsig:DigestValue>
 >>>>>>> 5afcd7c4f2284487ecbbdfc2faa98b162b5daf5a
 >>>>>>> d1247c1f091e35b9a6be5a84231912dd38c15cf3
+=======
+        <dsig:DigestValue>VS+w2cAZ6ao/oaq33ulHahqnEcXYE6BD8u9tlaMFexA=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>pcU0DYCs0MyTFH5iYul5CPdWAAz17qBig0sdSBEXpGg=</dsig:DigestValue>
+>>>>>>> f0d994e73ac05a73aac72a52fcb19b18ee606753
+>>>>>>> d9eefd642cfd17a4545d84e42907f078f6316097
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2005,6 +2019,7 @@
   </file>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <file name="RTIS_Vulcan_UI.exe.config" size="837">
 =======
   <file name="RTIS_Vulcan_UI.exe.config" size="855">
@@ -2023,11 +2038,18 @@
   <file name="RTIS_Vulcan_UI.exe.config" size="855">
 >>>>>>> 5afcd7c4f2284487ecbbdfc2faa98b162b5daf5a
 >>>>>>> d1247c1f091e35b9a6be5a84231912dd38c15cf3
+=======
+  <file name="RTIS_Vulcan_UI.exe.config" size="842">
+=======
+  <file name="RTIS_Vulcan_UI.exe.config" size="853">
+>>>>>>> f0d994e73ac05a73aac72a52fcb19b18ee606753
+>>>>>>> d9eefd642cfd17a4545d84e42907f078f6316097
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <dsig:DigestValue>GdF0T1vmqQwFHk3sV6+Q6O/5M/zeh7NZ9TVXNzjALa8=</dsig:DigestValue>
@@ -2048,6 +2070,12 @@
       <dsig:DigestValue>M5yFxKPl5afln0uDRfXgiOPvqY7f7dhSxXTQR1yJmRI=</dsig:DigestValue>
 >>>>>>> 5afcd7c4f2284487ecbbdfc2faa98b162b5daf5a
 >>>>>>> d1247c1f091e35b9a6be5a84231912dd38c15cf3
+=======
+      <dsig:DigestValue>iDRbFB/39jD2V648KqKt7JsUHDKiX9Y4QrDWDn4Xw8A=</dsig:DigestValue>
+=======
+      <dsig:DigestValue>Zif8Iz5l6DrO23O49p/uQjEtjGEeeWX4j8XfzaTcbjw=</dsig:DigestValue>
+>>>>>>> f0d994e73ac05a73aac72a52fcb19b18ee606753
+>>>>>>> d9eefd642cfd17a4545d84e42907f078f6316097
     </hash>
   </file>
   <file name="SQLite.Interop.dll" size="1155584">
