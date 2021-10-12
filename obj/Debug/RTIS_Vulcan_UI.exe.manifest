@@ -1905,6 +1905,7 @@
   <dependency>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="3875800">
 =======
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="4042200">
@@ -1912,12 +1913,16 @@
 =======
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="4045272">
 >>>>>>> 0eba6c03dd72329eb044a550b39a5e84c6157abd
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="4045784">
+>>>>>>> 5afcd7c4f2284487ecbbdfc2faa98b162b5daf5a
       <assemblyIdentity name="RTIS_Vulcan_UI" version="1.1.2.23" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <dsig:DigestValue>rTJVPgZ4ifbEqel99RD1GvmgBuVPWU7S/VMH47xNnbA=</dsig:DigestValue>
@@ -1927,6 +1932,9 @@
 =======
         <dsig:DigestValue>xuxemHdtIY0UusrsU3WZTXnMV2XCVBVho9R0AKlNYA4=</dsig:DigestValue>
 >>>>>>> 0eba6c03dd72329eb044a550b39a5e84c6157abd
+=======
+        <dsig:DigestValue>p7I9znxq68BFfyy8/T0+U5jm8vvQx/2/Kx0eLjbWavc=</dsig:DigestValue>
+>>>>>>> 5afcd7c4f2284487ecbbdfc2faa98b162b5daf5a
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1977,6 +1985,7 @@
   </file>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <file name="RTIS_Vulcan_UI.exe.config" size="852">
 =======
   <file name="RTIS_Vulcan_UI.exe.config" size="837">
@@ -1984,11 +1993,15 @@
 =======
   <file name="RTIS_Vulcan_UI.exe.config" size="855">
 >>>>>>> 0eba6c03dd72329eb044a550b39a5e84c6157abd
+=======
+  <file name="RTIS_Vulcan_UI.exe.config" size="855">
+>>>>>>> 5afcd7c4f2284487ecbbdfc2faa98b162b5daf5a
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <dsig:DigestValue>c34SLY9huiOw1AKMbG9XqBeEhNiqqQUlP3NV7dWGGPA=</dsig:DigestValue>
@@ -1998,6 +2011,9 @@
 =======
       <dsig:DigestValue>M5yFxKPl5afln0uDRfXgiOPvqY7f7dhSxXTQR1yJmRI=</dsig:DigestValue>
 >>>>>>> 0eba6c03dd72329eb044a550b39a5e84c6157abd
+=======
+      <dsig:DigestValue>M5yFxKPl5afln0uDRfXgiOPvqY7f7dhSxXTQR1yJmRI=</dsig:DigestValue>
+>>>>>>> 5afcd7c4f2284487ecbbdfc2faa98b162b5daf5a
     </hash>
   </file>
   <file name="SQLite.Interop.dll" size="1155584">

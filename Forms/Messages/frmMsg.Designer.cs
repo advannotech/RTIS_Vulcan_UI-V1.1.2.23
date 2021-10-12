@@ -76,11 +76,12 @@
             this.xtcMain.BorderStylePage = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.xtcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtcMain.Location = new System.Drawing.Point(0, 0);
+            this.xtcMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.xtcMain.Name = "xtcMain";
             this.xtcMain.PaintStyleName = "Standard";
             this.xtcMain.SelectedTabPage = this.xtpError;
             this.xtcMain.ShowTabHeader = DevExpress.Utils.DefaultBoolean.True;
-            this.xtcMain.Size = new System.Drawing.Size(385, 235);
+            this.xtcMain.Size = new System.Drawing.Size(513, 289);
             this.xtcMain.TabIndex = 0;
             this.xtcMain.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpError,
@@ -97,8 +98,9 @@
             this.xtpError.Controls.Add(this.pictureEdit1);
             this.xtpError.Controls.Add(this.btnOk);
             this.xtpError.Controls.Add(this.lblError);
+            this.xtpError.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.xtpError.Name = "xtpError";
-            this.xtpError.Size = new System.Drawing.Size(385, 215);
+            this.xtpError.Size = new System.Drawing.Size(513, 266);
             this.xtpError.Text = "xtpError";
             // 
             // meError
@@ -106,24 +108,25 @@
             this.meError.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.meError.Location = new System.Drawing.Point(27, 47);
+            this.meError.Location = new System.Drawing.Point(36, 58);
+            this.meError.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.meError.Name = "meError";
             this.meError.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.meError.Properties.Appearance.Options.UseFont = true;
-            this.meError.Size = new System.Drawing.Size(330, 110);
+            this.meError.Size = new System.Drawing.Size(440, 135);
             this.meError.TabIndex = 39;
             // 
             // pictureEdit1
             // 
             this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureEdit1.EditValue = global::RTIS_Vulcan_UI.Properties.Resources.redX;
-            this.pictureEdit1.Location = new System.Drawing.Point(27, 3);
+            this.pictureEdit1.Location = new System.Drawing.Point(36, 4);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Properties.ZoomAccelerationFactor = 1D;
-            this.pictureEdit1.Size = new System.Drawing.Size(38, 38);
+            this.pictureEdit1.Size = new System.Drawing.Size(51, 47);
             this.pictureEdit1.TabIndex = 0;
             // 
             // btnOk
@@ -131,11 +134,12 @@
             this.btnOk.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnOk.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnOk.Appearance.Options.UseBackColor = true;
-            this.btnOk.Location = new System.Drawing.Point(231, 163);
+            this.btnOk.Location = new System.Drawing.Point(308, 201);
             this.btnOk.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnOk.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnOk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(126, 40);
+            this.btnOk.Size = new System.Drawing.Size(168, 49);
             this.btnOk.TabIndex = 38;
             this.btnOk.Text = "OK";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
@@ -153,9 +157,10 @@
             this.lblError.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
             this.lblError.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblError.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblError.Location = new System.Drawing.Point(72, 3);
+            this.lblError.Location = new System.Drawing.Point(96, 4);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(285, 38);
+            this.lblError.Size = new System.Drawing.Size(380, 47);
             this.lblError.TabIndex = 37;
             this.lblError.Text = "fsdvdsdvsdvsdvvsdsvsvdsdvsdvsdvsdvsdvsd";
             // 
@@ -166,8 +171,9 @@
             this.xtpSuccess.Controls.Add(this.btnSucOk);
             this.xtpSuccess.Controls.Add(this.lblSuc);
             this.xtpSuccess.Controls.Add(this.pictureEdit2);
+            this.xtpSuccess.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.xtpSuccess.Name = "xtpSuccess";
-            this.xtpSuccess.Size = new System.Drawing.Size(385, 215);
+            this.xtpSuccess.Size = new System.Drawing.Size(513, 266);
             this.xtpSuccess.Text = "xtraTabPage2";
             // 
             // btnSucOk
@@ -175,11 +181,12 @@
             this.btnSucOk.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSucOk.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnSucOk.Appearance.Options.UseBackColor = true;
-            this.btnSucOk.Location = new System.Drawing.Point(126, 137);
+            this.btnSucOk.Location = new System.Drawing.Point(168, 169);
             this.btnSucOk.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnSucOk.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnSucOk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSucOk.Name = "btnSucOk";
-            this.btnSucOk.Size = new System.Drawing.Size(126, 40);
+            this.btnSucOk.Size = new System.Drawing.Size(168, 49);
             this.btnSucOk.TabIndex = 41;
             this.btnSucOk.Text = "OK";
             this.btnSucOk.Click += new System.EventHandler(this.btnSucOk_Click);
@@ -198,9 +205,10 @@
             this.lblSuc.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblSuc.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblSuc.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblSuc.Location = new System.Drawing.Point(3, 65);
+            this.lblSuc.Location = new System.Drawing.Point(4, 80);
+            this.lblSuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblSuc.Name = "lblSuc";
-            this.lblSuc.Size = new System.Drawing.Size(379, 66);
+            this.lblSuc.Size = new System.Drawing.Size(505, 81);
             this.lblSuc.TabIndex = 40;
             this.lblSuc.Text = "The following error has occured:";
             // 
@@ -209,13 +217,13 @@
             this.pictureEdit2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureEdit2.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureEdit2.EditValue = global::RTIS_Vulcan_UI.Properties.Resources.found;
-            this.pictureEdit2.Location = new System.Drawing.Point(157, 8);
+            this.pictureEdit2.Location = new System.Drawing.Point(209, 10);
+            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit2.Properties.ZoomAccelerationFactor = 1D;
-            this.pictureEdit2.Size = new System.Drawing.Size(51, 51);
+            this.pictureEdit2.Size = new System.Drawing.Size(68, 63);
             this.pictureEdit2.TabIndex = 39;
             // 
             // xtpQuestion
@@ -226,8 +234,9 @@
             this.xtpQuestion.Controls.Add(this.btnYes);
             this.xtpQuestion.Controls.Add(this.lblQuest);
             this.xtpQuestion.Controls.Add(this.pictureEdit3);
+            this.xtpQuestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.xtpQuestion.Name = "xtpQuestion";
-            this.xtpQuestion.Size = new System.Drawing.Size(385, 215);
+            this.xtpQuestion.Size = new System.Drawing.Size(513, 266);
             this.xtpQuestion.Text = "xtraTabPage1";
             // 
             // btnNo
@@ -235,11 +244,12 @@
             this.btnNo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnNo.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnNo.Appearance.Options.UseBackColor = true;
-            this.btnNo.Location = new System.Drawing.Point(247, 169);
+            this.btnNo.Location = new System.Drawing.Point(329, 208);
             this.btnNo.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnNo.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(126, 40);
+            this.btnNo.Size = new System.Drawing.Size(168, 49);
             this.btnNo.TabIndex = 44;
             this.btnNo.Text = "No";
             this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
@@ -249,11 +259,12 @@
             this.btnYes.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnYes.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnYes.Appearance.Options.UseBackColor = true;
-            this.btnYes.Location = new System.Drawing.Point(12, 169);
+            this.btnYes.Location = new System.Drawing.Point(16, 208);
             this.btnYes.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnYes.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnYes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(126, 40);
+            this.btnYes.Size = new System.Drawing.Size(168, 49);
             this.btnYes.TabIndex = 43;
             this.btnYes.Text = "Yes";
             this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
@@ -272,9 +283,10 @@
             this.lblQuest.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblQuest.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblQuest.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblQuest.Location = new System.Drawing.Point(3, 61);
+            this.lblQuest.Location = new System.Drawing.Point(4, 75);
+            this.lblQuest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblQuest.Name = "lblQuest";
-            this.lblQuest.Size = new System.Drawing.Size(379, 102);
+            this.lblQuest.Size = new System.Drawing.Size(505, 126);
             this.lblQuest.TabIndex = 42;
             this.lblQuest.Text = "The following error has occured:";
             // 
@@ -283,12 +295,12 @@
             this.pictureEdit3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureEdit3.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(172, 13);
+            this.pictureEdit3.Location = new System.Drawing.Point(229, 16);
+            this.pictureEdit3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit3.Properties.ZoomAccelerationFactor = 1D;
-            this.pictureEdit3.Size = new System.Drawing.Size(51, 51);
+            this.pictureEdit3.Size = new System.Drawing.Size(68, 63);
             this.pictureEdit3.TabIndex = 0;
             // 
             // xtpVir
@@ -298,8 +310,9 @@
             this.xtpVir.Controls.Add(this.pictureEdit4);
             this.xtpVir.Controls.Add(this.btnVirOk);
             this.xtpVir.Controls.Add(this.labelControl1);
+            this.xtpVir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.xtpVir.Name = "xtpVir";
-            this.xtpVir.Size = new System.Drawing.Size(385, 215);
+            this.xtpVir.Size = new System.Drawing.Size(513, 266);
             this.xtpVir.Text = "xtraTabPage1";
             // 
             // pictureEdit4
@@ -307,13 +320,13 @@
             this.pictureEdit4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureEdit4.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureEdit4.EditValue = global::RTIS_Vulcan_UI.Properties.Resources.Information;
-            this.pictureEdit4.Location = new System.Drawing.Point(172, 22);
+            this.pictureEdit4.Location = new System.Drawing.Point(229, 27);
+            this.pictureEdit4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureEdit4.Name = "pictureEdit4";
             this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit4.Properties.ZoomAccelerationFactor = 1D;
-            this.pictureEdit4.Size = new System.Drawing.Size(51, 51);
+            this.pictureEdit4.Size = new System.Drawing.Size(68, 63);
             this.pictureEdit4.TabIndex = 40;
             // 
             // btnVirOk
@@ -321,11 +334,12 @@
             this.btnVirOk.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnVirOk.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnVirOk.Appearance.Options.UseBackColor = true;
-            this.btnVirOk.Location = new System.Drawing.Point(128, 163);
+            this.btnVirOk.Location = new System.Drawing.Point(171, 201);
             this.btnVirOk.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnVirOk.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnVirOk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVirOk.Name = "btnVirOk";
-            this.btnVirOk.Size = new System.Drawing.Size(126, 40);
+            this.btnVirOk.Size = new System.Drawing.Size(168, 49);
             this.btnVirOk.TabIndex = 39;
             this.btnVirOk.Text = "OK";
             this.btnVirOk.Click += new System.EventHandler(this.btnVirOk_Click);
@@ -343,9 +357,10 @@
             this.labelControl1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
             this.labelControl1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(52, 79);
+            this.labelControl1.Location = new System.Drawing.Point(69, 97);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(285, 68);
+            this.labelControl1.Size = new System.Drawing.Size(380, 84);
             this.labelControl1.TabIndex = 38;
             this.labelControl1.Text = "Initial use detected\r\n\r\nYou will be logged in as a Service User";
             // 
@@ -357,8 +372,9 @@
             this.xtpInfo.Controls.Add(this.pictureEdit5);
             this.xtpInfo.Controls.Add(this.btnInfoOK);
             this.xtpInfo.Controls.Add(this.lblInfoMsg);
+            this.xtpInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.xtpInfo.Name = "xtpInfo";
-            this.xtpInfo.Size = new System.Drawing.Size(385, 215);
+            this.xtpInfo.Size = new System.Drawing.Size(513, 266);
             this.xtpInfo.Text = "Info";
             // 
             // lblInfoHeader
@@ -374,9 +390,10 @@
             this.lblInfoHeader.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
             this.lblInfoHeader.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblInfoHeader.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblInfoHeader.Location = new System.Drawing.Point(50, 74);
+            this.lblInfoHeader.Location = new System.Drawing.Point(67, 91);
+            this.lblInfoHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblInfoHeader.Name = "lblInfoHeader";
-            this.lblInfoHeader.Size = new System.Drawing.Size(285, 20);
+            this.lblInfoHeader.Size = new System.Drawing.Size(380, 25);
             this.lblInfoHeader.TabIndex = 44;
             this.lblInfoHeader.Text = "info header";
             // 
@@ -385,13 +402,13 @@
             this.pictureEdit5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureEdit5.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureEdit5.EditValue = global::RTIS_Vulcan_UI.Properties.Resources.Information;
-            this.pictureEdit5.Location = new System.Drawing.Point(170, 17);
+            this.pictureEdit5.Location = new System.Drawing.Point(227, 21);
+            this.pictureEdit5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureEdit5.Name = "pictureEdit5";
             this.pictureEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit5.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit5.Properties.ZoomAccelerationFactor = 1D;
-            this.pictureEdit5.Size = new System.Drawing.Size(51, 51);
+            this.pictureEdit5.Size = new System.Drawing.Size(68, 63);
             this.pictureEdit5.TabIndex = 43;
             // 
             // btnInfoOK
@@ -399,11 +416,12 @@
             this.btnInfoOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnInfoOK.Appearance.BackColor = System.Drawing.Color.Black;
             this.btnInfoOK.Appearance.Options.UseBackColor = true;
-            this.btnInfoOK.Location = new System.Drawing.Point(126, 158);
+            this.btnInfoOK.Location = new System.Drawing.Point(168, 194);
             this.btnInfoOK.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnInfoOK.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnInfoOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInfoOK.Name = "btnInfoOK";
-            this.btnInfoOK.Size = new System.Drawing.Size(126, 40);
+            this.btnInfoOK.Size = new System.Drawing.Size(168, 49);
             this.btnInfoOK.TabIndex = 42;
             this.btnInfoOK.Text = "OK";
             this.btnInfoOK.Click += new System.EventHandler(this.btnInfoOK_Click);
@@ -421,25 +439,27 @@
             this.lblInfoMsg.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
             this.lblInfoMsg.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblInfoMsg.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblInfoMsg.Location = new System.Drawing.Point(50, 100);
+            this.lblInfoMsg.Location = new System.Drawing.Point(67, 123);
+            this.lblInfoMsg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblInfoMsg.Name = "lblInfoMsg";
-            this.lblInfoMsg.Size = new System.Drawing.Size(285, 52);
+            this.lblInfoMsg.Size = new System.Drawing.Size(380, 64);
             this.lblInfoMsg.TabIndex = 41;
             this.lblInfoMsg.Text = "info message";
             // 
             // frmMsg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(385, 235);
+            this.ClientSize = new System.Drawing.Size(513, 289);
             this.Controls.Add(this.xtcMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMsg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RTIS Vulcan - Notification";
+            this.Text = "CATscan - Notification";
             this.Load += new System.EventHandler(this.frmMsg_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtcMain)).EndInit();
             this.xtcMain.ResumeLayout(false);

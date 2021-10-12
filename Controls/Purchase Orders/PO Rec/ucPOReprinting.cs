@@ -786,6 +786,11 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
                     }
 
                 }
+                else
+                {
+                    msg = new frmMsg("Label Reprint", "Select item to reprint", GlobalVars.msgState.Info);
+                    msg.ShowDialog();
+                }
             }
             catch (Exception ex)
             {
@@ -1234,6 +1239,11 @@ namespace RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec
                         msg = new frmMsg("Cannot reprint item", "The item you have selected is invalid for reprints!", GlobalVars.msgState.Info);
                         msg.ShowDialog();
                     }
+                }
+                else
+                {
+                    msg = new frmMsg("Reprint Receipt", "Select item to reprint", GlobalVars.msgState.Info);
+                    msg.ShowDialog();
                 }
             }
             catch (Exception ex)

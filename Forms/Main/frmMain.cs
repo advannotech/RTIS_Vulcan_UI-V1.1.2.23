@@ -578,10 +578,12 @@ namespace RTIS_Vulcan_UI
             bool found = false;
             switch (e.Node.Text)
             {
+                
                 case "PO Reprinting":
                     found = false;
                     foreach (XtraTabPage page in xtcMain.TabPages)
                     {
+
                         if (page.Text == "PO Reprinting")
                         {
                             found = true;
