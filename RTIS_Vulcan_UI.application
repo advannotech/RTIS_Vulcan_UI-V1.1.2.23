@@ -14,7 +14,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD:bin/Release/RTIS_Vulcan_UI.application
+        <dsig:DigestValue>uHUHpcOEKGloStI4lp5J8y1bunoVOiej5e99ZSgvnrg=</dsig:DigestValue>
+=======
         <dsig:DigestValue>gANTvXv2zWWMBZDmwYUvdfgygHvJ8DLmVRRr1d/UYFE=</dsig:DigestValue>
+>>>>>>> 5afcd7c4f2284487ecbbdfc2faa98b162b5daf5a:RTIS_Vulcan_UI.application
       </hash>
     </dependentAssembly>
   </dependency>

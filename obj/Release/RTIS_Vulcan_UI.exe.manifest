@@ -1903,14 +1903,22 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="3956696">
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_UI.exe" size="3956184">
+>>>>>>> 402e35b58a6df3d70f850d3232275a10c4759de0
       <assemblyIdentity name="RTIS_Vulcan_UI" version="1.1.2.23" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>SGuVbwtzEW0v9oplNs92s/5218GyOraGlB2L5mVrbH4=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>miG7TfZ3YgriXxY74iBef441Xk7ESdEmcmjYuXrKUpA=</dsig:DigestValue>
+>>>>>>> 402e35b58a6df3d70f850d3232275a10c4759de0
       </hash>
     </dependentAssembly>
   </dependency>
