@@ -379,23 +379,19 @@ namespace RTIS_Vulcan_UI.Controls.Stock_Management.Stock_Takes
                     builder.Append(writeLine);
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        bool onST = Convert.ToBoolean(gvItems.GetRowCellValue(i, "gcOnST").ToString());
-                        if (onST)
+                        string line = string.Empty;
+                        var builder1 = new StringBuilder();
+                        builder1.Append(line);
+                        foreach (string column in _format.Split('|'))
                         {
-                            string line = string.Empty;
-                            var builder1 = new StringBuilder();
-                            builder1.Append(line);
-                            foreach (string column in _format.Split('|'))
+                            if (column != string.Empty)
                             {
-                                if (column != string.Empty)
-                                {
-                                    builder1.Append(gvItems.GetRowCellValue(i, column) + _delimiter.Replace("'", ""));
-                                }
+                                builder1.Append(gvItems.GetRowCellValue(i, column) + _delimiter.Replace("'", ""));
                             }
-                            line = builder1.ToString();
-                            line = line.Substring(0, line.Length - 1);
-                            builder.Append(line + "|");
                         }
+                        line = builder1.ToString();
+                        line = line.Substring(0, line.Length - 1);
+                        builder.Append(line + "|");
                     }
                     writeLine = builder.ToString();
                     File.Create(@"C:\RTIS\Stock Takes\Stock Take Records\" + cmbStockTakes.Text.Split('-')[0].Substring(0, cmbStockTakes.Text.Split('-')[0].Length - 1) + " - " + _name + ".csv").Close();
@@ -439,6 +435,7 @@ namespace RTIS_Vulcan_UI.Controls.Stock_Management.Stock_Takes
                                 string count2Lines = paramInfo.Split('|')[2];
                                 string totalLines = paramInfo.Split('|')[3];
 
+                                var param = cmbStockTakes.Text.Split('-')[0].Substring(0, cmbStockTakes.Text.Split('-')[0].Length - 1);
                                 rptInvCount stReport = new rptInvCount();
                                 string connectionString = "Data Source=" + GlobalVars.SQLServer + "; Initial Catalog=" + GlobalVars.RTDB +
                                 "; user ID=" + GlobalVars.SqlUser + "; password=" + GlobalVars.SqlPass + ";Max Pool Size=99999;";
@@ -446,22 +443,22 @@ namespace RTIS_Vulcan_UI.Controls.Stock_Management.Stock_Takes
                                 stReport.sqlDataSource1.ConnectionParameters = connectionParams;
 
                                 DevExpress.DataAccess.Sql.CustomSqlQuery query = stReport.sqlDataSource1.Queries[0] as DevExpress.DataAccess.Sql.CustomSqlQuery;
-                                query.Sql = "SELECT s.[Code] AS [ItemCode], s.[Description_1] AS [Desc] ,b.[cBinLocationName] AS Bin ,il.[fCountQty]  AS [Counted], [fCountQty2] AS [Counted2],il.[fSystemQty] AS [System], ABS(il.[fCountQty] - il.[fSystemQty]) AS [Variance] ,w.[Code] AS [WHSE]  ,i.[dPrepared] FROM [RTIS_InvCountArchiveLines] il INNER JOIN [RTIS_InvCount] i ON i.[idInvCount] = [iInvCountID] INNER JOIN [" + GlobalVars.EvoDB + "].[dbo].[StkItem] s ON s.[StockLink] = il.[iStockID] INNER JOIN [" + GlobalVars.EvoDB + "].[dbo].[WhseMst] w ON w.[WhseLink] = il.[iWarehouseID] LEFT JOIN [" + GlobalVars.EvoDB + "].[dbo].[_btblBINLocation] b ON b.[idBinLocation] = il.[iBinLocationId] LEFT JOIN [" + GlobalVars.EvoDB + "].[dbo].[_etblLotTracking] l ON il.[iLotTrackingID] = l.[idLotTracking] WHERE i.[cInvCountNo] = '" + cmbStockTakes.Text.Split('-')[0].Substring(0, cmbStockTakes.Text.Split('-')[0].Length - 1) + "' AND il.[fSystemQty] > il.[fCountQty]  AND il.[fCountQty] <> 0 AND il.[fCountQty] = il.[fCountQty2] AND il.[bOnST] = 1 ORDER BY s.[Code]";
+                                query.Sql = string.Format("SELECT * FROM [dbo].[vw_GetArchivedItemsBelowSystemCount] WHERE [dbo].[vw_GetArchivedItemsBelowSystemCount].[cInvCountNo] = '{0}' ORDER BY [vw_GetArchivedItemsBelowSystemCount].[ItemCode]", param);
 
                                 DevExpress.DataAccess.Sql.CustomSqlQuery query2 = stReport.sqlDataSource1.Queries[1] as DevExpress.DataAccess.Sql.CustomSqlQuery;
-                                query2.Sql = "SELECT s.[Code] AS [ItemCode], s.[Description_1] AS [Desc] , b.[cBinLocationName] AS Bin ,il.[fCountQty]  AS [Counted], [fCountQty2] AS [Counted2] ,il.[fSystemQty] AS [System], ABS(il.[fCountQty] - il.[fSystemQty]) AS [Variance] ,w.[Code] AS [WHSE] ,i.[dPrepared] FROM [RTIS_InvCountArchiveLines] il INNER JOIN [RTIS_InvCount] i ON i.[idInvCount] = [iInvCountID] INNER JOIN [" + GlobalVars.EvoDB + "].[dbo].[StkItem] s ON s.[StockLink] = il.[iStockID] INNER JOIN [" + GlobalVars.EvoDB + "].[dbo].[WhseMst] w ON w.[WhseLink] = il.[iWarehouseID] LEFT JOIN [" + GlobalVars.EvoDB + "].[dbo].[_btblBINLocation] b ON b.[idBinLocation] = il.[iBinLocationId] LEFT JOIN [" + GlobalVars.EvoDB + "].[dbo].[_etblLotTracking] l ON il.[iLotTrackingID] = l.[idLotTracking] WHERE i.[cInvCountNo] = '" + cmbStockTakes.Text.Split('-')[0].Substring(0, cmbStockTakes.Text.Split('-')[0].Length - 1) + "' AND il.[fSystemQty] < il.[fCountQty] AND il.[fCountQty] = il.[fCountQty2] AND il.[bOnST] = 1 ORDER BY s.[Code]";
+                                query2.Sql = string.Format("SELECT * FROM [dbo].[vw_GetArchivedItemsAboveSystemCount] WHERE [dbo].[vw_GetArchivedItemsAboveSystemCount].[cInvCountNo] = '{0}' ORDER BY [vw_GetArchivedItemsAboveSystemCount].[ItemCode]", param);
 
                                 DevExpress.DataAccess.Sql.CustomSqlQuery query3 = stReport.sqlDataSource1.Queries[2] as DevExpress.DataAccess.Sql.CustomSqlQuery;
-                                query3.Sql = "SELECT s.[Code] AS [ItemCode] , s.[Description_1] AS [Desc] , b.[cBinLocationName] AS Bin ,'0'  AS [Counted], [fCountQty2] AS [Counted2] ,il.[fSystemQty] AS [System], ABS(il.[fCountQty] - il.[fSystemQty]) AS [Variance] ,w.[Code] AS [WHSE] ,i.[dPrepared] FROM [RTIS_InvCountArchiveLines] il INNER JOIN [RTIS_InvCount] i ON i.[idInvCount] = [iInvCountID] INNER JOIN [" + GlobalVars.EvoDB + "].[dbo].[StkItem] s ON s.[StockLink] = il.[iStockID] INNER JOIN [" + GlobalVars.EvoDB + "].[dbo].[WhseMst] w ON w.[WhseLink] = il.[iWarehouseID] LEFT JOIN [" + GlobalVars.EvoDB + "].[dbo].[_btblBINLocation] b ON b.[idBinLocation] = il.[iBinLocationId] LEFT JOIN [" + GlobalVars.EvoDB + "].[dbo].[_etblLotTracking] l ON il.[iLotTrackingID] = l.[idLotTracking] WHERE i.[cInvCountNo] = '" + cmbStockTakes.Text.Split('-')[0].Substring(0, cmbStockTakes.Text.Split('-')[0].Length - 1) + "' AND (il.[fCountQty] = 0 OR il.[fCountQty] IS NULL OR il.[fCountQty] = '') AND (il.[fCountQty2] = 0 OR il.[fCountQty2] IS NULL OR il.[fCountQty2] = '') AND (il.[fCountQty] <> 0 OR il.[fCountQty2] <> 0 OR il.[fSystemQty] <> 0) AND il.[bOnST] = 1 ORDER BY s.[Code]";
+                                query3.Sql = string.Format("SELECT * FROM [dbo].[vw_GetArchivedItemsUncounted] WHERE [dbo].[vw_GetArchivedItemsUncounted].[cInvCountNo] = '{0}' ORDER BY [vw_GetArchivedItemsUncounted].[ItemCode]", param);
 
                                 DevExpress.DataAccess.Sql.CustomSqlQuery query4 = stReport.sqlDataSource1.Queries[3] as DevExpress.DataAccess.Sql.CustomSqlQuery;
-                                query4.Sql = "SELECT s.[Code] AS [ItemCode], s.[Description_1] AS [Desc], b.[cBinLocationName] AS Bin ,il.[fCountQty]  AS [Counted], [fCountQty2] AS [Counted2],il.[fSystemQty] AS [System], ABS(il.[fCountQty] - il.[fSystemQty]) AS [Variance] ,w.[Code] AS [WHSE] ,i.[dPrepared] FROM [RTIS_InvCountArchiveLines] il INNER JOIN [RTIS_InvCount] i ON i.[idInvCount] = [iInvCountID] INNER JOIN [" + GlobalVars.EvoDB + "].[dbo].[StkItem] s ON s.[StockLink] = il.[iStockID] INNER JOIN [" + GlobalVars.EvoDB + "].[dbo].[WhseMst] w ON w.[WhseLink] = il.[iWarehouseID] LEFT JOIN [" + GlobalVars.EvoDB + "].[dbo].[_btblBINLocation] b ON b.[idBinLocation] = il.[iBinLocationId] LEFT JOIN [" + GlobalVars.EvoDB + "].[dbo].[_etblLotTracking] l ON il.[iLotTrackingID] = l.[idLotTracking] WHERE i.[cInvCountNo] = '" + cmbStockTakes.Text.Split('-')[0].Substring(0, cmbStockTakes.Text.Split('-')[0].Length - 1) + "' AND il.[fCountQty] = il.[fSystemQty] AND il.[fCountQty] <> 0 AND il.[fSystemQty] <> 0 AND il.[fCountQty] = il.[fCountQty2] AND il.[bOnST] = 1 ORDER BY s.[Code]";
+                                query4.Sql = string.Format("SELECT * FROM [dbo].[vw_GetArchivedItemsEqualSystemCount] WHERE [dbo].[vw_GetArchivedItemsEqualSystemCount].[cInvCountNo] = '{0}' ORDER BY [vw_GetArchivedItemsEqualSystemCount].[ItemCode]", param);
 
                                 DevExpress.DataAccess.Sql.CustomSqlQuery query5 = stReport.sqlDataSource1.Queries[4] as DevExpress.DataAccess.Sql.CustomSqlQuery;
-                                query5.Sql = "SELECT s.[Code] AS [ItemCode], s.[Description_1] AS [Desc] , b.[cBinLocationName] AS Bin ,il.[fCountQty]  AS [Counted], [fCountQty2] AS [Counted2], ABS(il.[fCountQty2] - il.[fCountQty]) AS [Variance] ,il.[fSystemQty] AS [System], w.[Code] AS [WHSE] ,i.[dPrepared] FROM [RTIS_InvCountArchiveLines] il INNER JOIN [RTIS_InvCount] i ON i.[idInvCount] = [iInvCountID] INNER JOIN [" + GlobalVars.EvoDB + "].[dbo].[StkItem] s ON s.[StockLink] = il.[iStockID] INNER JOIN [" + GlobalVars.EvoDB + "].[dbo].[WhseMst] w ON w.[WhseLink] = il.[iWarehouseID] LEFT JOIN [" + GlobalVars.EvoDB + "].[dbo].[_btblBINLocation] b ON b.[idBinLocation] = il.[iBinLocationId] LEFT JOIN [" + GlobalVars.EvoDB + "].[dbo].[_etblLotTracking] l ON il.[iLotTrackingID] = l.[idLotTracking] WHERE i.[cInvCountNo] = '" + cmbStockTakes.Text.Split('-')[0].Substring(0, cmbStockTakes.Text.Split('-')[0].Length - 1) + "' AND il.[fCountQty] <> il.[fCountQty2] AND il.[bOnST] = 1 ORDER BY s.[Code]";
+                                query5.Sql = string.Format("SELECT * FROM [dbo].[vw_GetUnequalScannerQty] WHERE [dbo].[vw_GetUnequalScannerQty].[cInvCountNo] = '{0}' ORDER BY [vw_GetUnequalScannerQty].[ItemCode]", param);
 
                                 DevExpress.DataAccess.Sql.CustomSqlQuery query6 = stReport.sqlDataSource1.Queries[5] as DevExpress.DataAccess.Sql.CustomSqlQuery;
-                                query6.Sql = "SELECT s.[Code] AS [ItemCode], s.[Description_1] AS [Desc], b.[cBinLocationName] AS Bin ,il.[fCountQty]  AS [Counted], [fCountQty2] AS [Counted2],il.[fSystemQty] AS [System], ABS(il.[fCountQty] - il.[fSystemQty]) AS [Variance] ,w.[Code] AS [WHSE] ,i.[dPrepared] FROM [RTIS_InvCountArchiveLines] il INNER JOIN [RTIS_InvCount] i ON i.[idInvCount] = [iInvCountID] INNER JOIN [" + GlobalVars.EvoDB + "].[dbo].[StkItem] s ON s.[StockLink] = il.[iStockID] INNER JOIN [" + GlobalVars.EvoDB + "].[dbo].[WhseMst] w ON w.[WhseLink] = il.[iWarehouseID] LEFT JOIN [" + GlobalVars.EvoDB + "].[dbo].[_btblBINLocation] b ON b.[idBinLocation] = il.[iBinLocationId] LEFT JOIN [" + GlobalVars.EvoDB + "].[dbo].[_etblLotTracking] l ON il.[iLotTrackingID] = l.[idLotTracking] WHERE i.[cInvCountNo] = '" + cmbStockTakes.Text.Split('-')[0].Substring(0, cmbStockTakes.Text.Split('-')[0].Length - 1) + "' AND il.[bOnST] = 0 ORDER BY s.[Code]";
+                                query6.Sql = string.Format("SELECT * FROM [dbo].[vw_GetArchivedUnlistedItems] WHERE [dbo].[vw_GetArchivedUnlistedItems].[cInvCountNo] = '{0}' ORDER BY [vw_GetArchivedUnlistedItems].[ItemCode]", param);
 
 
                                 if (frm_stReport.negativeVars == false)

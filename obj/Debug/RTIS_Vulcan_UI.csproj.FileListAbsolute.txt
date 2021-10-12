@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0eba6c03dd72329eb044a550b39a5e84c6157abd
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\SQLite.Interop.dll
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\RTIS_Vulcan_UI.exe.config
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\RTIS_Vulcan_UI.exe.manifest
@@ -196,7 +199,6 @@ C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\es\DevExpress.Diagram.v20.2.Core.resources.dll
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\ja\DevExpress.Diagram.v20.2.Core.resources.dll
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\bin\Debug\ru\DevExpress.Diagram.v20.2.Core.resources.dll
-C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.csprojAssemblyReference.cache
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.ucRecTransferManagement.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Controls.Administration.Transfer_Management.ucWhseLocManagement.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Controls.Administration.ucDispatchBarcodes.resources
@@ -226,6 +228,7 @@ C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Controls.ucModuleSettings.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Controls.ucPOAdmin.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Controls.ucWhseAdmin.resources
+C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Controls.Purchase_Orders.PO_Rec.ucPOReprinting.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Controls.Stock_Management.Stock_Takes.ucArchiveStockTake.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Controls.Stock_Management.Stock_Takes.ucOpenStockTakes.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Controls.ucTransferManagement.resources
@@ -264,6 +267,8 @@ C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Forms.Purchase_Orders.frmAddItemCMS.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Forms.Purchase_Orders.CMS_Management.frmEditCMS.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Forms.Purchase_Orders.CMS_Management.frmVeiwApproval.resources
+C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec.frmLinkPurchaseOrder.resources
+C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec.frmPOReprintlostlbl.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Forms.Stock_Take.frmCSVBuilder.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Forms.Stock_Take.frmExportLayout.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Forms.Stock_Take.frmImportST.resources
@@ -300,6 +305,7 @@ C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.rptInvCount.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Reports.rptPalletLines.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Reports.rptPORec.resources
+C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.Reports.rptPOReprintrec.resources
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.csproj.GenerateResource.cache
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.exe.licenses
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.csproj.CoreCompileInputs.cache
@@ -308,6 +314,7 @@ C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.csproj.CopyComplete
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.exe
 C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.pdb
+<<<<<<< HEAD
 =======
 C:\Users\advannotechdev1\source\repos\cataler\UI\bin\Debug\DevExpress.XtraBars.v20.2.dll
 C:\Users\advannotechdev1\source\repos\cataler\UI\bin\Debug\DevExpress.XtraCharts.v20.2.Wizard.dll
@@ -623,3 +630,6 @@ C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.pdb
 C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.Forms.Purchase_Orders.PO_Rec.frmPOReprintlostlbl.resources
 C:\Users\advannotechdev1\source\repos\cataler\UI\obj\Debug\RTIS_Vulcan_UI.csprojAssemblyReference.cache
 >>>>>>> 8ff1dd33504e07b3ce7523cfd8cced122fa6a532
+=======
+C:\Users\advannotechdev2\Documents\Cataler\UI\RTIS_Vulcan_UI V1.1.2.23\obj\Debug\RTIS_Vulcan_UI.csprojAssemblyReference.cache
+>>>>>>> 0eba6c03dd72329eb044a550b39a5e84c6157abd

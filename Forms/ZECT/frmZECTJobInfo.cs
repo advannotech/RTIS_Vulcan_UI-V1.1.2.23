@@ -36,64 +36,41 @@ namespace RTIS_Vulcan_UI.Forms
 
         public string id { get; set; }
         public string jobNo { get; set; }
+        public string lotnumber { get; set; }
+        public bool running { get; set; }
 
         public DataTable genInfo { get; set; }
-        //public string itemCode { get; set; }
-        //public string lotNumber { get; set; }
-        //public string jobQty { get; set; }
-        //public string manufQty { get; set; }
-        //public string line { get; set; }
-        //public string running { get; set; }
-        //public string started { get; set; }
-        //public string userStarted { get; set; }
-        //public string stopped { get; set; }
-        //public string userStopped { get; set; }
-        //public string reopened { get; set; }
-        //public string userReopened { get; set; }
         #endregion
 
-        public frmZECTJobInfo(string _id, string _jobNo, DataTable _genInfo) 
+        public frmZECTJobInfo(string _id, string _jobNo, DataTable _genInfo, string lotNumber, bool running) 
         {
-            //string _itemCode, string _lotNumber, string _jobQty, string _manufQty, string _line, string _running, string _started, string _userStarted, string _stopped,
-            //string _userStopped, string _reopened, string _userReopened
 
             InitializeComponent();
             id = _id;
             jobNo = _jobNo;
             genInfo = _genInfo;
-            //itemCode = _itemCode;
-            //lotNumber = _lotNumber;
-            //jobQty = _jobQty;
-            //manufQty = _manufQty;
-            //line = _line;
-            //running = _running;
-            //started = _started;
-            //userStarted = _userStarted;
-            //stopped = _stopped;
-            //userStopped = _userStopped;
-            //reopened = _reopened;
-            //userReopened = _userReopened;
+            this.lotnumber = lotNumber;
+            this.running = running;
         }
         private void frmZECTJobInfo_Load(object sender, EventArgs e)
         {
-            //lblJob.Text = jobNo;
-            //lblItem.Text = itemCode;
-            //lblLot.Text = lotNumber;
-            //lblJobQty.Text = jobQty;
-            //lblManuf.Text = manufQty;
-            //lblLine.Text = line;
-            //lblJonRunning.Text = running;
-            //lblStarted.Text = started;
-            //lblUserStarted.Text = userStarted;
-            //lblStopped.Text = stopped;
-            //lblUserStopped.Text = userStopped;
-            //lblReOpened.Text = reopened;
-            //lblUserReOpen.Text = userReopened;
             dgInfo.DataSource = genInfo;
             dgInfo.MainView.GridControl.DataSource = genInfo;
             dgInfo.MainView.GridControl.EndUpdate();
             setUpDatatables();
             refreshInputs();
+
+            if (GlobalVars.userName.ToUpper().Trim() == "Admin".ToUpper().Trim())
+            {
+                if (this.running)
+                {
+                    btnManuallyClose.Enabled = true;
+                }
+            }
+            else
+            {
+                btnManuallyClose.Visible = false;
+            }
         }
         public void setUpDatatables()
         {
@@ -304,5 +281,21 @@ namespace RTIS_Vulcan_UI.Forms
             setZectOutputs();
         }
         #endregion
+
+        private void btnManuallyClose_Click(object sender, EventArgs e)
+        {
+            var response = Convert.ToInt32(Client.ZectManualCloseJob(this.lotnumber));
+            if (Convert.ToBoolean(response))
+            {
+                msg = new frmMsg("Success", "The job has been closed successfully", GlobalVars.msgState.Success);
+                msg.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                msg = new frmMsg("Error", "The job could not be closed\n\n.", GlobalVars.msgState.Error);
+                msg.ShowDialog();
+            }
+        }
     }
 }

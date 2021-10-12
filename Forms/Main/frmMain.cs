@@ -745,11 +745,11 @@ namespace RTIS_Vulcan_UI
                         xtcMain.SelectedTabPage = xp;
                     }
                     break;
-                case "Production Planning":
+                case "Production RM":
                     found = false;
                     foreach (XtraTabPage page in xtcMain.TabPages)
                     {
-                        if (page.Text == "Production Planning")
+                        if (page.Text == "Production RM")
                         {
                             found = true;
                             xtcMain.SelectedTabPage = page;
@@ -758,18 +758,18 @@ namespace RTIS_Vulcan_UI
 
                     if (found == false)
                     {
-                        xp.Text = "Production Planning";
+                        xp.Text = "Production RM";
                         ucProductionPlanning ucCntrl = new ucProductionPlanning();
                         xp.Controls.Add(ucCntrl);
                         xtcMain.TabPages.Add(xp);
                         xtcMain.SelectedTabPage = xp;
                     }
                     break;
-                case "PGM Planning":
+                case "PGM RM":
                     found = false;
                     foreach (XtraTabPage page in xtcMain.TabPages)
                     {
-                        if (page.Text == "PGM Planning")
+                        if (page.Text == "PGM RM")
                         {
                             found = true;
                             xtcMain.SelectedTabPage = page;
@@ -778,7 +778,7 @@ namespace RTIS_Vulcan_UI
 
                     if (found == false)
                     {
-                        xp.Text = "PGM Planning";
+                        xp.Text = "PGM RM";
                         ucPGMPlanning ucCntrl = new ucPGMPlanning();
                         xp.Controls.Add(ucCntrl);
                         xtcMain.TabPages.Add(xp);
@@ -1165,11 +1165,11 @@ namespace RTIS_Vulcan_UI
                         xtcMain.SelectedTabPage = xp;
                     }
                     break;
-                case "ZECT Jobs":
+                case "ZECT Records":
                     found = false;
                     foreach (XtraTabPage page in xtcMain.TabPages)
                     {
-                        if (page.Text == "ZECT Jobs")
+                        if (page.Text == "ZECT Records")
                         {
                             found = true;
                             xtcMain.SelectedTabPage = page;
@@ -1178,18 +1178,18 @@ namespace RTIS_Vulcan_UI
 
                     if (found == false)
                     {
-                        xp.Text = "ZECT Jobs";
+                        xp.Text = "ZECT Records";
                         ucZectOutput ucCntrl = new ucZectOutput();
                         xp.Controls.Add(ucCntrl);
                         xtcMain.TabPages.Add(xp);
                         xtcMain.SelectedTabPage = xp;
                     }
                     break;
-                case "AW Jobs":
+                case "AW Records":
                     found = false;
                     foreach (XtraTabPage page in xtcMain.TabPages)
                     {
-                        if (page.Text == "AW Jobs")
+                        if (page.Text == "AW Records")
                         {
                             found = true;
                             xtcMain.SelectedTabPage = page;
@@ -1198,7 +1198,7 @@ namespace RTIS_Vulcan_UI
 
                     if (found == false)
                     {
-                        xp.Text = "AW Jobs";
+                        xp.Text = "AW Records";
                         ucAWJobs ucCntrl = new ucAWJobs();
                         xp.Controls.Add(ucCntrl);
                         xtcMain.TabPages.Add(xp);
