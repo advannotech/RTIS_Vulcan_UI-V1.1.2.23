@@ -60,9 +60,16 @@ namespace RTIS_Vulcan_UI.Forms
             setUpDatatables();
             refreshInputs();
 
-            if (this.running && GlobalVars.userName.ToUpper().Trim() == "Admin".ToUpper().Trim())
+            if (GlobalVars.userName.ToUpper().Trim() == "Admin".ToUpper().Trim())
             {
-                btnManuallyClose.Enabled = true;
+                if (this.running)
+                {
+                    btnManuallyClose.Enabled = true;
+                }
+            }
+            else
+            {
+                btnManuallyClose.Visible = false;
             }
         }
         public void setUpDatatables()
