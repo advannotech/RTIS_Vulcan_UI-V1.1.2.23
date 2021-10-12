@@ -796,7 +796,8 @@
             this.btnManuallyClose.Appearance.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.btnManuallyClose.Appearance.Options.UseBackColor = true;
             this.btnManuallyClose.Appearance.Options.UseFont = true;
-            this.btnManuallyClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnManuallyClose.Enabled = false;
+            this.btnManuallyClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnManuallyClose.ImageOptions.Image")));
             this.btnManuallyClose.Location = new System.Drawing.Point(948, 9);
             this.btnManuallyClose.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnManuallyClose.LookAndFeel.UseDefaultLookAndFeel = false;

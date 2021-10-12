@@ -44,7 +44,7 @@ namespace RTIS_Vulcan_UI
                         }
                         if (cmbUsers.Properties.Items.Count != 0)
                         {
-                            cmbUsers.Text = cmbUsers.Properties.Items[16].ToString();
+                            cmbUsers.Text = cmbUsers.Properties.Items[0].ToString();
                         }
                         this.WindowState = FormWindowState.Normal;
                         this.ShowInTaskbar = true;
